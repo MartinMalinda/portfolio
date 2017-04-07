@@ -1,0 +1,329 @@
+.glimmer-portfolio {
+  font-family: 'Helvetica Neue', Verdana;
+  padding-top: 50px;
+  font-size: 16px;
+  letter-spacing: 0.09em;
+  line-height: 1.5em;
+  border-bottom: 4px solid #008596;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; }
+  .glimmer-portfolio ::-webkit-scrollbar {
+    width: 9px;
+    height: 10px; }
+  .glimmer-portfolio ::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: rgba(0, 133, 150, 0.1); }
+  .glimmer-portfolio ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(0, 133, 150, 0.3); }
+  .glimmer-portfolio ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 133, 150, 0.5); }
+  .glimmer-portfolio ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 133, 150, 0.05); }
+  .glimmer-portfolio .filter-info {
+    padding: 20px;
+    max-width: 200px;
+    transition: 0.5s max-width, 0.2s opacity;
+    opacity: 1;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em; }
+    @media (max-width: 500px) {
+      .glimmer-portfolio .filter-info {
+        max-height: 108px;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: flex-start;
+        padding: 10px;
+        margin: 0 10px; } }
+    .glimmer-portfolio .filter-info.hidden {
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden; }
+    .glimmer-portfolio .filter-info .inner {
+      width: 160px; }
+      .glimmer-portfolio .filter-info .inner.instructions {
+        display: flex;
+        align-items: center;
+        width: 55px;
+        height: 100%;
+        justify-content: center; }
+      .glimmer-portfolio .filter-info .inner svg {
+        width: 45px; }
+    .glimmer-portfolio .filter-info .filter-section {
+      position: relative;
+      cursor: pointer;
+      display: block; }
+      .glimmer-portfolio .filter-info .filter-section:hover {
+        text-decoration: underline; }
+      .glimmer-portfolio .filter-info .filter-section.picked {
+        text-decoration: underline;
+        font-weight: bold; }
+        .glimmer-portfolio .filter-info .filter-section.picked::before {
+          content: '';
+          display: block;
+          position: absolute;
+          border-left: 5px solid black;
+          border-bottom: 5px solid transparent;
+          border-top: 5px solid transparent;
+          top: 8px; }
+  .glimmer-portfolio .links {
+    padding: 0 20px; }
+    .glimmer-portfolio .links .link:last-child {
+      margin-bottom: 20px; }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .links .link:last-child {
+          margin-bottom: 10px; } }
+    @media (max-width: 500px) {
+      .glimmer-portfolio .links {
+        padding: 0 10px; } }
+    .glimmer-portfolio .links .demo {
+      background: transparent;
+      color: black;
+      display: flex;
+      align-items: center; }
+    .glimmer-portfolio .links svg {
+      display: inline-block;
+      width: 21px;
+      margin: 0 5px; }
+  .glimmer-portfolio .left.column {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.93);
+    opacity: 1;
+    border-right: 4px solid #008596;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 215px;
+    flex-shrink: 0; }
+    @media (max-width: 800px) {
+      .glimmer-portfolio .left.column {
+        border: 0; } }
+    @media (max-width: 500px) {
+      .glimmer-portfolio .left.column {
+        padding-bottom: 188px; } }
+    .glimmer-portfolio .left.column h3 {
+      font-size: 40px;
+      margin: 0;
+      line-height: 1.05em;
+      position: relative;
+      padding: 0.65em 20px;
+      color: #008596;
+      background: white;
+      border-top: 4px dashed;
+      text-transform: uppercase;
+      position: relative; }
+      @media (max-width: 800px) {
+        .glimmer-portfolio .left.column h3 {
+          width: 100%;
+          text-align: left;
+          border: 0;
+          padding: 0.3em 20px; } }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column h3 {
+          margin: 20px 0;
+          background: transparent;
+          margin-top: 0;
+          margin-bottom: 0.1em;
+          font-size: 25px;
+          top: 0; } }
+    .glimmer-portfolio .left.column h4 {
+      margin: 0;
+      font-size: 25px;
+      background: white;
+      color: #008596;
+      padding: 1em;
+      text-transform: uppercase;
+      border-top: 4px dashed; }
+      @media (max-width: 800px) {
+        .glimmer-portfolio .left.column h4 {
+          width: 100%;
+          text-align: left;
+          border: 0;
+          padding: 0.1em 20px; } }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column h4 {
+          font-size: 16px;
+          margin-bottom: 10px; } }
+    .glimmer-portfolio .left.column .description {
+      margin: 20px 0;
+      padding: 20px;
+      background: rgba(128, 128, 128, 0.13);
+      letter-spacing: 0.05em;
+      margin-top: 15px;
+      box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+      font-size: 15px; }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column .description {
+          margin: 10px 0;
+          padding: 10px; } }
+    .glimmer-portfolio .left.column .my-work {
+      padding: 0 20px; }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column .my-work {
+          padding: 0; } }
+    .glimmer-portfolio .left.column .line {
+      padding: 0.4em 8px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0, 0.05); }
+      .glimmer-portfolio .left.column .line:nth-child(2n - 2) {
+        background: rgba(128, 128, 128, 0.13); }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column .line {
+          padding: 0.25em 8px;
+          padding-left: 10px; } }
+    .glimmer-portfolio .left.column .technologies {
+      margin-top: 5px;
+      padding: 0 20px; }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column .technologies {
+          padding: 0 10px; } }
+      @media (max-width: 500px) {
+        .glimmer-portfolio .left.column .technologies .label {
+          font-size: 14px;
+          padding: 2px 6px;
+          margin: 3px 0; } }
+  .glimmer-portfolio .column.right {
+    width: 100vw;
+    transition: 0.7s width;
+    background-size: cover !important;
+    position: relative;
+    overflow: hidden; }
+    .glimmer-portfolio .column.right .inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-size: cover !important; }
+    .glimmer-portfolio .column.right.blurred .blurred-placeholder {
+      opacity: 1; }
+  .glimmer-portfolio span.type {
+    font-size: 15px; }
+    @media (max-width: 500px) {
+      .glimmer-portfolio span.type {
+        display: none; } }
+  .glimmer-portfolio img.image-preview {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.3s object-position; }
+    .glimmer-portfolio img.image-preview:hover {
+      will-change: object-position; }
+  .glimmer-portfolio .blurred-placeholder {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background-size: cover !important;
+    filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s opacity; }
+  .glimmer-portfolio, .glimmer-portfolio * {
+    box-sizing: border-box; }
+  .glimmer-portfolio img {
+    max-width: 100%;
+    max-height: 100%; }
+  .glimmer-portfolio .thumbnails {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px 0;
+    overflow-x: auto;
+    overflow-y: visible;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0, 133, 150, 0.3);
+    z-index: 3;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab; }
+    .glimmer-portfolio .thumbnails:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing; }
+  .glimmer-portfolio .thumbnail {
+    width: 180px;
+    height: 180px;
+    margin: 0 10px;
+    flex-shrink: 0;
+    outline: 3px solid transparent;
+    transition: 0.3s outline, 1s max-width, 0.3s opacity;
+    max-width: 250px;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: 50% 0%; }
+    @media (max-width: 500px) {
+      .glimmer-portfolio .thumbnail {
+        max-height: 100px;
+        max-width: 100px; } }
+    .glimmer-portfolio .thumbnail:hover {
+      outline-color: rgba(0, 133, 150, 0.5); }
+    .glimmer-portfolio .thumbnail.active {
+      outline-color: #008596; }
+    .glimmer-portfolio .thumbnail.hidden {
+      max-width: 0;
+      opacity: 0;
+      margin: 0;
+      padding: 0; }
+    .glimmer-portfolio .thumbnail.empty {
+      width: 1px; }
+  .glimmer-portfolio .columns {
+    display: flex;
+    justify-content: space-between;
+    min-height: calc(100vh - 40px);
+    transition: transform 0.4s; }
+    @media (max-width: 800px) {
+      .glimmer-portfolio .columns.pushRight {
+        transform: translateX(-100vw); } }
+  @media (max-width: 800px) {
+    .glimmer-portfolio .column {
+      flex-shrink: 0;
+      width: 100% !important; } }
+  .glimmer-portfolio .label {
+    display: inline-block;
+    margin: 5px;
+    border-bottom: 2px dashed;
+    transition: 0.3s all; }
+    .glimmer-portfolio .label:hover, .glimmer-portfolio .label.active {
+      cursor: pointer;
+      color: #008596; }
+  .glimmer-portfolio .mobile-preview-switch {
+    display: none; }
+    @media (max-width: 800px) {
+      .glimmer-portfolio .mobile-preview-switch {
+        position: absolute;
+        bottom: 128px;
+        width: 100%;
+        z-index: 3;
+        display: flex; }
+        .glimmer-portfolio .mobile-preview-switch button {
+          width: 50%;
+          height: 40px;
+          background: white;
+          border: 0;
+          text-transform: uppercase;
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1);
+          margin: 10px;
+          transition: 0.3s background, 0.3s color; }
+          .glimmer-portfolio .mobile-preview-switch button.info {
+            margin-right: 0; }
+          .glimmer-portfolio .mobile-preview-switch button.active {
+            background: #008596;
+            color: white; } }
+    @media (min-width: 501px) and (max-width: 800px) {
+      .glimmer-portfolio .mobile-preview-switch {
+        bottom: 200px; } }

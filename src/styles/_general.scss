@@ -1,0 +1,18 @@
+$menuheight: 80px;
+$color-white: white;
+$color-black: black;
+$color-beige: #F7F7F9;
+$color-grey: #7F7F7F;
+$color-blue: #045981;
+$color-light-blue: #47484C;
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  font-family: 'Helvetica Neue', Verdana, Helvetica, sans-serif;
+  &.wf-active {
+    font-family: 'Lato';
+  }
+}

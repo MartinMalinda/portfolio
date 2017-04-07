@@ -1,0 +1,17 @@
+image: node:7.5.0
+
+pages:
+  cache:
+    paths:
+     - node_modules/
+
+  script:
+    - npm install -g gulp-cli
+    - npm install
+    - gulp build --production
+    - mv dist public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
