@@ -11,6 +11,11 @@ section.top {
   background: linear-gradient(to bottom, mix(black, $primary, 90%), mix(black, $primary, 50%));
   color: white;
 
+  .stage {
+    position: absolute;
+    overflow: hidden;
+  }
+
 
   h1 {
     // font-weight: 500;

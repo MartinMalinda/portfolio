@@ -90,6 +90,7 @@ gulp.task('scripts', function(){
       }}))
   .pipe(concat('main.js'))
   .pipe(babel())
+  .pipe(addsrc.prepend('node_modules/cash-dom/dist/cash.min.js'))
   .pipe(gulpif(isProduction, uglify()))
   .pipe(concat('main.js'))
   .pipe(gulp.dest('dist/scripts/'))
