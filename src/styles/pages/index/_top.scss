@@ -1,18 +1,20 @@
 section.top {
-  height: calc(80vh - 100px);
+  height: calc(95vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
   border: 10px solid $primary;
   margin: 10px;
   margin-bottom: 0;
-  background: transparentize(mix(black, $primary, 40%), 0.95);
+  // background: transparentize(mix(black, $primary, 40%), 0.98);
   color: darken($primary, 50%);
+  background: linear-gradient(to bottom, mix(black, $primary, 90%), mix(black, $primary, 50%));
+  color: white;
 
 
   h1 {
     // font-weight: 500;
-    font-weight: 400;
+    font-weight: 500;
     
     .highlighted {
       background: $primary;

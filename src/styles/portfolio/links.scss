@@ -1,0 +1,30 @@
+.links {
+
+  padding: 0 $base-space;
+
+  .link:last-child {
+    margin-bottom: $base-space;
+
+    @media(max-width: $mobile-breakpoint) {
+      margin-bottom: $base-space/2;
+    }
+  }
+
+  @media(max-width: $mobile-breakpoint) {
+    padding: 0 $base-space/2; 
+  }
+
+
+  .demo {
+    background: transparent;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    display: inline-block;
+    width: 21px;
+    margin: 0 5px;
+  }
+}

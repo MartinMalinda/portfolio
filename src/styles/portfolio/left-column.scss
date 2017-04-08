@@ -1,0 +1,126 @@
+.left.column {
+  width: 500px;
+  background: transparentize(white, 0.07);
+  opacity: 1;
+  border-right: 4px solid $primary;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 215px;
+  flex-shrink: 0;
+
+  @media (max-width: $tablet-portait-breakpoint){
+    border: 0;
+  }
+
+  @media (max-width: $mobile-breakpoint){
+    padding-bottom: 108px + 80px;
+  }
+
+  h3 {
+    font-size: 40px;
+    margin: 0;
+    line-height: 1.05em;
+    position: relative;
+    padding: 0.65em $base-space;
+    color: $primary;
+    background: white;
+    border-top: 4px dashed;
+    text-transform: uppercase;
+    position: relative;
+
+    @media (max-width: $tablet-portait-breakpoint){
+      width: 100%;
+      text-align: left;
+      border: 0;
+      padding: 0.3em $base-space;
+    }  
+
+    @media (max-width: $mobile-breakpoint){
+      margin: $base-space 0;
+      background: transparent;
+      margin-top: 0;
+      margin-bottom: 0.1em;
+      font-size: 25px;
+      top: 0;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 25px;
+    background: white;
+    color: $primary;
+    padding: 1em;
+    text-transform: uppercase;
+    border-top: 4px dashed;
+
+    @media (max-width: $tablet-portait-breakpoint){
+      width: 100%;
+      text-align: left;
+      border: 0;
+      padding: 0.1em $base-space;
+    }  
+
+    @media (max-width: $mobile-breakpoint){
+      font-size: 16px;
+      margin-bottom: $base-space/2;
+    }
+  }
+
+  .description {
+    margin: $base-space 0;
+    padding: $base-space;
+    background: transparentize(grey, 0.87);
+    letter-spacing: 0.05em;
+    margin-top: $base-space - 5px;
+    box-shadow: inset 0px 1px 1px 1px transparentize(black, 0.95);
+    font-size: 15px;
+
+    @media (max-width: $mobile-breakpoint){
+      margin: $base-space/2 0;
+      padding: $base-space/2;
+    }
+  }
+
+  .my-work {
+    padding: 0 $base-space;
+
+    @media(max-width: $mobile-breakpoint) {
+      padding: 0;
+    }
+  }
+
+  .line {
+    padding: 0.4em 8px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    box-shadow: inset 0px 1px 1px 1px transparentize(black, 0.95);
+
+    &:nth-child(2n - 2){
+      background: transparentize(grey, 0.87);
+    }
+
+    @media (max-width: $mobile-breakpoint){
+      padding: 0.25em 8px;
+      padding-left: $base-space/2;
+    }
+  }
+
+  .technologies {
+    margin-top: 5px;
+    padding: 0 $base-space;
+
+    @media (max-width: $mobile-breakpoint){
+      padding: 0 $base-space/2;
+    }
+
+    .label {
+      @media (max-width: $mobile-breakpoint){
+        font-size: 14px;
+        padding: 2px 6px;
+        margin: 3px 0;
+      }
+    }
+  }
+
+}
