@@ -5,5 +5,5 @@ $('.cube').on('mouseenter', function(){
 $('.cube').on('mouseleave', function(){
   setTimeout(() => {
     $(this).removeClass('active');
-  }, 8000);
+  }, 2000);
 });
