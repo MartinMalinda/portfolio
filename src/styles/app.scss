@@ -1,3 +1,14 @@
+$green: #145214;
+$red: #ff5722;
+$blue: #008596;
+$darkgreen: #002500;
+$medium-space: 20px;
+
+$primary: $red;
+$base-space: $medium-space; 
+$mobile-breakpoint: 500px;
+$tablet-portait-breakpoint: 800px;
+
 @import "container";
 @import "general";
 

@@ -1,5 +1,11 @@
 section.services {
   min-height: 90vh;
+  padding: 20px 0;
+  // border: 5px solid $primary;
+  display: flex;
+  align-items: center;
+  background: $primary;
+  margin: 0 10px;
 
   .columns {
     display: flex;
@@ -12,11 +18,13 @@ section.services {
     font-size: 18px;
     line-height: 1.8em;
     font-weight: 300;
+    background: white;
+    box-shadow: 0 0 50px 10px transparentize(black, 0.9);
   }
 
   .column {
     padding: 20px;
-    overflow: hidden;
+    // overflow: hidden;
     min-width: 320px;
   }
 

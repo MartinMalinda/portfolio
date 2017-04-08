@@ -1,19 +1,12 @@
-$green: #145214;
-$red: #ff5722;
-$blue: #008596;
-$darkgreen: #002500;
-$medium-space: 20px;
-
-$primary: $blue;
-$base-space: $medium-space; 
-$mobile-breakpoint: 500px;
-$tablet-portait-breakpoint: 800px;
-
 section.top {
-  height: calc(100vh - 40px);
+  height: calc(80vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 10px solid $primary;
+  margin: 10px;
+  margin-bottom: 0;
+
 
   h1 {
     display: flex;
