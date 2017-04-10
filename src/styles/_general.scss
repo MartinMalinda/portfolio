@@ -13,10 +13,79 @@ html {
   color: lighten(black, 10%);
 }
 
+.icons {
+  z-index: 3;
+
+  @keyframes grow {
+    0% {transform: scale(1,1)}
+    94%{transform: scale(1,1)}
+    98% {transform: scale(1.2,1.2)}
+    100% {transform: scale(1,1)}
+  }
+
+  .email {
+    position: relative;
+    top: 2px;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 5px;
+    transition: 0.3s transform;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+
+    $increment: 0.04s;
+    &:nth-of-type(2){
+      svg {
+        animation-delay: $increment;
+      }
+    }
+
+    &:nth-of-type(3){
+      svg {
+        animation-delay: $increment * 2;
+      }
+    }
+
+    &:nth-of-type(3){
+      svg {
+        animation-delay: $increment * 3;
+      }
+    }
+
+    &:nth-of-type(4){
+      svg {
+        animation-delay: $increment * 4;
+      }
+    }
+
+    &:nth-of-type(5){
+      svg {
+        animation-delay: $increment * 5;
+      }
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    animation: 6s grow infinite;
+    }
+
+  }
+
   h2 {
     font-size: 40px;
     // border-bottom: 5px dashed $primary;
     padding: 20px 0 ;
+
+    &.center {
+      text-align: center;
+    }
   }
 
 .highlighted {

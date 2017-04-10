@@ -10,9 +10,21 @@ section.top {
   background: linear-gradient(to bottom, mix(black, $primary, 20%), mix(black, $primary, 0%));
   color: white;
 
+  overflow: hidden;
+
   .inner {
     position: relative;
     z-index: 1;
+  }
+
+  .secrets {
+    z-index: 2;
+  }
+
+  .letter {
+    transform: rotate(-90deg);
+    opacity: 0.7;
+    text-shadow: 1px 1px 1px black;
   }
 
   .stage {
@@ -21,27 +33,6 @@ section.top {
     z-index: 2;
 
   }
-
-  .icons {
-    z-index: 3;
-
-    a {
-      display: inline-block;
-      margin: 0 5px;
-      transition: 0.3s transform;
-
-      &:hover {
-        transform: scale(1.1, 1.1);
-      }
-    }
-
-    svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
-    }
-  }
-
 
   h1 {
     font-weight: 500;
@@ -52,6 +43,7 @@ section.top {
     display: flex;
     align-items: center;
     font-weight: 400;
+    font-size: 25px;
 
   }
 

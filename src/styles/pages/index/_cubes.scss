@@ -47,6 +47,11 @@ $cube-height: 10vh;
     position: absolute;
     transition: 4s transform;
     //box-shadow: inset 1px 1px 2px 3px transparentize(white, 0.9);
+    font-size: 2em;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    padding: 10px;
     
     &.front{
       transform: translateZ($cube-size/2);
@@ -55,12 +60,12 @@ $cube-height: 10vh;
     
     &.right{
       transform: rotateY(90deg) translateZ($cube-size/2);
-      background: transparentize(mix(yellow, black, 50%), 0.99);
+      background: transparent;
     }
     
     &.left{
       transform: rotateY(90deg) translateZ(-$cube-size/2);
-        background: transparentize(mix(black, black, 50%), 0.7);
+        background: transparent;
     }
     
     &.top{

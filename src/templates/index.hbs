@@ -14,26 +14,14 @@
   </h2>
 </div>
   <div class="icons ui container">
-    <a target="_blank" href="https://medium.com/@martinmalinda">
-      {{>svg/medium}}
-    </a>
-    <a target="_blank" href="https://twitter.com/martinmalindacz">
-      {{>svg/twitter}}
-    </a>
-    <a target="_blank" href="https://github.com/martinmalinda">
-      {{>svg/github}}
-    </a>
-    <a target="_blank" href="https://www.linkedin.com/in/martin-malinda-58b03253/">
-      {{>svg/linkedin}}
-    </a>
-
+    {{>icons}}
   </div>
 </section>
 
 <section class="services">
   <div class="ui container">
     <h2>I like to build <span class="highlighted">amazing projects on the web</span></h2>
-    <p>The joy of writing applications with JavaScript is that they can run anywhere. I like to come up with inovative and original approaches that provide a unique experience yet which do not compromise speed, usability or accessibility.</p>
+    <p>The joy of writing applications with JavaScript is that they can run anywhere. I like to come up with inovative and original approaches that provide a unique experience but do not compromise speed, usability or accessibility.</p>
     <div class="three columns">
       <div class="column">
         <div class="block">
@@ -61,7 +49,7 @@
             {{>svg/source}}
           </div>
           <div class="title">
-            Speed & efficiency
+            Optimizations
           </div>
         </div>
       </div>
@@ -72,7 +60,7 @@
 <section class="creative-coding">
     <div class="ui container">
       <h2><span class="highlighted">Design by code</span> is my favourite hobby </h2>
-      <p>Even though I am primarily a JavaScript developer, main driving force behind my work is creativity. Design by code is effective, requires a different mindset and therefore leads to unique results. Letting me do both design and code can be ideal for smaller projects.</p>
+      <p>Even though I am primarily a JavaScript developer, main driving force behind my work is creativity. Design by code is effective. It requires a different mindset and therefore leads to unique results. Letting me do both design and code can be ideal for smaller projects.</p>
     </div>
     <div class="canvas">
       <div class="first-phase">
@@ -97,9 +85,35 @@
         <div class="arrow"></div>
       </div>
       <div class="second-phase">
-        <div class="sketch"></div>
-        <div class="sketch"></div>
-        <div class="sketch"></div>
+        <div class="sketch">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
+        <div class="sketch">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="sketch">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
         <div class="label">
           2. Multiple prototypes
         </div>
@@ -110,7 +124,15 @@
         <div class="arrow"></div>
       </div>
       <div class="final-phase">
-        <div class="sketch"></div>
+        <div class="sketch">
+          <div class="circle"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
         <div class="label">
           3. Final result
         </div>
@@ -118,10 +140,23 @@
     </div>
 </section>
 
-
 <section class="showcase">
-  <h2>Showcase</h2>
+  <div class="ui container">
+    <h2 class="center"> ▼ Here's a few <span class="highlighted">featured projects</span> ▼</h2>
+  </div>
 </section>
-<section id="glimmer-portfolio"></section>
+
+<section id="glimmer-portfolio">
+  {{!-- Glimmer app --}}
+</section>
+
+<section class="contact">
+  <div class="photo">
+    <img itemprop="image" src="https://res.cloudinary.com/serenity-themes/image/upload/q_auto,f_auto,w_450/v1487255126/martin_sykp3p.jpg" alt="Martin Malinda">
+    <div class="icons highlighted">
+      {{>icons}}
+    </div>
+  </div>
+</section>
 
 {{>footer}}
