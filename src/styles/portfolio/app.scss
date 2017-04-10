@@ -11,13 +11,13 @@
   font-size: 16px;
   letter-spacing: 0.09em;
   line-height: 1.5em;
-  border-bottom: 4px solid $primary;
   min-height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 
   span.type {
     font-size: 15px;
