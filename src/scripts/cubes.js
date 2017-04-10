@@ -1,3 +1,7 @@
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 $('.cube').on('mouseenter', function(){
   $(this).addClass('active');
 });
@@ -5,5 +9,5 @@ $('.cube').on('mouseenter', function(){
 $('.cube').on('mouseleave', function(){
   setTimeout(() => {
     $(this).removeClass('active');
-  }, 2000);
+  }, getRandomArbitrary(50, 3000));
 });

@@ -1,13 +1,9 @@
 $cube-size: 10vw;
+$cube-width: 10vw;
+$cube-height: 10vh;
 
 * {
   box-sizing: border-box;
-}
-
-body, html {
-  background:  #008596;
-  width: 100%;
-  height: 100%;
 }
 
 .stage {
@@ -25,7 +21,7 @@ body, html {
   transform-style: preserve-3d;
   width: $cube-size;
   height: $cube-size;
-  transition: 0.2s all;
+  transition: 0.2s transform;
   transform-origin: 50% 50%;
   position: absolute;
   transform: rotateY(90deg);
@@ -47,7 +43,7 @@ body, html {
     width: $cube-size;
     height: $cube-size;
     position: absolute;
-    transition: 4s all;
+    transition: 4s transform;
     //box-shadow: inset 1px 1px 2px 3px transparentize(white, 0.9);
     
     &.front{

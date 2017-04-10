@@ -1,49 +1,44 @@
 section.services {
   min-height: 90vh;
-  padding: 20px 0;
-  // border: 5px solid $primary;
   display: flex;
+  justify-content: center;
   align-items: center;
-  background: $primary;
-  margin: 0 10px;
+  font-size: 20px;
+  line-height: 1.5em;
+
+  h2 {
+    font-size: 40px;
+    // border-bottom: 5px dashed $primary;
+    padding: 20px 0 ;
+  }
 
   .columns {
     display: flex;
-    justify-content: space-around;
+    height: 400px;
   }
 
   .block {
-    border: 6px solid $primary;
-    padding: 10px 20px;
-    font-size: 18px;
-    line-height: 1.8em;
-    font-weight: 300;
-    background: white;
-    box-shadow: 0 0 50px 10px transparentize(black, 0.9);
+    background: $primary;
+    color: white;
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 2px transparentize(black, 0.8);
+    box-shadow: 0 0 10px 1px transparentize(black, 0.5);
   }
 
   .column {
-    padding: 20px;
-    // overflow: hidden;
-    min-width: 320px;
+    width: 33%;
+    margin: 10px;
   }
 
-  .ui.container {
-    max-width: 900px !important;
-  }
-
-  h2 {
-    font-weight: 400;
-    font-size: 35px;
-    font-weight: 300;
-    margin: 20px 0;
-    padding: 0;
-    padding-bottom: 10px;
-    border-bottom: 4px dashed $primary;
-    position: relative;
-    top: 4px;
-    line-height: 1.18em;
-
-
+  .inner {
+    
   }
 }
