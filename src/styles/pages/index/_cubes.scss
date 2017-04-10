@@ -1,4 +1,4 @@
-$cube-size: 10vw;
+$cube-size: 20vh;
 $cube-width: 10vw;
 $cube-height: 10vh;
 
@@ -10,6 +10,8 @@ $cube-height: 10vh;
   perspective: 10000vw;
   width: 100%;
   height: 100%;
+  position: relative;
+  top: $cube-size / 10;
 }
 
 .row {
@@ -48,7 +50,7 @@ $cube-height: 10vh;
     
     &.front{
       transform: translateZ($cube-size/2);
-      background: transparentize(mix(yellow, black, 50%), 0.9);
+      background: transparentize(mix(invert($primary), black, 100%), 0.8);
     }
     
     &.right{

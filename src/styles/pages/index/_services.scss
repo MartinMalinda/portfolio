@@ -31,6 +31,31 @@ section.services {
     letter-spacing: 1.5px;
     text-shadow: 2px 2px 2px transparentize(black, 0.8);
     box-shadow: 0 0 10px 1px transparentize(black, 0.5);
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .icon {
+    width: 150px;
+    height: 140px;
+    margin-bottom: 10px;
+    
+    svg {
+      height: 100%;
+      max-width: 100%;
+      fill: mix($primary, white, 20%);
+
+      &, & path {
+        stroke: mix($primary, black, 90%);
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  .title {
+    line-height: 1.3em;
+    height: 50px;
   }
 
   .column {
