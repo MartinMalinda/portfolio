@@ -36,7 +36,7 @@ $cube-height: 10vh;
 
   
   &:hover,&.active {
-    transform: rotateZ(450deg) translateZ(500px);
+    transform: rotateZ(450deg) translateZ(500px) translateY(4px) translateX(4px);
     z-index: 5;
   }
   
@@ -50,7 +50,7 @@ $cube-height: 10vh;
     
     &.front{
       transform: translateZ($cube-size/2);
-      background: transparentize(mix(invert($primary), black, 100%), 0.8);
+      background: transparentize(mix($primary, purple, 50%), 0.9);
     }
     
     &.right{
@@ -60,22 +60,22 @@ $cube-height: 10vh;
     
     &.left{
       transform: rotateY(90deg) translateZ(-$cube-size/2);
-        background: transparentize(mix(black, black, 50%), 0.95);
+        background: transparentize(mix(black, black, 50%), 0.7);
     }
     
     &.top{
       transform: rotateX(90deg) translateZ($cube-size/2);
-      background: transparentize(mix(red, black, 50%), 0.9);
+      background: transparentize(mix(red, black, 50%), 0.7);
     }
         
     &.bottom{
       transform: rotateX(90deg) translateZ(-$cube-size/2);
-        background: transparentize(mix(salmon, black, 50%), 0.9);
+        background: transparentize(mix(salmon, black, 50%), 0.7);
     }
     
     &.back {
       transform: translateZ(-$cube-size/2);
-        background: transparentize(mix(purple, black, 50%), 0.9);
+        background: transparentize(mix(green, black, 50%), 0.7);
     }
   }
 }

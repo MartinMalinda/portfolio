@@ -2,7 +2,8 @@ section.top {
   height: calc(95vh - 100px);
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
+
   border-bottom: 0;
   margin-bottom: 0;
   // background: transparentize(mix(black, $primary, 40%), 0.98);
@@ -11,17 +12,18 @@ section.top {
 
   .inner {
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
 
   .stage {
     position: absolute;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
 
   }
 
   .icons {
+    z-index: 3;
 
     a {
       display: inline-block;
