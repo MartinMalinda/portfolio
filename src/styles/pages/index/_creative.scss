@@ -1,0 +1,131 @@
+section.creative-coding {
+
+  $grey: transparentize(grey, 0.3);
+
+  min-height: 100vh;
+  font-size: 20px;
+  line-height: 1.5em;
+
+
+  .canvas {
+    padding: 1em;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto; 
+  }
+
+  .sketch {
+    border: 2px solid $grey;
+    width: 150px;
+    height: 180px;
+    padding: 15px;
+  }
+
+  $circle-width: 30px;
+  $circle-height: $circle-width;
+
+  .second-phase {
+    .sketch {
+      margin-bottom: 5%;
+    }
+  }
+
+  .circle {
+    background: $grey;
+    width: $circle-width;
+    height: $circle-height;
+    float: right;
+    border-radius: 50%;
+    shape-outside: border-box;
+  }
+
+  .line {
+    height: 5%;
+    width: 100%;
+    background: $grey;
+    margin-top: 8%;
+
+    &:nth-of-type(2) {
+      width: calc(100% - #{$circle-width} - 10px);
+    }
+
+    &:nth-of-type(3) {
+      width: calc(100% - #{$circle-width} - 5px);
+    }
+  }
+
+  .square {
+    background: $grey;
+    width: calc(50% - 4px);
+    height: 20%;
+    margin-top: 8%;
+    display: inline-block;
+    margin-bottom: -4%;
+  }
+
+  .label {
+    color: $grey;
+    font-size: 14px;
+  }
+
+  .arrows {
+    $angle: 25deg;
+    $size: 15px;
+
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    margin: 0 35px;
+
+    .arrow {
+      color: $grey;
+      margin: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        width: $size * 4;
+        height: $size;
+        content: '';
+        display: block;
+        background: $grey;
+      }
+
+      &::after {
+        
+        content: '';
+        display: block;
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid;
+        border-right: $size solid transparent;
+      }
+
+      &:nth-of-type(1){
+        transform: rotate(-$angle);
+      }
+
+      &:nth-of-type(3) {
+        transform: rotate($angle);
+      }
+    }
+
+    &.converge {
+      .arrow {
+        &:nth-of-type(1){
+          transform: rotate($angle); 
+        }
+        &:nth-of-type(3){
+          transform: rotate(-$angle);
+        }
+      }
+    }
+  }
+
+
+}

@@ -10,9 +10,14 @@ html {
   &.wf-active {
     font-family: 'Lato';
   }
-
   color: lighten(black, 10%);
 }
+
+  h2 {
+    font-size: 40px;
+    // border-bottom: 5px dashed $primary;
+    padding: 20px 0 ;
+  }
 
 .highlighted {
   background: lighten($primary, 10%);
