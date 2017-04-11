@@ -12,6 +12,10 @@ $cube-height: 10vh;
   height: 100%;
   position: relative;
   top: $cube-size / 10;
+
+  @media (max-width: 1024px){
+    display: none;
+  }
 }
 
 .row {
