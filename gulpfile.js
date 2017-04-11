@@ -91,6 +91,7 @@ gulp.task('scripts', function(){
   .pipe(concat('main.js'))
   .pipe(babel())
   .pipe(addsrc.prepend('node_modules/cash-dom/dist/cash.min.js'))
+  .pipe(addsrc.prepend('bower_components/scrollMonitor/scrollMonitor.js'))
   .pipe(gulpif(isProduction, uglify()))
   .pipe(concat('main.js'))
   .pipe(gulp.dest('dist/scripts/'))

@@ -127,6 +127,102 @@ section.creative-coding {
       }
     }
   }
+}
+
+//
+// Animation
+//
+
+.canvas {
+
+  //
+  // off
+  //
+
+  .sketch {
+    opacity: 0;
+    transition: 1s opacity;
+  }
+
+  .label {
+    opacity: 0;
+    transition: 1s opacity;
+  }
+
+  .arrow {
+    opacity: 0;
+    transition: 1s opacity;
+  }
+
+  .line {
+    transform: scale(0, 1);
+    transition: 0.5s transform;
+    transform-origin: 0 0;
+  }
+
+  .square {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: 0.5s transform, 0.5s opacity;
+  }
+
+  .circle {
+    transform: scale(0, 0);
+    transition: 0.3s transform;
+  }
+
+  //
+  // on
+  //
+
+  &.animate {
+
+    .sketch {
+      opacity: 1;
+    }
+
+    .label {
+      opacity: 1;
+    }
+
+    .arrow {
+      opacity: 1;
+    }
+
+    .line {
+      transform: scale(1, 1);
+    }
+
+    .square {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .circle {
+      transform: scale(1, 1);
+    }
+  }
+
+  //
+  // timings
+  //
+
+  .sketch {
+    $base: 2s;
 
 
+    @each $index in 1, 2, 3, 4, 5 {
+      &:nth-of-type(#{$index}){
+        transition-delay: $base * $index;
+      }    
+    }
+
+    div {    
+      @each $index in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
+        &:nth-of-type(#{$index}){
+          transition-delay: $base * $index;
+        }    
+      }
+    }
+  }
 }

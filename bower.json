@@ -1,0 +1,21 @@
+{
+  "name": "personal",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Martin Malinda"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scrollMonitor": "^1.2.3"
+  }
+}
