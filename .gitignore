@@ -4,3 +4,4 @@ Landing.sublime-workspace
 node_modules
 dist
 **/*.md.hbs
+bower_components
