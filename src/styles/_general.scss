@@ -88,6 +88,10 @@ html {
     @media (max-width: $tablet-portrait-breakpoint){
       font-size: 28px;
     }
+
+    @media (max-width: 600px){
+      font-size: 25px;
+    }
   }
 
 .highlighted {

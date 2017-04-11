@@ -10,6 +10,11 @@ section.services {
   .columns {
     display: flex;
     height: 400px;
+
+    @media (max-width: $mobile-breakpoint){
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   .block {
@@ -61,6 +66,10 @@ section.services {
   .column {
     width: 33%;
     margin: 10px;
+
+    @media (max-width: $mobile-breakpoint){
+      width: 100%;
+    }
   }
 
   .inner {
