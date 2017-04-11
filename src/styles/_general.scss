@@ -84,6 +84,10 @@ html {
     &.center {
       text-align: center;
     }
+
+    @media (max-width: $tablet-portrait-breakpoint){
+      font-size: 28px;
+    }
   }
 
 .highlighted {

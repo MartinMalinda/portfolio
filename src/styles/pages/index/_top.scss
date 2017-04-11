@@ -41,15 +41,17 @@ section.top {
 
   h1 {
     font-weight: 500;
+
+    @media (max-width: $tablet-portrait-breakpoint){
+      font-size: 28px;
+    }
   }
 
   h2 {
-
     display: flex;
     align-items: center;
     font-weight: 400;
     font-size: 25px;
-
   }
 
   h3 {

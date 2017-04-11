@@ -132,7 +132,7 @@
     transition: transform 0.4s;
 
     &.pushRight {
-      @media (max-width: $tablet-portait-breakpoint){
+      @media (max-width: $tablet-portrait-breakpoint){
         transform: translateX(-100vw);
       }
     }
@@ -142,7 +142,7 @@
   .column {
     $side-column-size: 400px;
 
-    @media (max-width: $tablet-portait-breakpoint){
+    @media (max-width: $tablet-portrait-breakpoint){
       flex-shrink: 0;
       width: 100% !important;
     }
@@ -164,7 +164,7 @@
   .mobile-preview-switch {
     display: none;
 
-    @media (max-width: $tablet-portait-breakpoint){
+    @media (max-width: $tablet-portrait-breakpoint){
       position: absolute;
       bottom: 128px;
       width: 100%;
@@ -192,7 +192,7 @@
       }
     }
 
-    @media (min-width: $mobile-breakpoint + 1) and (max-width: $tablet-portait-breakpoint){
+    @media (min-width: $mobile-breakpoint + 1) and (max-width: $tablet-portrait-breakpoint){
       bottom: 200px;
     }
   }
