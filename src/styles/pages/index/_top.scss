@@ -25,6 +25,10 @@ section.top {
     transform: rotate(-90deg);
     opacity: 0.7;
     text-shadow: 1px 1px 1px black;
+
+    @media (max-width: 1152px){
+      display: none;
+    }
   }
 
   .stage {
