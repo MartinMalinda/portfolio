@@ -130,3 +130,51 @@ html {
     border: 0  !important;
   }
 }
+
+p {
+  @media (max-width: $mobile-breakpoint){
+    font-size: 15px;
+    line-height: 1.6em;
+    letter-spacing: 0.1px;
+  }
+}
+
+.showcase {
+
+  h2 {
+    position: relative;
+    width: 100%;
+
+    @media (max-width: $mobile-breakpoint){
+      .highlighted {
+        position: relative;
+      }
+    }
+  }
+
+  .caret {
+    @media (max-width: $mobile-breakpoint){
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 30px;
+      height: 10px;
+      display: inline-block;
+
+      &.first {
+        left: 0px;
+      }
+
+      &.second {
+        right: 0px;
+      }
+
+    }
+
+    @media (max-width: 320px){
+      font-size: 14px;
+    }
+  }
+}
