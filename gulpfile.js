@@ -73,9 +73,6 @@ gulp.task('styles', function(){
   .pipe(autoprefixer('last 2 versions'))
   .pipe(addsrc('node_modules/normalize-css/normalize.css'))
   .pipe(concat('app.css'))
-  .pipe(gulpif(isProduction, purify(['./src/**/*.hbs', './src/scripts/**/*.js', 'vendor/**/*.js'], {
-      whitelist: ['*wf-active*']
-    })))
   .pipe(gulpif(isProduction, minifycss()))
   .pipe(gulp.dest('dist/styles/'))
   .pipe(browserSync.reload({stream:true}))
