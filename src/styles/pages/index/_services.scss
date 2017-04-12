@@ -14,6 +14,9 @@ section.services {
     @media (max-width: $mobile-breakpoint){
       flex-direction: column;
       height: auto;
+      .block {
+        height: 300px;
+      }
     }
   }
 
@@ -22,18 +25,73 @@ section.services {
     color: white;
     font-size: 30px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 0.5em;
     font-weight: 500;
     letter-spacing: 1.5px;
     text-shadow: 2px 2px 2px transparentize(black, 0.8);
     box-shadow: 0 0 10px 1px transparentize(black, 0.5);
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    width: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: 'See details';
+      font-size: 12px;
+      font-weight: 300;
+      text-shadow: none;
+      font-family: Verdana;
+      position: absolute;
+      bottom: 10px;
+      text-decoration: underline;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 1px transparentize(black, 0.8);
+      transition: 0.3s opacity;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &:hover,&:focus {
+      .icon {
+        will-change: top, left, width, height, transform;
+      }
+
+      .title {
+        will-change: top, font-size, padding-right;
+      }
+
+      .details {
+        will-change: transform, opacity;
+      }
+    }
+
+    &:focus {
+      .icon {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 10px;
+        left: 100%;
+        transform: translate(-150%, 0);
+      }
+
+      .title {
+        top: 20px;
+        font-size: 20px;
+        padding-right: 50px;
+      }
+
+      .details {
+        transform: translateY(60px);
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
 
     @media (max-width: $tablet-portrait-breakpoint){
       font-size: 20px;
@@ -45,6 +103,11 @@ section.services {
     height: 140px;
     margin-bottom: 10px;
     max-width: 100%;
+    position: absolute;
+    transition: 0.3s top, 0.3s left, 0.3s transform, 0.3s width, 0.3s height;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
     
     svg {
       height: 100%;
@@ -60,7 +123,28 @@ section.services {
 
   .title {
     line-height: 1.3em;
-    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 90%;
+    transition: 0.3s top, 0.5s font-size;
+  }
+
+  .details {
+    font-size: 12px;
+    line-height: 1.35em;
+    height: 100%;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.3s transform, 0.2s opacity;
+    font-weight: 400;
+    text-align: left;
+
+    li {
+      margin-top: 10px;
+    }
+
   }
 
   .column {
@@ -69,6 +153,7 @@ section.services {
 
     @media (max-width: $mobile-breakpoint){
       width: 100%;
+      margin: 10px 0;
     }
   }
 

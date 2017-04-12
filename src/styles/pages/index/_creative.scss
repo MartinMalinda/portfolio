@@ -25,6 +25,12 @@ section.creative-coding {
     width: 150px;
     height: 180px;
     padding: 15px;
+
+    @media (max-width: $mobile-breakpoint){
+      width: 110px;
+      height: 150px;
+      margin: 0 auto;
+    }
   }
 
   $circle-width: 30px;
@@ -136,6 +142,7 @@ section.creative-coding {
   @media (max-width: $tablet-portrait-breakpoint) {
     .canvas {
       flex-direction: column;
+      overflow: hidden;
     }
 
     .second-phase {
@@ -156,6 +163,7 @@ section.creative-coding {
     .arrows {
       flex-direction: row;
       justify-content: center;
+      height: 140px;
 
       &.diverge {
         .arrow.first {
