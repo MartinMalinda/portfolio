@@ -19,7 +19,7 @@
     } else {
         factory((root.dragscroll = {}));
     }
-}(window, function (exports) {
+}(this, function (exports) {
     var _window = window;
     var _document = document;
     var mousemove = 'mousemove';
