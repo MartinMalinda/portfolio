@@ -9,7 +9,7 @@ section.services {
 
   .columns {
     display: flex;
-    height: 400px;
+    position: relative;
 
     @media (max-width: $mobile-breakpoint){
       flex-direction: column;
@@ -24,7 +24,6 @@ section.services {
     background: $primary;
     color: white;
     font-size: 30px;
-    height: 100%;
     text-align: center;
     padding: 0.5em;
     font-weight: 500;
@@ -36,6 +35,7 @@ section.services {
     border: 0;
     width: 100%;
     overflow: hidden;
+    height: 400px;
 
     &::after {
       content: 'See details';
@@ -76,9 +76,9 @@ section.services {
         height: 40px;
         width: 40px;
         position: absolute;
-        top: 10px;
-        left: 100%;
-        transform: translate(-150%, 0);
+        top: 50px;
+        left: calc(100% - 40px);
+        // transform: translate(-150%, 0);
       }
 
       .title {
@@ -108,7 +108,7 @@ section.services {
     margin-bottom: 10px;
     max-width: 100%;
     position: absolute;
-    transition: 0.3s top, 0.3s left, 0.3s transform, 0.3s width, 0.3s height;
+    transition: 0.3s top, 0.3s left, 0.3s width, 0.3s height;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%);

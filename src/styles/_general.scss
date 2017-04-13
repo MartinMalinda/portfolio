@@ -79,7 +79,7 @@ html {
   h2 {
     font-size: 40px;
     // border-bottom: 5px dashed $primary;
-    padding: 20px 0 ;
+    padding: 20px 0;
 
     &.center {
       text-align: center;
@@ -91,6 +91,7 @@ html {
 
     @media (max-width: 600px){
       font-size: 25px;
+      padding: 5px 0;
     }
   }
 
@@ -148,6 +149,16 @@ p {
     @media (max-width: $mobile-breakpoint){
       .highlighted {
         position: relative;
+      }
+    }
+  }
+
+  .ui.container {
+    @media (max-width: $mobile-breakpoint){
+      margin: 0px;
+
+      h2 {
+        margin-bottom: -15px;
       }
     }
   }
