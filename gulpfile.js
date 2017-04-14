@@ -70,7 +70,7 @@ gulp.task('styles', function(){
       this.emit('end');
       }}))
   .pipe(sass())
-  .pipe(autoprefixer('last 2 versions'))
+  .pipe(autoprefixer())
   .pipe(addsrc('node_modules/normalize-css/normalize.css'))
   .pipe(concat('app.css'))
   .pipe(gulpif(isProduction, minifycss()))

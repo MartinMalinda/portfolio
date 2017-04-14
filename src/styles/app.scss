@@ -17,3 +17,7 @@ $tablet-portrait-breakpoint: 800px;
 @import "general";
 
 @import "pages/index";
+
+el {
+  display: block;
+}
