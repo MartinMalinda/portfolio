@@ -192,11 +192,12 @@
         border: 0;
         text-transform: uppercase;
         box-shadow: 1px 1px 1px 1px transparentize(black, 0.9), -1px -1px 1px 1px transparentize(black, 0.9);
-        margin: 10px;
+        margin: 10px 2px;
         transition: 0.3s background, 0.3s color;
 
         &.info {
-          margin-right: 0;
+          margin-right: 5px;
+
         }
 
         &.active {
