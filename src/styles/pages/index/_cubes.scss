@@ -23,6 +23,12 @@ $cube-height: 10vh;
   height: $cube-size;
 }
 
+@keyframes pulse {
+    0% {transform: rotateZ(450deg);}
+  50% {transform: rotateZ(450deg) scale(1.05);}
+  100% {transform: rotateZ(450deg);}
+}
+
 .cube {
   transform-style: preserve-3d;
   width: $cube-size;
@@ -40,8 +46,14 @@ $cube-height: 10vh;
 
   
   &:hover,&.active {
-    transform: rotateZ(450deg) translateZ(500px) translateY(4px) translateX(4px);
+    transform: rotateZ(450deg);
     z-index: 5;
+  }
+
+  &:hover {
+    .side {
+      border: 3px solid transparentize(black, 0.8);
+    }
   }
   
   .side {
