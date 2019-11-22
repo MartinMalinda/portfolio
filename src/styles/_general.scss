@@ -78,7 +78,6 @@ html {
 
   h2 {
     font-size: 40px;
-    // border-bottom: 5px dashed $primary;
     padding: 20px 0;
 
     &.center {
@@ -125,6 +124,7 @@ html {
   margin-bottom: 20px;
   border-bottom: 0 !important;
 
+
   .left.column {
     border: 0 !important;
   }
@@ -143,6 +143,7 @@ p {
 }
 
 .showcase {
+
 
   h2 {
     position: relative;
@@ -167,7 +168,6 @@ p {
 
   .caret {
     @media (max-width: $mobile-breakpoint){
-
       position: absolute;
       top: 0;
       bottom: 0;

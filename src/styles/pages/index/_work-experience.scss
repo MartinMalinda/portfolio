@@ -1,0 +1,49 @@
+section.work-experience {
+  background: darken(white, 2%);
+  padding-top: 1px;
+  padding-bottom: 55px;
+
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6em;
+    font-size: 18px;
+    
+    > * {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .year {
+      text-align: center;
+      flex-basis: 100px;
+      font-size: 18px;
+      padding: 50px;
+      justify-content: center;
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width: 800px) {
+      display: block;
+
+      .year {
+        flex-direction: row-reverse;
+        padding: 0;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: left;
+      }
+
+      .image {
+        margin-left: 20px;
+      }
+    }
+  }
+}
