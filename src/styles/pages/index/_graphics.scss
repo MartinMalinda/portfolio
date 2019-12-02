@@ -1,0 +1,194 @@
+section.graphics {  
+  height: 50vw;
+  background: black;
+
+  @keyframes glow {
+    0% { opacity: 1 }
+    50% { opacity: 0.8 }
+  }
+
+  .star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 3px white;
+    background: transparentize(white, 0.2);
+
+    &.one {
+      top: 20vh;
+      left: 30vw;
+      transform: scale(1.2, 1.2);
+    }
+
+    &.two {
+      top: 10vh;
+      left: 50vw;
+      animation: 0.5s glow infinite;
+      transform: scale(0.7, 0.7);
+    }
+
+    &.three {
+      top: 40vh;
+      left: 60vw;
+      animation-delay: 0.3s;
+      animation: 1s glow infinite;
+      transform: scale(1.1, 1.1);
+    }
+
+    &.four {
+      top: 40vh;
+      left: 10vw;
+      transform: scale(0.6, 0.6);
+    }
+
+    &.five {
+      top: 5vh;
+      left: 15vw;
+    }
+
+    &.six {
+      top: 20vh;
+      left: 70vw;
+      animation: 1s glow infinite;
+      transform: scale(0.5, 0.5);
+    }
+
+    &.seven {
+      top: 28vh;
+      left: 80vw;
+    }
+
+    &.eight {
+      top: 50vh;
+      left: 40vw;
+      animation-delay: 0.3s;
+      animation: 1s glow infinite;
+    }
+
+    &.nine {
+      top: 40vh;
+      left: 25vw;
+      animation-delay: 0.3s;
+      animation: 1s glow infinite;
+      transform: scale(0.4, 0.4);
+    }
+
+    &.ten {
+      top: 30vh;
+      left: 40vw;
+      animation-delay: 0.3s;
+      animation: 1s glow infinite;
+      transform: scale(0.4, 0.4);
+    }
+  }
+  
+  $tree-size: 10px;
+  // $green: #003f00;
+  $green: #143214;
+  $white: white;
+  
+  .moon {
+    $size: 4vw;
+    width: $size;
+    height: $size;
+    opacity: 0.9;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    
+    right: 10vw;
+    left: auto;
+    top: 5vw;
+    transform: rotate(15deg);
+    
+    &::before {
+      content: '';
+      background: black;
+      width: 95%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+  }
+  
+  .tree {
+    width: $tree-size;
+    display: flex;
+    flex-direction: column;
+     padding-top: $tree-size/2;
+     position: absolute;
+    
+    &.one {
+      top: -4vh;
+      right: 100vw;
+    }
+    
+    &.two {
+      top: -1vh;
+      right: 120vw;
+    }
+    
+      &.three {
+      top: 0.5vw;
+      right: 125vw;
+    }
+    
+    &.four {
+      right: 126vw;
+      top: 1.5vh;
+    }
+    
+    &.five {
+      right: 128vw;
+      top: 3vh;
+    }
+    
+    span {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: $tree-size solid transparent;
+      border-right: $tree-size solid transparent;
+      border-bottom: $tree-size solid black;
+      border-top: $tree-size solid transparent;
+      margin-bottom: -$tree-size * 1.3;
+      transform: scale(0.6, 1);
+    }
+  }
+  
+  section {
+    height: 100vh;
+    overflow: hidden;
+    background: #000900;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(0.3%) }
+  }
+  
+  .horizon {
+    animation: 6s float infinite;
+    
+    $size: 200vw;
+    left: -25vw;
+    top: 55vh;
+    width: $size;
+    height: $size;
+    background: darken($green, 4.5%);
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px 10px transparentize(white, 0.7), inset 0px 0px 40px 20px transparentize(black, 0.4);
+    
+    &.second {
+      left: -100vw;
+      animation-delay: 1s;
+      box-shadow: inset 0px 0px 40px 20px transparentize(black, 0.4);
+    }
+  }
+}
