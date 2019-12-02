@@ -8,6 +8,32 @@ section.graphics {
     50% { opacity: 0.8 }
   }
 
+  @keyframes skyfall {
+    0% { transform: translate(0, 0) rotate(45deg);  }
+    100% { transform: translate(120px, 120px) rotate(45deg);}
+  }
+
+  @keyframes fadeout {
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes glowdie {
+    0% {
+      box-shadow: 0px 0px 8px 3px transparentize(white, 0.5);
+      transform: scale(1,1);
+    }
+    90% {
+      box-shadow: -3px -3px 8px 7px transparentize(white, 0.5);
+      transform: scale(3,0.7);
+
+    }
+    100% {
+      box-shadow: 0px 0px 8px 7px transparentize(white, 0.5);
+      transform: scale(3,0.7);
+    }
+  }
+
   .star {
     position: absolute;
     top: 0;
@@ -17,11 +43,30 @@ section.graphics {
     border-radius: 50%;
     box-shadow: 0px 0px 8px 3px white;
     background: transparentize(white, 0.2);
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+
+    &::before {
+      //extra glow when dying
+
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      background: white;
+    }
 
     &.one {
       top: 20vh;
       left: 30vw;
-      transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2) rotate(45deg);
+      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
+      animation-delay: 5s;
+
+      &::before {
+        animation: 0.8s glowdie forwards;
+        animation-delay: 5s;
+      }
     }
 
     &.two {
@@ -43,6 +88,14 @@ section.graphics {
       top: 40vh;
       left: 10vw;
       transform: scale(0.6, 0.6);
+
+      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
+      animation-delay: 9s;
+
+      &::before {
+        animation: 0.8s glowdie forwards;
+        animation-delay: 9s;
+      }
     }
 
     &.five {
@@ -55,6 +108,14 @@ section.graphics {
       left: 70vw;
       animation: 1s glow infinite;
       transform: scale(0.5, 0.5);
+
+      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
+      animation-delay: 12s;
+
+      &::before {
+        animation: 0.8s glowdie forwards;
+        animation-delay: 12s;
+      }
     }
 
     &.seven {
