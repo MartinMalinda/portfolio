@@ -1,10 +1,10 @@
 $green: #145214;
 $red: darken(#ff5722, 30%);
 $blue: #008596;
-$darkgreen: #002500;
+$darkgreen: darken(#002500, 5%);
 $medium-space: 20px;
 
-$primary: darken($blue, 10%);
+$primary: $darkgreen;
 
 // $primary: darken(seagreen, 10%);
 // $primary: darken(lightcoral, 10%);
