@@ -1,6 +1,7 @@
 section.graphics {  
   height: 50vw;
   background: black;
+  position: relative;
 
   @keyframes glow {
     0% { opacity: 1 }
@@ -124,23 +125,23 @@ section.graphics {
      position: absolute;
     
     &.one {
-      top: -4vh;
-      right: 100vw;
+      top: -35px;
+      right: 50vw;
     }
     
     &.two {
-      top: -1vh;
-      right: 120vw;
+      top: -45px;
+      right: 55vw;
     }
     
       &.three {
-      top: 0.5vw;
-      right: 125vw;
+      top: -35px;
+      right: 56vw;
     }
     
     &.four {
-      right: 126vw;
-      top: 1.5vh;
+      top: -37px;
+      right: 52.5vw;
     }
     
     &.five {
@@ -173,17 +174,15 @@ section.graphics {
   }
   
   .horizon {
-    animation: 6s float infinite;
+    // animation: 6s float infinite;
     
-    $size: 200vw;
-    left: -25vw;
-    top: 55vh;
-    width: $size;
-    height: $size;
+    width: 100vw;
+    height: 1px;
+    bottom: 0;
     background: darken($green, 4.5%);
     position: absolute;
-    border-radius: 50%;
-    box-shadow: 0px 0px 100px 10px transparentize(white, 0.7), inset 0px 0px 40px 20px transparentize(black, 0.4);
+    // border-radius: 50%;
+    box-shadow: 0px 0px 700px 70px transparentize(white, 0.75);
     
     &.second {
       left: -100vw;
