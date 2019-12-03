@@ -60,13 +60,6 @@ section.graphics {
       top: 20vh;
       left: 30vw;
       transform: scale(1.2, 1.2) rotate(45deg);
-      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
-      animation-delay: 5s;
-
-      &::before {
-        animation: 0.8s glowdie forwards;
-        animation-delay: 5s;
-      }
     }
 
     &.two {
@@ -87,15 +80,6 @@ section.graphics {
     &.four {
       top: 40vh;
       left: 10vw;
-      transform: scale(0.6, 0.6);
-
-      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
-      animation-delay: 9s;
-
-      &::before {
-        animation: 0.8s glowdie forwards;
-        animation-delay: 9s;
-      }
     }
 
     &.five {
@@ -108,14 +92,6 @@ section.graphics {
       left: 70vw;
       animation: 1s glow infinite;
       transform: scale(0.5, 0.5);
-
-      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
-      animation-delay: 12s;
-
-      &::before {
-        animation: 0.8s glowdie forwards;
-        animation-delay: 12s;
-      }
     }
 
     &.seven {
@@ -144,6 +120,14 @@ section.graphics {
       animation-delay: 0.3s;
       animation: 1s glow infinite;
       transform: scale(0.4, 0.4);
+    }
+
+    &.fallen {
+      animation: 0.8s skyfall forwards, 0.8s fadeout forwards;
+
+      &::before {
+        animation: 0.8s glowdie forwards;
+      }
     }
   }
   
