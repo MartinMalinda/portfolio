@@ -45,6 +45,7 @@ section.graphics {
     background: transparentize(white, 0.2);
     transform: rotate(45deg);
     transform-origin: 100% 100%;
+    transition: 0.5s top, 0.5s left;
 
     &::before {
       //extra glow when dying
