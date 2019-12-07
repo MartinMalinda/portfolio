@@ -56,23 +56,6 @@ function getDelta(star1, star2) {
   return { top: y2 - y1, left: x2 - x1 };
 }
 
-function getDistance(star1, star2) {
-  const { top, left } = getDelta(star1, star2);
-  return Math.sqrt(Math.pow(left, 2) - Math.pow(top, 2));
-}
-
-function getClosestStar(star, stars) {
-  const distances = stars
-    .filter(iteratedStar => iteratedStar !== star)
-    .map(iteratedStar => {
-      return {
-        star: iteratedStar,
-        distance: getDistance(star, iteratedStar)
-      }
-    }).sort((a, b) => b.distance - a.distance);
-  return distances[0].star;
-}
-
 function moveStar(star, top, left) {
   const coordinates = getCoordinates(star);
   star.setAttribute('style', `
@@ -80,13 +63,3 @@ function moveStar(star, top, left) {
     top: ${coordinates.y + top}px;
   `);
 }
-
-// // Gravity!
-// window.setInterval(() => {
-//   const liveStars = getLiveStars();
-//   liveStars.forEach(star => {
-//     const closestStar = getClosestStar(star, liveStars);
-//     const delta = getDelta(star, closestStar);
-//     moveStar(star, (1000 / delta.top) / 100, (1000 / delta.left) / 100);
-//   });
-// }, 300);
