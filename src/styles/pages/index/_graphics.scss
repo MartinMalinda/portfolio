@@ -166,6 +166,7 @@ section.graphics {
   .tree {
     width: $tree-size;
     display: flex;
+    position: relative;
     flex-direction: column;
      padding-top: $tree-size/2;
      position: absolute;
@@ -237,8 +238,131 @@ section.graphics {
     }
   }
 
+  @keyframes rideAround {
+    0% { left: -100px }
+    100% { left: 220vw }
+  }
+
   .car {
+    $wheel-size: 8px;
+    $color: darken($green, 18%);
+    $window-color: darken(#5c6512, 12%);
+
     position: absolute;
     bottom: 0;
+    left: -100px;
+    width: 30px;
+    animation: 30s rideAround infinite;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+
+    .wheel {
+      display: inline-block;
+      background: black;
+      width: $wheel-size;
+      height: $wheel-size;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+
+      &.back {
+        left: 1px;
+      }
+
+      &.front {
+        right: 0;
+      }
+
+      //inner
+      &::before {
+        content: '';
+        width: $wheel-size / 2;
+        height: $wheel-size / 2;
+        background: lighten(black, 30%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        border-radius: 50%;
+      }
+
+    }
+
+    .light {
+      background: transparentize(yellow, 0.5);
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      right: -2px;
+      bottom: 7px;
+      box-shadow: 10px 0 15px 10px transparentize(yellow, 0.6);
+      transform: scale(1.5, 0.2 );
+
+      &.two {
+        transform: scale(2.2, 0.4);
+      }
+    }
+
+    .body {
+      background: $color;
+      position: absolute;
+      z-index: 2;
+      bottom: $wheel-size / 2;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+
+      &.back {
+        width: 17px;
+        height: 14px;
+        position: relative;
+
+        &::before {
+          width: 60%;
+          height: 45%;
+          content: '';
+          background: $window-color;
+          position: absolute;
+          top: 2px;
+          left: 3px;
+          border-radius: 2px;
+        }
+      }
+
+      &.front {
+        right: -1px;
+        width: 15px;
+        height: 7px;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: -4px;
+          left: -1px;
+          transform: rotate(29deg);
+          background: $color;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          border-top: 3px solid transparent;
+          border-left: 7px solid $window-color;
+          border-bottom: 3px solid $window-color;
+          border-right: 3px solid transparent;
+          height: 0;
+          width: 0;
+          position: absolute;
+          border-bottom-left-radius: 2px;
+          top: -5px;
+          // left: -1px;
+        }
+      }
+    }
   }
 }
