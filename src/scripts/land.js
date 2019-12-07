@@ -1,16 +1,23 @@
 const graphics = document.querySelector('.graphics');
 
+const config = {
+  starFallTimeMax: 15000,
+  minStarScale: 0.15,
+  initialStarAmount: 20
+};
+
 function addStar(leftPct, topPct) {
   const newStarEl = document.createElement('div');
   newStarEl.classList.add('star');
 
   let scale = Math.random();
-  if (scale < 0.2) {
-    scale = 0.2;
+  if (scale < config.minStarScale) {
+    scale = config.minStarScale;
   }
 
   newStarEl.style.top = `${topPct}vh`;
   newStarEl.style.left = `${leftPct}vw`;
+  newStarEl.style.transform = `scale(${scale})`;
   graphics.prepend(newStarEl);
 }
 
@@ -21,10 +28,27 @@ graphics.addEventListener('click', event => {
   addStar(leftPct, topPct);
 });
 
-Array(10).fill(0).forEach(() => {
+// initial stars
+Array(config.initialStarAmount).fill(0).forEach(() => {
   const leftPct = Math.random() * 100;
   const topPct = Math.random() * 100;
   addStar(leftPct, topPct);
+});
+
+// grow trees
+const trees = Array.from(document.querySelectorAll('.tree'));
+trees.forEach(tree => {
+  tree.addEventListener('click', event => {
+    const triangle = document.createElement('span');
+    tree.prepend(triangle);
+
+    const previousTransform = tree.style.transform || "translateY(0px)";
+    const extractNum = t => Number(t.split('translateY(')[1].split('px)')[0]);
+    const previousTranslate = extractNum(previousTransform);
+    tree.style.transform = `translateY(${previousTranslate - 7}px)`;
+
+    event.stopPropagation();
+  });
 });
 
 function getLiveStars() {
@@ -41,7 +65,7 @@ function getLiveStars() {
     randomStar.classList.add('fallen');
   }
 
-  window.setTimeout(starFall, Math.round(Math.random() * 300));
+  window.setTimeout(starFall, Math.round(Math.random() * config.starFallTimeMax));
 
 })();
 

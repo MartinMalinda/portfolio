@@ -236,4 +236,9 @@ section.graphics {
       box-shadow: inset 0px 0px 40px 20px transparentize(black, 0.4);
     }
   }
+
+  .car {
+    position: absolute;
+    bottom: 0;
+  }
 }
