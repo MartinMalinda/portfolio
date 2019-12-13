@@ -3,16 +3,41 @@ const graphics = document.querySelector(".graphics");
 const config = {
   starFallTimeMax: 360000,
   minStarScale: 0.15,
-  initialStarAmount: 20
+  initialStarAmount: 40
 };
 
 function addStar(leftPct, topPct) {
   const newStarEl = document.createElement("div");
   newStarEl.classList.add("star");
 
+  // random scale
   let scale = Math.random();
   if (scale < config.minStarScale) {
     scale = config.minStarScale;
+  }
+
+  // random glow
+  let random = Math.round(Math.random() * 7);
+  if (random === 1) {
+    newStarEl.classList.add("glowing-1");
+  }
+
+  if (random === 2) {
+    newStarEl.classList.add("glowing-0-5");
+  }
+
+  if (random === 3) {
+    newStarEl.classList.add("glowing-0-3");
+  }
+
+  // random delay
+  random = Math.round(Math.random() * 3);
+  if (random === 1) {
+    newStarEl.classList.add("delay-0-3");
+  }
+
+  if (random === 2) {
+    newStarEl.classList.add("delay-0-6");
   }
 
   newStarEl.style.top = `${topPct}vh`;
@@ -54,7 +79,9 @@ trees.forEach(tree => {
 });
 
 function getLiveStars() {
-  return Array.from(document.querySelectorAll(".star:not(.fallen)"));
+  return Array.from(
+    document.querySelectorAll(".star:not(.fallen):not(.satellite)")
+  );
 }
 
 // random star fall

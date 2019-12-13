@@ -1,37 +1,72 @@
-section.graphics {  
+section.graphics {
   height: 50vw;
   background: black;
   position: relative;
   overflow: hidden;
 
+  @keyframes rideAround {
+    0% {
+      left: -100px;
+    }
+    50% {
+      left: calc(100vw + 50px);
+    }
+    100% {
+      left: calc(100vw + 50px);
+    }
+  }
+
+  @keyframes rideAround2 {
+    0% {
+      left: -100px;
+    }
+    10% {
+      left: calc(100vw + 50px);
+    }
+    100% {
+      left: calc(100vw + 50px);
+    }
+  }
+
   @keyframes glow {
-    0% { opacity: 1 }
-    50% { opacity: 0.8 }
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
   }
 
   @keyframes skyfall {
-    0% { transform: translate(0, 0) rotate(45deg);  }
-    100% { transform: translate(120px, 120px) rotate(45deg);}
+    0% {
+      transform: translate(0, 0) rotate(45deg);
+    }
+    100% {
+      transform: translate(120px, 120px) rotate(45deg);
+    }
   }
 
   @keyframes fadeout {
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   @keyframes glowdie {
     0% {
       box-shadow: 0px 0px 8px 3px transparentize(white, 0.5);
-      transform: scale(1,1);
+      transform: scale(1, 1);
     }
     90% {
       box-shadow: -3px -3px 8px 7px transparentize(white, 0.5);
-      transform: scale(3,0.7);
-
+      transform: scale(3, 0.7);
     }
     100% {
       box-shadow: 0px 0px 8px 7px transparentize(white, 0.5);
-      transform: scale(3,0.7);
+      transform: scale(3, 0.7);
     }
   }
 
@@ -51,77 +86,31 @@ section.graphics {
     &::before {
       //extra glow when dying
 
-      content: '';
+      content: "";
       position: absolute;
       width: 1px;
       height: 1px;
       background: white;
     }
 
-    &.one {
-      top: 20vh;
-      left: 30vw;
-      transform: scale(1.2, 1.2) rotate(45deg);
-    }
-
-    &.two {
-      top: 10vh;
-      left: 50vw;
+    &.glowing-0-5 {
       animation: 0.5s glow infinite;
-      transform: scale(0.7, 0.7);
     }
 
-    &.three {
-      top: 40vh;
-      left: 60vw;
+    &.glowing-0-3 {
+      animation: 0.3s glow infinite;
+    }
+
+    &.glowing-1 {
+      animation: 1s glow infinite;
+    }
+
+    &.delay-0-3 {
       animation-delay: 0.3s;
-      animation: 1s glow infinite;
-      transform: scale(1.1, 1.1);
     }
 
-    &.four {
-      top: 40vh;
-      left: 10vw;
-    }
-
-    &.five {
-      top: 5vh;
-      left: 15vw;
-    }
-
-    &.six {
-      top: 20vh;
-      left: 70vw;
-      animation: 1s glow infinite;
-      transform: scale(0.5, 0.5);
-    }
-
-    &.seven {
-      top: 28vh;
-      left: 80vw;
-    }
-
-    &.eight {
-      top: 50vh;
-      left: 40vw;
-      animation-delay: 0.3s;
-      animation: 1s glow infinite;
-    }
-
-    &.nine {
-      top: 40vh;
-      left: 25vw;
-      animation-delay: 0.3s;
-      animation: 1s glow infinite;
-      transform: scale(0.4, 0.4);
-    }
-
-    &.ten {
-      top: 30vh;
-      left: 40vw;
-      animation-delay: 0.3s;
-      animation: 1s glow infinite;
-      transform: scale(0.4, 0.4);
+    &.delay-0.6 {
+      animation-delay: 0.6s;
     }
 
     &.fallen {
@@ -131,13 +120,21 @@ section.graphics {
         animation: 0.8s glowdie forwards;
       }
     }
+
+    &.satellite {
+      top: 40vh;
+      left: -20px;
+      animation: 40s rideAround forwards;
+      animation-delay: 20s;
+      animation-timing-function: linear;
+    }
   }
-  
+
   $tree-size: 10px;
   // $green: #003f00;
   $green: #143214;
   $white: white;
-  
+
   .moon {
     $size: 4vw;
     width: $size;
@@ -146,14 +143,14 @@ section.graphics {
     background: white;
     position: absolute;
     border-radius: 50%;
-    
+
     right: 10vw;
     left: auto;
     top: 5vw;
     transform: rotate(15deg);
-    
+
     &::before {
-      content: '';
+      content: "";
       background: black;
       width: 95%;
       height: 100%;
@@ -163,40 +160,40 @@ section.graphics {
       border-radius: 50%;
     }
   }
-  
+
   .tree {
     width: $tree-size;
     display: flex;
     position: relative;
     flex-direction: column;
-     padding-top: $tree-size/2;
-     position: absolute;
-    
+    padding-top: $tree-size/2;
+    position: absolute;
+
     &.one {
       top: -35px;
       right: 50vw;
     }
-    
+
     &.two {
       top: -45px;
       right: 55vw;
     }
-    
-      &.three {
+
+    &.three {
       top: -35px;
       right: 56vw;
     }
-    
+
     &.four {
       top: -37px;
       right: 52.5vw;
     }
-    
+
     &.five {
       right: 128vw;
       top: 3vh;
     }
-    
+
     span {
       display: inline-block;
       width: 0;
@@ -209,39 +206,37 @@ section.graphics {
       transform: scale(0.6, 1);
     }
   }
-  
+
   section {
     height: 100vh;
     overflow: hidden;
     background: #000900;
   }
-  
+
   @keyframes float {
-    0% { transform: translateY(0%) }
-    50% { transform: translateY(0.3%) }
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(0.3%);
+    }
   }
-  
+
   .horizon {
     // animation: 6s float infinite;
-    
+
     width: 100vw;
     height: 1px;
     bottom: 0;
     background: darken($green, 4.5%);
     position: absolute;
     box-shadow: 0px 0px 700px 70px transparentize(white, 0.75);
-    
+
     &.second {
       left: -100vw;
       animation-delay: 1s;
       box-shadow: inset 0px 0px 40px 20px transparentize(black, 0.4);
     }
-  }
-
-  @keyframes rideAround {
-    0% { left: -100px }
-    50% { left: calc(100vw + 50px) }
-    100% { left: calc(100vw + 50px) }
   }
 
   .car {
@@ -281,7 +276,7 @@ section.graphics {
 
       //inner
       &::before {
-        content: '';
+        content: "";
         width: $wheel-size / 2;
         height: $wheel-size / 2;
         background: lighten(black, 30%);
@@ -293,7 +288,6 @@ section.graphics {
         margin: auto;
         border-radius: 50%;
       }
-
     }
 
     .light {
@@ -304,7 +298,7 @@ section.graphics {
       right: -2px;
       bottom: 7px;
       box-shadow: 10px 0 15px 10px transparentize(yellow, 0.6);
-      transform: scale(1.5, 0.2 );
+      transform: scale(1.5, 0.2);
 
       &.two {
         transform: scale(2.2, 0.4);
@@ -328,7 +322,7 @@ section.graphics {
         &::before {
           width: 60%;
           height: 45%;
-          content: '';
+          content: "";
           background: $window-color;
           position: absolute;
           top: 2px;
@@ -343,7 +337,7 @@ section.graphics {
         height: 7px;
 
         &::before {
-          content: '';
+          content: "";
           width: 100%;
           height: 100%;
           position: absolute;
@@ -354,7 +348,7 @@ section.graphics {
         }
 
         &::after {
-          content: '';
+          content: "";
           display: block;
           border-top: 3px solid transparent;
           border-left: 7px solid $window-color;
