@@ -1,14 +1,14 @@
-const graphics = document.querySelector('.graphics');
+const graphics = document.querySelector(".graphics");
 
 const config = {
-  starFallTimeMax: 15000,
+  starFallTimeMax: 360000,
   minStarScale: 0.15,
   initialStarAmount: 20
 };
 
 function addStar(leftPct, topPct) {
-  const newStarEl = document.createElement('div');
-  newStarEl.classList.add('star');
+  const newStarEl = document.createElement("div");
+  newStarEl.classList.add("star");
 
   let scale = Math.random();
   if (scale < config.minStarScale) {
@@ -22,28 +22,30 @@ function addStar(leftPct, topPct) {
 }
 
 // adding stars
-graphics.addEventListener('click', event => {
-  const leftPct = event.clientX / window.innerWidth * 100;
-  const topPct = event.clientY / window.innerHeight * 100;
+graphics.addEventListener("click", event => {
+  const leftPct = (event.clientX / window.innerWidth) * 100;
+  const topPct = (event.clientY / window.innerHeight) * 100;
   addStar(leftPct, topPct);
 });
 
 // initial stars
-Array(config.initialStarAmount).fill(0).forEach(() => {
-  const leftPct = Math.random() * 100;
-  const topPct = Math.random() * 100;
-  addStar(leftPct, topPct);
-});
+Array(config.initialStarAmount)
+  .fill(0)
+  .forEach(() => {
+    const leftPct = Math.random() * 100;
+    const topPct = Math.random() * 100;
+    addStar(leftPct, topPct);
+  });
 
 // grow trees
-const trees = Array.from(document.querySelectorAll('.tree'));
+const trees = Array.from(document.querySelectorAll(".tree"));
 trees.forEach(tree => {
-  tree.addEventListener('click', event => {
-    const triangle = document.createElement('span');
+  tree.addEventListener("click", event => {
+    const triangle = document.createElement("span");
     tree.prepend(triangle);
 
     const previousTransform = tree.style.transform || "translateY(0px)";
-    const extractNum = t => Number(t.split('translateY(')[1].split('px)')[0]);
+    const extractNum = t => Number(t.split("translateY(")[1].split("px)")[0]);
     const previousTranslate = extractNum(previousTransform);
     tree.style.transform = `translateY(${previousTranslate - 7}px)`;
 
@@ -52,7 +54,7 @@ trees.forEach(tree => {
 });
 
 function getLiveStars() {
-  return Array.from(document.querySelectorAll('.star:not(.fallen)'));
+  return Array.from(document.querySelectorAll(".star:not(.fallen)"));
 }
 
 // random star fall
@@ -62,11 +64,14 @@ function getLiveStars() {
   const randomStar = liveStars[randomIndex];
 
   if (randomStar) {
-    randomStar.classList.add('fallen');
+    randomStar.classList.add("fallen");
   }
 
-  window.setTimeout(starFall, Math.round(Math.random() * config.starFallTimeMax));
+  const nextFallIn = Math.round(
+    (Math.random() * config.starFallTimeMax) / (liveStars.length + 1)
+  );
 
+  window.setTimeout(starFall, nextFallIn);
 })();
 
 function getCoordinates(star) {
@@ -82,8 +87,11 @@ function getDelta(star1, star2) {
 
 function moveStar(star, top, left) {
   const coordinates = getCoordinates(star);
-  star.setAttribute('style', `
+  star.setAttribute(
+    "style",
+    `
     left: ${coordinates.x + left}px;
     top: ${coordinates.y + top}px;
-  `);
+  `
+  );
 }
