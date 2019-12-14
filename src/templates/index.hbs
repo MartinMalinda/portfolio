@@ -49,8 +49,6 @@
 
 <section class="top">
 
-  {{>cubes}}
-
   {{!-- <div class="inner ui container"> --}}
   <h1 class="ui container">I am Martin&nbsp;Malinda and I create <span class="highlighted">interactive user
       experiences</span>
@@ -259,12 +257,15 @@
 </section>
 
 <section class="contact">
-  <div class="photo">
-    <img itemprop="image"
-      src="https://res.cloudinary.com/serenity-themes/image/upload/q_auto,f_auto,w_450/v1487255126/martin_sykp3p.jpg"
-      alt="Martin Malinda (personal photo)">
-    <div class="icons highlighted">
-      {{>icons}}
+  {{>cubes}}
+  <div class="content">
+    <div class="photo">
+      <img itemprop="image"
+        src="https://res.cloudinary.com/serenity-themes/image/upload/q_auto,f_auto,w_450/v1487255126/martin_sykp3p.jpg"
+        alt="Martin Malinda (personal photo)">
+      <div class="icons highlighted">
+        {{>icons}}
+      </div>
     </div>
   </div>
 </section>

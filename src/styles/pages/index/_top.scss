@@ -8,7 +8,11 @@ section.top {
   border-bottom: 0;
   margin-bottom: 0;
   // background: transparentize(mix(black, $primary, 40%), 0.98);
-  background: linear-gradient(to bottom, mix(black, $primary, 20%), mix(black, $primary, 0%));
+  background: linear-gradient(
+    to bottom,
+    mix(black, $primary, 20%),
+    mix(black, $primary, 0%)
+  );
   color: white;
 
   overflow: hidden;
@@ -20,19 +24,6 @@ section.top {
 
   .secrets {
     z-index: 2;
-  }
-
-  .letter {
-    transform: rotate(-90deg);
-    opacity: 0.7;
-    text-shadow: 1px 1px 1px black;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-
-    @media (max-width: 1152px){
-      display: none;
-    }
   }
 
   .stage {
@@ -51,11 +42,11 @@ section.top {
   h1 {
     font-weight: 500;
 
-    @media (max-width: $tablet-portrait-breakpoint){
+    @media (max-width: $tablet-portrait-breakpoint) {
       font-size: 28px;
     }
 
-    @media (max-width: 320px){
+    @media (max-width: 320px) {
       font-size: 25px;
     }
   }
@@ -66,7 +57,7 @@ section.top {
     font-weight: 400;
     font-size: 25px;
 
-    @media (max-width: $mobile-breakpoint){
+    @media (max-width: $mobile-breakpoint) {
       font-size: 20px;
     }
   }
@@ -92,7 +83,6 @@ section.top {
       &::after {
         display: none;
       }
-
     }
   }
 }

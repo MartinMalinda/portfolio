@@ -1,9 +1,23 @@
-$cube-size: 20vh;
-$cube-width: 10vw;
-$cube-height: 10vh;
+$cube-size: 25vh;
+$cube-width: 20vw;
+$cube-height: 20vh;
 
 * {
   box-sizing: border-box;
+}
+
+.letter {
+  color: white;
+  transform: rotate(-90deg);
+  opacity: 1;
+  text-shadow: 1px 1px 1px black;
+  position: absolute;
+  left: 10px;
+  margin: auto;
+
+  @media (max-width: 1152px) {
+    display: none;
+  }
 }
 
 .stage {
@@ -13,7 +27,7 @@ $cube-height: 10vh;
   position: relative;
   top: $cube-size / 10;
 
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -24,9 +38,15 @@ $cube-height: 10vh;
 }
 
 @keyframes pulse {
-    0% {transform: rotateZ(450deg);}
-  50% {transform: rotateZ(450deg) scale(1.05);}
-  100% {transform: rotateZ(450deg);}
+  0% {
+    transform: rotateZ(450deg);
+  }
+  50% {
+    transform: rotateZ(450deg) scale(1.05);
+  }
+  100% {
+    transform: rotateZ(450deg);
+  }
 }
 
 .cube {
@@ -37,15 +57,15 @@ $cube-height: 10vh;
   transform-origin: 50% 50%;
   position: absolute;
   transform: rotateY(90deg);
-  
+
   @each $index in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
-    &:nth-child(#{$index}){
+    &:nth-child(#{$index}) {
       left: $cube-size * $index - $cube-size + 0.01;
-    }    
+    }
   }
 
-  
-  &:hover,&.active {
+  &:hover,
+  &.active {
     transform: rotateZ(450deg);
     z-index: 5;
   }
@@ -55,7 +75,7 @@ $cube-height: 10vh;
       border: 3px solid transparentize(black, 0.8);
     }
   }
-  
+
   .side {
     background: transparentize(black, 0.9);
     width: $cube-size;
@@ -68,35 +88,35 @@ $cube-height: 10vh;
     justify-content: right;
     align-items: flex-start;
     padding: 10px;
-    
-    &.front{
+
+    &.front {
       transform: translateZ($cube-size/2);
       background: transparentize(mix($primary, purple, 50%), 0.9);
     }
-    
-    &.right{
+
+    &.right {
       transform: rotateY(90deg) translateZ($cube-size/2);
       background: transparent;
     }
-    
-    &.left{
+
+    &.left {
       transform: rotateY(90deg) translateZ(-$cube-size/2);
-        background: transparent;
+      background: transparent;
     }
-    
-    &.top{
+
+    &.top {
       transform: rotateX(90deg) translateZ($cube-size/2);
       background: transparentize(mix(red, black, 50%), 0.7);
     }
-        
-    &.bottom{
+
+    &.bottom {
       transform: rotateX(90deg) translateZ(-$cube-size/2);
-        background: transparentize(mix(salmon, black, 50%), 0.7);
+      background: transparentize(mix(salmon, black, 50%), 0.7);
     }
-    
+
     &.back {
       transform: translateZ(-$cube-size/2);
-        background: transparentize(mix(green, black, 50%), 0.7);
+      background: transparentize(mix(green, black, 50%), 0.7);
     }
   }
 }
