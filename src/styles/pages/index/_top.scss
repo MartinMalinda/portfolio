@@ -1,4 +1,4 @@
-section.top {
+section.top-content {
   position: relative;
   height: calc(95vh - 100px);
   display: flex;
@@ -7,12 +7,7 @@ section.top {
 
   border-bottom: 0;
   margin-bottom: 0;
-  // background: transparentize(mix(black, $primary, 40%), 0.98);
-  background: linear-gradient(
-    to bottom,
-    mix(black, $primary, 20%),
-    mix(black, $primary, 0%)
-  );
+
   color: white;
 
   overflow: hidden;
