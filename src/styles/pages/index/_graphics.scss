@@ -4,6 +4,10 @@ section.graphics {
   position: relative;
   overflow: hidden;
 
+  @media (max-width: 1000px) {
+    height: 95vh;
+  }
+
   @keyframes rideAround {
     0% {
       left: -100px;

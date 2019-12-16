@@ -163,7 +163,6 @@ gulp.task("critical", function() {
 
 gulp.task("build", function(cb) {
   return runSequence(
-    "markdown",
     ["templates", "styles", "scripts", "images"],
     "critical",
     "public-dist",
@@ -180,7 +179,6 @@ gulp.task("watch", function() {
   gulp.watch("src/data/**/*.json", ["templates"]);
   gulp.watch("dist/*.html", ["bs-reload"]);
   gulp.watch("public/**/*", ["public-dist"]);
-  gulp.watch("src/templates/**/*.md", ["markdown"]);
 });
 
 gulp.task("default", function(cb) {

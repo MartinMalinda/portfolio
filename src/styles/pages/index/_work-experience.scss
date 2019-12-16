@@ -1,9 +1,9 @@
 section.work-experience {
   background: darken(white, 2%);
   padding-top: 1px;
-  padding-bottom: 60px;
-  padding-top: 10px;
 
+  padding-bottom: 80px;
+  padding-top: 30px;
 
   .timeline-item {
     display: flex;
@@ -11,7 +11,7 @@ section.work-experience {
     // justify-content: center;
     line-height: 1.6em;
     font-size: 18px;
-    
+
     > * {
       // max-width: 600px;
       display: flex;

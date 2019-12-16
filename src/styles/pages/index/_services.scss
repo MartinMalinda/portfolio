@@ -6,14 +6,15 @@ section.services {
   font-size: 20px;
   line-height: 1.5em;
   background: darken(white, 2%);
-  padding-bottom: 45px;
 
+  padding-bottom: 65px;
+  padding-top: 20px;
 
   .columns {
     display: flex;
     position: relative;
 
-    @media (max-width: $mobile-breakpoint){
+    @media (max-width: $mobile-breakpoint) {
       flex-direction: column;
       height: auto;
       .block {
@@ -40,7 +41,7 @@ section.services {
     height: 400px;
 
     &::after {
-      content: 'See details';
+      content: "See details";
       font-size: 12px;
       font-weight: 300;
       text-shadow: none;
@@ -54,12 +55,13 @@ section.services {
       left: 50%;
       transform: translate(-50%);
 
-      @media (min-width: $tablet-portrait-breakpoint){
+      @media (min-width: $tablet-portrait-breakpoint) {
         font-size: 14px;
       }
     }
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       .icon {
         will-change: top, left, width, height, transform;
       }
@@ -99,7 +101,7 @@ section.services {
       }
     }
 
-    @media (max-width: $tablet-portrait-breakpoint){
+    @media (max-width: $tablet-portrait-breakpoint) {
       font-size: 20px;
     }
   }
@@ -114,13 +116,14 @@ section.services {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%);
-    
+
     svg {
       height: 100%;
       max-width: 100%;
       fill: mix($primary, white, 20%);
 
-      &, & path {
+      &,
+      & path {
         stroke: mix($primary, black, 90%);
         stroke-width: 2px;
       }
@@ -164,23 +167,21 @@ section.services {
       padding-top: 5px;
     }
 
-    @media (min-width: $tablet-portrait-breakpoint){
+    @media (min-width: $tablet-portrait-breakpoint) {
       font-size: 14px;
     }
-
   }
 
   .column {
     width: 33%;
     margin: 10px;
 
-    @media (max-width: $mobile-breakpoint){
+    @media (max-width: $mobile-breakpoint) {
       width: 100%;
       margin: 10px 0;
     }
   }
 
   .inner {
-    
   }
 }
