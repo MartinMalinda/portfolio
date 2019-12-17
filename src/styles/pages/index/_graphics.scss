@@ -143,6 +143,8 @@ section.graphics {
     $size: 4vw;
     width: $size;
     height: $size;
+    min-width: 70px;
+    min-height: 70px;
     opacity: 0.9;
     background: white;
     position: absolute;

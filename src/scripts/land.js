@@ -48,8 +48,11 @@ function addStar(leftPct, topPct) {
 
 // adding stars
 graphics.addEventListener("click", event => {
+  const scrollTop = document.scrollingElement.scrollTop;
+
   const leftPct = (event.clientX / window.innerWidth) * 100;
-  const topPct = (event.clientY / window.innerHeight) * 100;
+  const topPct = ((event.clientY + scrollTop) / window.innerHeight) * 100;
+
   addStar(leftPct, topPct);
 });
 
