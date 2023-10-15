@@ -1,13 +1,12 @@
 function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
 
-$('.cube').on('mouseenter', function(){
-  $(this).addClass('active');
-});
+const cubes = document.querySelectorAll('.cube');
 
-$('.cube').on('mouseleave', function(){
-  setTimeout(() => {
-    $(this).removeClass('active');
-  }, getRandomArbitrary(50, 3000));
+cubes.forEach(cubeEl => {
+  cubeEl.addEventListener('mouseenter', () => cubeEl.classList.add('active'));
+  cubeEl.addEventListener('mouseleave', () => setTimeout(() => {
+    cubeEl.classList.remove('active');
+  }, getRandomArbitrary(50, 3000)));
 });

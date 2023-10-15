@@ -1,5 +1,11 @@
-const $graphics = $('.canvas');
-const elementWatcher = scrollMonitor.create( $graphics[0], {top: 300, bottom: 300});
+const canvas = document.querySelector('.canvas');
 
-elementWatcher.fullyEnterViewport(() => $graphics.addClass('animate'));
-elementWatcher.exitViewport(() => $graphics.removeClass('animate'));
+const observer = new IntersectionObserver(([entry]) => {
+  if (entry.isIntersecting) {
+    canvas.classList.add('animate');
+  } else {
+    canvas.classList.remove('animate');
+  }
+});
+
+observer.observe(canvas);

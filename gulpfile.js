@@ -16,7 +16,6 @@ import fs from "fs";
 import addsrc from "gulp-add-src";
 import htmlmin from "gulp-htmlmin";
 import svgmin from "gulp-svgmin";
-import runSequence from "run-sequence";
 import cache from 'gulp-cache';
 import nodeSass from 'node-sass';
 
@@ -95,10 +94,6 @@ gulp.task("scripts", function () {
       })
     )
     .pipe(concat("main.js"))
-    .pipe(addsrc.prepend("node_modules/cash-dom/dist/cash.min.js"))
-    .pipe(addsrc.prepend("bower_components/scrollMonitor/scrollMonitor.js"))
-    .pipe(gulpif(isProduction, uglify()))
-    .pipe(concat("main.js"))
     .pipe(gulp.dest("dist/scripts/"))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -158,6 +153,4 @@ gulp.task("watch", function () {
   gulp.watch("public/**/*", ["public-dist"]);
 });
 
-gulp.task("default", function (cb) {
-  runSequence("build", "browser-sync", "watch", cb);
-});
+gulp.task("default", gulp.series("build", "browser-sync", "watch"));
