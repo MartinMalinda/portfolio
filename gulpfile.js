@@ -16,7 +16,6 @@ import fs from "fs";
 import addsrc from "gulp-add-src";
 import htmlmin from "gulp-htmlmin";
 import svgmin from "gulp-svgmin";
-import critical from "critical";
 import runSequence from "run-sequence";
 import cache from 'gulp-cache';
 import nodeSass from 'node-sass';
