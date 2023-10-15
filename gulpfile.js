@@ -1,31 +1,27 @@
-const gulp = require("gulp"),
-  plumber = require("gulp-plumber"),
-  rename = require("gulp-rename");
-const autoprefixer = require("gulp-autoprefixer");
-const babel = require("gulp-babel");
-const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
-const imagemin = require("gulp-imagemin"),
-  cache = require("gulp-cache");
-const minifycss = require("gulp-minify-css");
-const sass = require("gulp-sass");
-const browserSync = require("browser-sync");
-const util = require("gulp-util");
-const gulpif = require("gulp-if");
-const handlebars = require("gulp-compile-handlebars");
-const data = require("gulp-data");
-const swig = require("gulp-swig");
-const fs = require("fs");
-const addsrc = require("gulp-add-src");
-const htmlmin = require("gulp-htmlmin");
-const svgmin = require("gulp-svgmin");
-const critical = require("critical").stream;
-const runSequence = require("run-sequence");
-const purify = require("gulp-purifycss");
-const surge = require("gulp-surge");
-const markdownit = require("gulp-markdown-it");
+import gulp from 'gulp';
+import plumber from "gulp-plumber";
+import rename from "gulp-rename";
 
-const isProduction = util.env.production;
+import autoprefixer from "gulp-autoprefixer";
+import concat from "gulp-concat";
+import uglify from "gulp-uglify";
+import imagemin from "gulp-imagemin";
+import minifycss from "gulp-minify-css";
+import gulpSass from "gulp-sass";
+import browserSync from "browser-sync";
+import util from "gulp-util";
+import gulpif from "gulp-if";
+import handlebars from "gulp-compile-handlebars";
+import fs from "fs";
+import addsrc from "gulp-add-src";
+import htmlmin from "gulp-htmlmin";
+import svgmin from "gulp-svgmin";
+import critical from "critical";
+import runSequence from "run-sequence";
+import cache from 'gulp-cache';
+import nodeSass from 'node-sass';
+
+const isProduction = true;
 
 function cdimg(path, width) {
   return (
@@ -36,7 +32,7 @@ function cdimg(path, width) {
   );
 }
 
-gulp.task("browser-sync", function() {
+gulp.task("browser-sync", function () {
   return browserSync({
     server: {
       baseDir: "./dist"
@@ -44,18 +40,18 @@ gulp.task("browser-sync", function() {
   });
 });
 
-gulp.task("bs-reload", function() {
+gulp.task("bs-reload", function () {
   return browserSync.reload();
 });
 
-gulp.task("svgmin", function() {
+gulp.task("svgmin", function () {
   return gulp
     .src("src/images/**/*.svg")
     .pipe(svgmin()) // gulpif isProduction ?
     .pipe(gulp.dest("dist/images/"));
 });
 
-gulp.task("images", ["svgmin"], function() {
+gulp.task("images", function () {
   return gulp
     .src("src/images/**/*.{jpg,png}")
     .pipe(
@@ -66,18 +62,20 @@ gulp.task("images", ["svgmin"], function() {
     .pipe(gulp.dest("dist/images/"));
 });
 
-gulp.task("styles", function() {
+gulp.task("styles", function () {
+  const _sass = gulpSass(nodeSass);
+
   return gulp
     .src(["src/styles/app.scss"])
     .pipe(
       plumber({
-        errorHandler: function(error) {
+        errorHandler: function (error) {
           console.log(error.message);
           this.emit("end");
         }
       })
     )
-    .pipe(sass())
+    .pipe(_sass())
     .pipe(autoprefixer())
     .pipe(addsrc("node_modules/normalize-css/normalize.css"))
     .pipe(concat("app.css"))
@@ -86,19 +84,18 @@ gulp.task("styles", function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src(["src/scripts/**/*.js"])
     .pipe(
       plumber({
-        errorHandler: function(error) {
+        errorHandler: function (error) {
           console.log(error.message);
           this.emit("end");
         }
       })
     )
     .pipe(concat("main.js"))
-    .pipe(babel())
     .pipe(addsrc.prepend("node_modules/cash-dom/dist/cash.min.js"))
     .pipe(addsrc.prepend("bower_components/scrollMonitor/scrollMonitor.js"))
     .pipe(gulpif(isProduction, uglify()))
@@ -107,12 +104,12 @@ gulp.task("scripts", function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("templates", function() {
+gulp.task("templates", function () {
   var options = {
     batch: ["./src/templates/partials"],
     helpers: {
       cdimg: cdimg,
-      cdsrcset: function(path) {
+      cdsrcset: function (path) {
         var sizes = [100, 200, 400, 800, 1024, 1440, 1660, 1920].map(size => {
           return cdimg(path, size) + " " + size + "w";
         });
@@ -135,42 +132,23 @@ gulp.task("templates", function() {
   //.pipe(gulpif(isProduction, htmlmin({collapseWhitespace: true})))
 });
 
-gulp.task("public-dist", function() {
+gulp.task("public-dist", function () {
   return gulp.src("public/**/*").pipe(gulp.dest("dist"));
 });
 
-gulp.task("critical", function() {
+gulp.task("critical", function () {
   return gulp
     .src("dist/*.html")
-    .pipe(
-      gulpif(
-        isProduction,
-        critical({
-          base: "dist/",
-          inline: true,
-          minify: true,
-          extract: true,
-          css: ["dist/styles/app.css"]
-        })
-      )
-    )
     .pipe(gulpif(isProduction, htmlmin({ collapseWhitespace: true })))
-    .on("error", function(err) {
+    .on("error", function (err) {
       util.log(util.colors.red(err.message));
     })
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task("build", function(cb) {
-  return runSequence(
-    ["templates", "styles", "scripts", "images"],
-    "critical",
-    "public-dist",
-    cb
-  );
-});
+gulp.task("build", gulp.series("templates", "styles", "scripts", "images", "critical", "public-dist"));
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   gulp.watch("src/styles/**/*.scss", ["styles"]);
   gulp.watch("src/images/**/*.{jpg,png,svg}", ["images"]);
   gulp.watch("src/scripts/**/*.js", ["scripts"]);
@@ -181,6 +159,6 @@ gulp.task("watch", function() {
   gulp.watch("public/**/*", ["public-dist"]);
 });
 
-gulp.task("default", function(cb) {
+gulp.task("default", function (cb) {
   runSequence("build", "browser-sync", "watch", cb);
 });
