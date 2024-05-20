@@ -4,7 +4,7 @@ import { UserConfig } from 'vite';
 import { resolve } from 'path';
 
 const config: UserConfig = {
-  plugins: [vue(), ssr()],
+  plugins: [vue(), ssr({ prerender: true })],
   resolve: {
     alias: {
       '/~': resolve(__dirname, './'),
