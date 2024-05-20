@@ -83,3 +83,7 @@ async function renderToString(app: App) {
   if (err) throw err
   return appHtml
 }
+
+export async function prerender() {
+  return ['/'];
+}
