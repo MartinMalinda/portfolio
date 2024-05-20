@@ -1,7 +1,0 @@
-Landing.sublime-project
-Landing.sublime-workspace
-.DS_Store
-node_modules
-dist
-**/*.md.hbs
-bower_components
