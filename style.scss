@@ -1,0 +1,138 @@
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// Flex
+
+.flex {
+  display: flex;
+}
+
+.f-sm-wrap {
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+@for $i from 1 through 10 {
+  .gap-#{$i} {
+    gap: $space * $i;
+  }
+}
+
+// Spacing
+
+@for $i from 1 through 10 {
+  .mt-#{$i} {
+    margin-top: $space * $i;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $space * $i;
+  }
+
+  .pt-#{$i} {
+    padding-top: $space * $i;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $space * $i;
+  }
+
+  .pl-#{$i} {
+    padding-left: $space * $i;
+  }
+
+  .pr-#{$i} {
+    padding-right: $space * $i;
+  }
+
+  .px-#{$i} {
+    padding-left: $space * $i;
+    padding-right: $space * $i;
+  }
+
+  .py-#{$i} {
+    padding-top: $space * $i;
+    padding-bottom: $space * $i;
+  }
+
+  .z-#{$i} {
+    position: relative;
+    z-index: $i;
+  }
+}
+
+.block {
+  display: block;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+.h100p {
+  height: 100%;
+}
+
+.w100p {
+  width: 100% !important;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
