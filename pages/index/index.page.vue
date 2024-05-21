@@ -369,10 +369,13 @@ a {
   }
 
   & > * {
-    border: 1px solid darken($yellow, 50%) !important;
+    // border: 1px solid darken($yellow, 5%) !important;
+    border: 1px solid transparent;
+    background: rgb(255, 255, 255);
     display: inline-flex;
     padding: $space $space * 1.5;
     border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 
     &:hover {
       background: lighten($yellow, 20%);
