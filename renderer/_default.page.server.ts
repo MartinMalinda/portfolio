@@ -30,6 +30,34 @@ async function render(pageContext: PageContextServer) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <meta name="twitter:site" content="@martinmalindacz">
+        <style>
+    @font-face {
+      font-family: 'Avenir';
+      src: url('/avenir/subset-AvenirLTStd-Black.woff2') format('woff2'),
+        url('/avenir/subset-AvenirLTStd-Black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* @font-face {
+      font-family: 'Avenir';
+      src: url('/avenir/subset-AvenirLTStd-Roman.woff2') format('woff2'),
+        url('/avenir/subset-AvenirLTStd-Roman.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    } */
+
+    @font-face {
+      font-family: 'Avenir';
+      src: url('/avenir/subset-AvenirLTStd-Book.woff2') format('woff2'),
+        url('/avenir/subset-AvenirLTStd-Book.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
         <meta property="og:type" content="profile">
         <script type="application/ld+json">{
   "@context": "http://schema.org",

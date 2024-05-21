@@ -18,8 +18,9 @@ const email = () => {
         <div class="cover">
           <div>
             <img
-              src="https://res.cloudinary.com/serenity-themes/image/upload/v1716215445/portfolio-2/pic.png"
+              src="https://res.cloudinary.com/serenity-themes/image/upload/w_350,f_webp/v1716215445/portfolio-2/pic.png"
               class="profile-pic"
+              alt="Profile picture of Martin Malinda"
             />
           </div>
         </div>
@@ -64,7 +65,7 @@ const email = () => {
           <div class="flex gap-2 ai-center mt-4">
             <HeroheroLogo class="logo" />
             <p>
-              I Co-Founded
+              I co-founded
               <a target="_blank" href="https://herohero.co">Herohero</a>, a
               monetisation service for creators. <br />
               Herohero has seen a rapid growth in Czech Republic and Slovakia
@@ -109,8 +110,9 @@ const email = () => {
               </div>
             </div>
             <img
+              alt="Giving a talk"
               class="photo"
-              src="https://res.cloudinary.com/serenity-themes/image/upload/v1716223319/portfolio-2/1714922488655.jpg"
+              src="https://res.cloudinary.com/serenity-themes/image/upload/w_700,f_webp/v1716223319/portfolio-2/1714922488655.jpg"
             />
           </div>
         </div>
@@ -143,7 +145,8 @@ const email = () => {
             <img
               style="width: 400px; max-width: 90%"
               class="photo"
-              src="https://res.cloudinary.com/serenity-themes/image/upload/v1716233411/portfolio-2/1601820372122.jpg"
+              alt="Teaching code"
+              src="https://res.cloudinary.com/serenity-themes/image/upload/w_900,f_webp/v1716233411/portfolio-2/1601820372122.jpg"
             />
           </div>
         </div>
@@ -224,6 +227,7 @@ p {
 }
 
 h1 {
+  letter-spacing: 0.5px;
   margin-top: $space * 8;
   margin-bottom: 0;
   text-align: center;
@@ -328,7 +332,6 @@ h1 {
 
 a {
   color: rgb(155, 155, 31);
-  font-weight: bold;
   display: inline-block;
   border-bottom: 1px dashed rgb(155, 155, 31);
   padding-bottom: 0px;
