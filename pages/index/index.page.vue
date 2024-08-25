@@ -5,6 +5,7 @@ import LinkedinLogo from "./components/LinkedinLogo.vue";
 import MediumLogo from "./components/MediumLogo.vue";
 import GithubLogo from "./components/GithubLogo.vue";
 import Envelope from "./components/Envelope.vue";
+import PowersaveLogo from "./PowersaveLogo.vue";
 
 const email = () => {
   window.open("mailto:malindacz@gmail.com");
@@ -73,11 +74,11 @@ const email = () => {
             </p>
           </div>
           <div class="flex gap-2 ai-center mt-4">
-            <OtimoLogo class="logo" />
+            <PowersaveLogo class="logo" />
             <p>
               I am currently building
-              <a target="_blank" href="https://otimo.us">Otimo</a> - A web app
-              to save & share quality&nbsp;content.
+              <a target="_blank" href="https://powersave.pro">Powersave</a> - A
+              chrome extension to save to Airtable with AI.
             </p>
           </div>
           <div class="mt-4">
