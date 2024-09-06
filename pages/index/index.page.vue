@@ -2,6 +2,9 @@
 import { defineAsyncComponent } from "vue";
 import Button from "../../components/Button.vue";
 import Supabase from "../../components/icons/Supabase.vue";
+import Database from "../../components/icons/Database.vue";
+import Bolt from "../../components/icons/Bolt.vue";
+import Rocket from "../../components/icons/Rocket.vue";
 
 const Calendar = defineAsyncComponent(
   () => import("../../components/Calendar.vue")
@@ -21,6 +24,16 @@ const Typescript = defineAsyncComponent(
 const Zapier = defineAsyncComponent(
   () => import("../../components/icons/Zapier.vue")
 );
+const Retool = defineAsyncComponent(
+  () => import("../../components/icons/Retool.vue")
+);
+const Dashboard = defineAsyncComponent(
+  () => import("../../components/icons/Dashboard.vue")
+);
+
+const email = () => {
+  window.open("mailto:malindacz@gmail.com");
+};
 </script>
 
 <template>
@@ -32,12 +45,37 @@ const Zapier = defineAsyncComponent(
       <b>I'm available for freelance:</b> workshops, consultations, building
       solutions for you.
     </h4>
-    <Button :icon="Calendar" size="smaller">Let's talk</Button>
+    <Button @click="email" :icon="Calendar" size="smaller">Let's talk</Button>
     <h2>Automations</h2>
     <div class="tools flex gap-xs">
-      <Button :icon="Airtable" variant="secondary" size="small" />
-      <Button :icon="Pipedream" variant="secondary" size="small" />
-      <Button :icon="Zapier" variant="secondary" size="small" />
+      <Button
+        href="https://airtable.com/"
+        target="_blank"
+        :icon="Airtable"
+        variant="secondary"
+        size="small"
+      />
+      <Button
+        href="https://pipedream.com/"
+        target="_blank"
+        :icon="Pipedream"
+        variant="secondary"
+        size="small"
+      />
+      <Button
+        href="https://zapier.com/"
+        target="_blank"
+        :icon="Zapier"
+        variant="secondary"
+        size="small"
+      />
+      <Button
+        href="https://retool.com/"
+        target="_blank"
+        :icon="Retool"
+        variant="secondary"
+        size="small"
+      />
     </div>
     <p>
       I am able to streamline and automate processes for your company to save
@@ -51,40 +89,87 @@ const Zapier = defineAsyncComponent(
       collection, metrics collection or just about anything else.
       <br />
     </p>
-    <h3>Why?</h3>
-    <ul>
-      <li>
-        <b>Internal dashboards:</b> make sure key people can access relevant
-        data in most user friendly way. No need for manual reports because
-        dashboards stay always up to date.
-      </li>
-      <li>
-        <b>Single source of truth:</b> no need to create new spreadsheets over
-        and over again. Instead define references and formulas. Data reference
-        each other instead of copying each other. This ensures correctness: no
-        danger of looking at outdated data.
-      </li>
-      <li>
-        <b>Save time and energy:</b> eliminiate mundane repetitive tasks and
-        have more time left for more creative and human parts of the job.
-      </li>
-      <li>
-        <b>New possibilities:</b> efficient storage and usage of tools can
-        unlock completely new processes. New approaches to sales, customer
-        success, product management and so on.
-      </li>
-    </ul>
+    <div class="flex fd-column gap-1">
+      <div class="service">
+        <Dashboard class="icon" />
+        <div class="texts">
+          <b>Dashboards</b>
+          <div>Access relevant up to date data at the same place.</div>
+        </div>
+      </div>
+      <div class="service">
+        <Database class="icon" />
+        <div class="texts">
+          <b>Single source of truth</b>
+          <div>Internal data always up to date, live, interlinked.</div>
+        </div>
+      </div>
+      <div class="service">
+        <Bolt class="icon" />
+        <div class="texts">
+          <b>Save time & energy</b>
+          <div>
+            Automate repetitive tasks and have more energy left for the creative
+            and human parts of work.
+          </div>
+        </div>
+      </div>
+      <div class="service">
+        <Rocket class="icon" />
+        <div class="texts">
+          <b>New processes</b>
+          <div>
+            Automation can unlock new approaches to sales, onboarding, customer
+            success, project management. One little automation can unlock
+            another one, leading to a positive, transformative "snowball"
+            effect.
+          </div>
+        </div>
+      </div>
+    </div>
     <h2>Web development</h2>
     <div class="tools flex gap-xs">
-      <Button :icon="Vue" variant="secondary" size="small" />
-      <Button :icon="Supabase" variant="secondary" size="small" />
-      <Button :icon="Typescript" variant="secondary" size="small" />
+      <Button
+        href="https://vuejs.org/"
+        target="_blank"
+        :icon="Vue"
+        variant="secondary"
+        size="small"
+      />
+      <Button
+        href="https://supabase.com/"
+        target="_blank"
+        :icon="Supabase"
+        variant="secondary"
+        size="small"
+      />
+      <Button
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+        :icon="Typescript"
+        variant="secondary"
+        size="small"
+      />
     </div>
     <p>
       My expertise lies in building web user interfaces that load fast and stay
       fast. I have a lot of experience with Vue.js, TypeScript and building
       complex web applications.
     </p>
+    <h3>Services</h3>
+    <ul>
+      <li>
+        <b>Building MVPs</b>
+      </li>
+      <li>
+        <b>Code review & consulting:</b> Help pick the right libraries, set up
+        architecture, build tooling and design quality reusable components.
+      </li>
+      <li>
+        <b>Performance:</b> Identify performance bottlenecks and implement fixes
+        to make web apps load fast and stay fast.
+      </li>
+    </ul>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -112,5 +197,25 @@ a {
   display: inline-block;
   border-bottom: 1px solid black;
   line-height: 1.2;
+}
+
+.service {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: $space;
+  line-height: 1.25;
+  border-radius: 5px;
+  display: flex;
+  gap: $space;
+
+  b {
+    display: block;
+    margin: $space * 1 0;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+  }
 }
 </style>

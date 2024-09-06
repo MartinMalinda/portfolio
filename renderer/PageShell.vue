@@ -107,7 +107,6 @@ aside {
   // border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   width: 800px;
-  padding-top: 5vh;
 
   h1 {
     margin: 0;
