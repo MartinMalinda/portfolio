@@ -1,1 +1,345 @@
 $space: 8px;
+$white: #fff;
+
+$dark-green: #003832;
+$mild-green: #5b6861;
+$smoke-green: #AFB99A;
+
+$yellow: rgb(179, 165, 72);
+$whity: #dfe4e2;
+$grey: rgb(138, 138, 138);
+$almost-black: rgb(53, 51, 56);
+$light-grey: rgb(212, 212, 212);
+$dark-grey: #302F2F;
+$transparent-grey: transparentize($light-grey, 0.7);
+
+$dark-blue: darken(#3c3933, 0%);
+
+$secondary-red: rgb(255, 157, 157);
+$mobile-breakpoint: 750px;
+
+* {
+  touch-action: manipulation;
+}
+
+* {
+  // display: none;
+  // background: rgb(52, 52, 52) !important;
+  // color: transparent !important;
+  // box-shadow: none !important;
+}
+
+:root {
+    --balloon-border-radius: 5px;
+    --balloon-color: #{$dark-grey};
+
+  font-family: Roboto, system-ui, Helvetica, Arial, sans-serif;
+  color: $almost-black;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.001em;
+  // letter-spacing: -0.01em;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  
+  --vh: 1vh; // this is dynamically updated with JS
+  --green: #173217;
+  --white: #fff;
+}
+
+button, h1, h2, h3, h4, b, a {
+  font-family: Karla, Roboto, system-ui, Helvetica, Arial, sans-serif;
+}
+
+a {
+  letter-spacing: initial;
+}
+
+// a {
+//   font-size: 1.1em;
+// }
+
+button {
+  color: $almost-black;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  // background: transparentize($dark-blue, 0.995);
+}
+
+html, html * {
+  box-sizing: border-box;
+}
+
+b, strong {
+  // font-family: Helvetica, Arial, sans-serif;
+  // font-size: 16px;
+}
+
+$mark-color: transparentize(rgb(228, 198, 5), 0.8);
+mark {
+  background: $mark-color;
+  outline: 1px solid $mark-color;
+  border-radius: 5px;
+  color: inherit;
+}
+
+input {
+  padding: 16px;
+  border: 2px solid var(--green);
+  background: var(--white);
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20%);
+    transform-origin: 50% 50%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(5px)
+  }
+
+  100% {
+    transform: translateY(0px)
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// Flex
+
+.i-flex {
+  display: inline-flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.fd-column-sm {
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+@for $i from 1 through 10 {
+  .gap-#{$i} {
+    gap: $space * $i;
+  }
+}
+
+.gap-xs {
+  gap: $space / 2;
+}
+
+// Spacing
+
+@for $i from 1 through 10 {
+  .mt-#{$i} {
+    margin-top: $space * $i;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $space * $i;
+  }
+
+  .pt-#{$i} {
+    padding-top: $space * $i;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $space * $i;
+  }
+
+  .pl-#{$i} {
+    padding-left: $space * $i;
+  }
+
+  .pr-#{$i} {
+    padding-right: $space * $i;
+  }
+
+  .px-#{$i} {
+    padding-left: $space * $i;
+    padding-right: $space * $i;
+  }
+
+  .py-#{$i} {
+    padding-top: $space * $i;
+    padding-bottom: $space * $i;
+  }
+
+  .z-#{$i} {
+    position: relative;
+    z-index: $i;
+  }
+}
+
+.block {
+  display: block;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+.h100p {
+  height: 100%;
+}
+
+.w100p {
+  width: 100% !important;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-br {
+  display: none;
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+  }
+}
+
+.desktop-only {
+  @media (max-width: $mobile-breakpoint) {
+    display: none !important;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+
+// Vue draggable
+.ghost { border: 1px dashed #cccccc66; border-radius: 5px; } .ghost * { visibility: hidden; }
+.fallback { opacity: 1 !important; }
+
+a {
+  color: darken($yellow, 15%);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.04);
+}
