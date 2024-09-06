@@ -40,7 +40,7 @@ const email = () => {
       </section>
       <section>
         <h2>Links</h2>
-        <div class="location"><Pin class="pin" /> Czech Rep. & Portugal</div>
+        <div class="location"><Pin class="pin" />Prague / Portugal</div>
         <div class="socials">
           <a
             target="_blank"
@@ -99,6 +99,7 @@ aside {
   padding: $space * 3;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   min-height: 100vh;
+  width: 220px;
 }
 
 .page {
