@@ -1,11 +1,14 @@
 <script lang="ts" setup>
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, onMounted, ref } from "vue";
 import Button from "../../components/Button.vue";
 import Supabase from "../../components/icons/Supabase.vue";
 import Database from "../../components/icons/Database.vue";
 import Bolt from "../../components/icons/Bolt.vue";
 import Rocket from "../../components/icons/Rocket.vue";
-import portfolioData from "../../data/portfolio.json";
+import studentDatabase from "../../data/student-database.json";
+import feedbackMachine from "../../data/feedback-machine.json";
+import cashflowDashboard from "../../data/cashflow-dashboard.json";
+import releaseManagement from "../../data/release-management.json";
 
 const Calendar = defineAsyncComponent(
   () => import("../../components/Calendar.vue")
@@ -35,6 +38,14 @@ const Dashboard = defineAsyncComponent(
 const email = () => {
   window.open("mailto:malindacz@gmail.com");
 };
+
+// Define a ref to hold the portfolio items
+const portfolioItems = [
+  studentDatabase,
+  feedbackMachine,
+  cashflowDashboard,
+  releaseManagement,
+];
 </script>
 
 <template>
@@ -47,7 +58,7 @@ const email = () => {
       solutions for you.
     </h4>
     <Button @click="email" :icon="Calendar" size="smaller">Let's talk</Button>
-    <h2>Automations</h2>
+    <h2 id="automation">Automation</h2>
     <div class="tools flex gap-xs">
       <Button
         href="https://airtable.com/"
@@ -127,11 +138,11 @@ const email = () => {
       </div>
     </div>
     <div class="portfolio">
-      <h3>Portfolio</h3>
+      <h3 id="portfolio">Portfolio</h3>
       <div class="projects flex gap-1">
         <a
-          v-for="portfolioItem in portfolioData"
-          href="/portfolio/1"
+          v-for="portfolioItem in portfolioItems"
+          :href="`/portfolio/${portfolioItem.fields.Slug}`"
           class="project"
         >
           <img :src="`/images-portfolio/${portfolioItem.id}.png`" />
@@ -141,7 +152,7 @@ const email = () => {
         </a>
       </div>
     </div>
-    <h2>Web development</h2>
+    <h2 id="web-development">Web development</h2>
     <div class="tools flex gap-xs">
       <Button
         href="https://vuejs.org/"
@@ -194,7 +205,7 @@ h4 {
 
 h2 {
   font-size: 30px;
-  margin-top: $space * 4;
+  margin-top: $space * 12;
 }
 
 li {

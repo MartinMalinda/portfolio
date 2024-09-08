@@ -4,8 +4,6 @@ import MediumLogo from "../components/MediumLogo.vue";
 import GithubLogo from "../components/GithubLogo.vue";
 import Envelope from "../components/Envelope.vue";
 import Pin from "../components/Pin.vue";
-import Button from "../components/Button.vue";
-import Calendar from "../components/Calendar.vue";
 
 const email = () => {
   window.open("mailto:malindacz@gmail.com");
@@ -14,62 +12,57 @@ const email = () => {
 
 <template>
   <div class="app">
-    <aside class="intro">
-      <div class="cover">
-        <div>
-          <img
-            src="https://res.cloudinary.com/serenity-themes/image/upload/w_350,f_webp/v1716215445/portfolio-2/pic.png"
-            class="profile-pic"
-            alt="Profile picture of Martin Malinda"
-          />
+    <nav class="intro">
+      <div class="inner">
+        <div class="left flex ai-center gap-2">
+          <div class="cover">
+            <img
+              src="https://res.cloudinary.com/serenity-themes/image/upload/w_350,f_webp/v1716215445/portfolio-2/pic.png"
+              class="profile-pic"
+              alt="Profile picture of Martin Malinda"
+            />
+          </div>
+          <h2>
+            <span>Martin Malinda</span>
+          </h2>
+          <section class="services flex ai-center gap-1">
+            <a href="/#automation">Automation</a>
+            <a href="/#web-development">Web development</a>
+          </section>
+        </div>
+        <div class="right flex ai-enter gap-2">
+          <section class="flex ai-center gap-2">
+            <div class="location"><Pin class="pin" />Prague / Portugal</div>
+            <div class="socials">
+              <a
+                target="_blank"
+                class="linkedin-link"
+                href="https://www.linkedin.com/in/martin-malinda-58b03253/"
+              >
+                <LinkedinLogo class="link-logo" />
+              </a>
+              <a
+                target="_blank"
+                class="medium-link"
+                href="https://medium.com/@martinmalinda"
+              >
+                <MediumLogo class="link-logo" />
+              </a>
+              <a
+                href="https://github.com/martinmalinda"
+                class="github-link"
+                target="_blank"
+              >
+                <GithubLogo class="link-logo" />
+              </a>
+              <a target="_blank" class="medium-link" @click="email">
+                <Envelope class="link-logo" />
+              </a>
+            </div>
+          </section>
         </div>
       </div>
-      <h2>
-        <span>Martin Malinda</span>
-      </h2>
-      <section class="services">
-        <h2>Services</h2>
-        <a>Automations</a>
-        <a>Web development</a>
-      </section>
-      <section class="portfolio-pages">
-        <h2>Projects</h2>
-        <a>Powersave.pro</a>
-        <a>Automations</a>
-        <a>Web development</a>
-      </section>
-      <section>
-        <h2>Links</h2>
-        <div class="location"><Pin class="pin" />Prague / Portugal</div>
-        <div class="socials">
-          <a
-            target="_blank"
-            class="linkedin-link"
-            href="https://www.linkedin.com/in/martin-malinda-58b03253/"
-          >
-            <LinkedinLogo class="link-logo" />
-            LinkedIn
-          </a>
-          <a
-            target="_blank"
-            class="medium-link"
-            href="https://medium.com/@martinmalinda"
-          >
-            <MediumLogo class="link-logo" /> Tech articles
-          </a>
-          <a
-            href="https://github.com/martinmalinda"
-            class="github-link"
-            target="_blank"
-          >
-            <GithubLogo class="link-logo" /> Github
-          </a>
-          <a target="_blank" class="medium-link" @click="email">
-            <Envelope class="link-logo" /> Email
-          </a>
-        </div>
-      </section>
-    </aside>
+    </nav>
     <main>
       <div class="page">
         <slot />
@@ -81,25 +74,39 @@ const email = () => {
 $yellow: #f2eac1;
 
 .app {
-  display: flex;
+  padding-top: 120px;
+  // display: flex;
 }
 
 a {
   text-decoration: none;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background: white;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: $space 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(800px + 16px);
+    max-width: 100%;
+  }
+}
+
 main {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-aside {
-  justify-self: flex-start;
-  padding: $space * 3;
-  border-right: 4px dashed rgba(0, 0, 0, 0.2);
-  min-height: 100vh;
-  width: 220px;
 }
 
 .page {
@@ -132,26 +139,12 @@ h2 {
 }
 
 img {
-  height: 130px;
-  width: 130px;
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   object-position: 100% 100%;
   border-radius: 50%;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  gap: $space / 2;
-
-  h2 {
-    margin: 0;
-    margin-top: $space * 2;
-    left: 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(57, 57, 57);
-  }
+  display: block;
 }
 
 .location {
@@ -170,7 +163,7 @@ section {
 
 .socials {
   display: flex;
-  flex-direction: column;
+  gap: $space;
 
   a {
     padding: $space / 3;
