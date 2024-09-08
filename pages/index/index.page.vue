@@ -5,6 +5,7 @@ import Supabase from "../../components/icons/Supabase.vue";
 import Database from "../../components/icons/Database.vue";
 import Bolt from "../../components/icons/Bolt.vue";
 import Rocket from "../../components/icons/Rocket.vue";
+import portfolioData from "../../data/portfolio.json";
 
 const Calendar = defineAsyncComponent(
   () => import("../../components/Calendar.vue")
@@ -117,14 +118,27 @@ const email = () => {
       <div class="service">
         <Rocket class="icon" />
         <div class="texts">
-          <b>New processes</b>
+          <b>New approaches</b>
           <div>
-            Automation can unlock new approaches to sales, onboarding, customer
-            success, project management. One little automation can unlock
-            another one, leading to a positive, transformative "snowball"
-            effect.
+            Every small automation or change can unlock new workflows, opening
+            up new automations, adding up to a transformative "snowball effect".
           </div>
         </div>
+      </div>
+    </div>
+    <div class="portfolio">
+      <h3>Portfolio</h3>
+      <div class="projects flex gap-1">
+        <a
+          v-for="portfolioItem in portfolioData"
+          href="/portfolio/1"
+          class="project"
+        >
+          <img :src="`/images-portfolio/${portfolioItem.id}.png`" />
+          <div class="px-1 py-1">
+            <b>{{ portfolioItem.fields.Name }}</b>
+          </div>
+        </a>
       </div>
     </div>
     <h2>Web development</h2>
@@ -216,6 +230,19 @@ a {
     flex-shrink: 0;
     width: 60px;
     height: 60px;
+  }
+}
+
+.project {
+  border-radius: 5px;
+  max-width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 </style>

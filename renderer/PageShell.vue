@@ -97,7 +97,7 @@ main {
 aside {
   justify-self: flex-start;
   padding: $space * 3;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 4px dashed rgba(0, 0, 0, 0.2);
   min-height: 100vh;
   width: 220px;
 }
