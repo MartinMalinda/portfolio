@@ -2,7 +2,6 @@
 import MarkdownIt from "markdown-it";
 import releaseManagement from "../../data/release-management.json";
 import Button from "../../components/Button.vue";
-import CornerArrow from "../../components/icons/CornerArrow.vue";
 
 // Initialize markdown-it instance
 const md = new MarkdownIt();
@@ -22,7 +21,7 @@ const markdownContent = md.render(
     <a href="/#portfolio"> Automation </a>
     \ {{ portfolioItem.fields.Name }}
   </div>
-  <div class="flex mt-4 gap-2">
+  <div class="flex mt-4 gap-4">
     <div>
       <h1>{{ portfolioItem.fields.Name }}</h1>
       <!-- Render the markdown content as raw HTML -->
@@ -49,6 +48,12 @@ const markdownContent = md.render(
         </div>
       </div>
     </div>
+  </div>
+  <div
+    class="cta py-4 mt-2 px-4 flex fd-column ai-center jc-center text-center"
+  >
+    <h3>{{ portfolioItem.fields.CTA.value }}</h3>
+    <Button variant="primary">Let's talk</Button>
   </div>
 </template>
 
@@ -77,6 +82,24 @@ const markdownContent = md.render(
 
   strong {
     font-size: 14px;
+  }
+}
+
+.cta {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 0, 0.2),
+    rgba(255, 0, 0, 0.15),
+    /* Slight red in the middle */ rgba(0, 140, 255, 0.2)
+  );
+  // border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  h3 {
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-top: 0;
   }
 }
 
