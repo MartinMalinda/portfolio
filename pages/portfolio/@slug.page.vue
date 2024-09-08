@@ -18,22 +18,22 @@ const markdownContent = md.render(
 </script>
 
 <template>
-  <div class="pos-rel">
-    <Button
-      :icon="CornerArrow"
-      href="/#portfolio"
-      variant="secondary"
-      size="smaller"
-    >
-      Back to all projects
-    </Button>
-    <img
-      class="main-image"
-      :src="`/images-portfolio/${portfolioItem.id}.png`"
-    />
-    <h1>{{ portfolioItem.fields.Name }}</h1>
-    <!-- Render the markdown content as raw HTML -->
-    <div class="content" v-html="markdownContent"></div>
+  <div class="breadcrumbs">
+    <a href="/#portfolio"> Automation projects </a>
+    \ {{ portfolioItem.fields.Name }}
+  </div>
+  <div class="flex mt-4">
+    <div>
+      <h1>{{ portfolioItem.fields.Name }}</h1>
+      <!-- Render the markdown content as raw HTML -->
+      <div class="content" v-html="markdownContent"></div>
+    </div>
+    <div>
+      <img
+        class="main-image"
+        :src="`/images-portfolio/${portfolioItem.id}.png`"
+      />
+    </div>
   </div>
 </template>
 
@@ -46,6 +46,17 @@ const markdownContent = md.render(
   // position: absolute;
   // right: 0;
   // top: 0;
+}
+
+.breadcrumbs {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.01);
+  padding: $space * 2;
+  border-radius: 5px;
+}
+
+h1 {
+  margin: 0;
 }
 
 .content {

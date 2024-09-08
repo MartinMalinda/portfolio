@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineAsyncComponent, onMounted, ref } from "vue";
+import { defineAsyncComponent } from "vue";
 import Button from "../../components/Button.vue";
 import Supabase from "../../components/icons/Supabase.vue";
 import Database from "../../components/icons/Database.vue";
@@ -138,7 +138,7 @@ const portfolioItems = [
       </div>
     </div>
     <div class="portfolio">
-      <h3 id="portfolio">Portfolio</h3>
+      <h3 class="mt-6" id="portfolio">Automation Portfolio</h3>
       <div class="projects flex gap-1">
         <a
           v-for="portfolioItem in portfolioItems"

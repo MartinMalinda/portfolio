@@ -74,7 +74,7 @@ const email = () => {
 $yellow: #f2eac1;
 
 .app {
-  padding-top: 120px;
+  padding-top: 85px;
   // display: flex;
 }
 
