@@ -49,7 +49,7 @@ const portfolioItems = [
 </script>
 
 <template>
-  <div class="index">
+  <div class="index pt-5">
     <h1>Crafting Fast UIs & Efficient Automations</h1>
     <h4>
       I specialize in building fast web UIs and automating business processes.

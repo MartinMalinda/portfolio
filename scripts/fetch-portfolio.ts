@@ -37,6 +37,14 @@ const streamPipeline = promisify(pipeline); // Promisify pipeline for async/awai
     return streamPipeline(res.body, fs.createWriteStream(filePath));
   }
 
+  // Function to check if the image needs to be downloaded
+  function shouldDownloadImage(item, existingItem) {
+    if (!existingItem) return true; // No existing data, so download the image
+    const existingImageId = existingItem.fields.Image?.[0]?.id;
+    const newImageId = item.fields.Image?.[0]?.id;
+    return newImageId !== existingImageId; // Return true if IDs are different
+  }
+
   // Loop through each item, save each by slug, and download the images
   for (const item of items) {
     const id = item.id;
@@ -48,15 +56,20 @@ const streamPipeline = promisify(pipeline); // Promisify pipeline for async/awai
       continue;
     }
 
+    const slugFilePath = path.join(dataDirPath, `${slug}.json`);
+    let existingItem = null;
+    if (fs.existsSync(slugFilePath)) {
+      existingItem = JSON.parse(fs.readFileSync(slugFilePath, 'utf-8'));
+    }
+
     slugs.push(slug); // Add the slug to the slugs array
 
     // Save item to [Slug].json
-    const slugFilePath = path.join(dataDirPath, `${slug}.json`);
     fs.writeFileSync(slugFilePath, JSON.stringify(item), 'utf-8');
     console.log(`Saved item data to ${slugFilePath}`);
 
     // Download the image if exists
-    if (imageUrl) {
+    if (imageUrl && shouldDownloadImage(item, existingItem)) {
       const imageFilePath = path.join(imagesDirPath, `${id}.png`); // Saving to ../public/images
       console.log(`Downloading image for item ${id}...`);
       try {
@@ -65,6 +78,8 @@ const streamPipeline = promisify(pipeline); // Promisify pipeline for async/awai
       } catch (err) {
         console.error(`Failed to download image for item ${id}: ${err.message}`);
       }
+    } else if (existingItem && imageUrl) {
+      console.log(`Image for item ${id} is up-to-date, skipping download.`);
     } else {
       console.log(`No image found for item ${id}`);
     }
