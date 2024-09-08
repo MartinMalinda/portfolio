@@ -53,7 +53,7 @@ const markdownContent = md.render(
     class="cta py-4 mt-2 px-4 flex fd-column ai-center jc-center text-center"
   >
     <h3>{{ portfolioItem.fields.CTA.value }}</h3>
-    <Button variant="primary">Let's talk</Button>
+    <Button variant="primary" style="width: 200px">Let's talk</Button>
   </div>
 </template>
 
@@ -94,6 +94,7 @@ const markdownContent = md.render(
   );
   // border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.516);
 
   h3 {
     font-size: 22px;
