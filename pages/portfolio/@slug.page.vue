@@ -18,12 +18,28 @@ const markdownContent = md.render(
 
 <template>
   <div class="breadcrumbs">
-    <a href="/#portfolio"> Automation </a>
+    <a :href="`/#${portfolioItem.fields.Select}-portfolio`">
+      {{ portfolioItem.fields.Select }}
+    </a>
     \ {{ portfolioItem.fields.Name }}
   </div>
   <div class="flex mt-4 gap-4">
     <div>
       <h1>{{ portfolioItem.fields.Name }}</h1>
+      <div class="period mt-2 flex">
+        <div class="tag">
+          {{ portfolioItem.fields["Year start"] }}
+          <template v-if="!portfolioItem.fields['Year end']"> - Now </template>
+          <template
+            v-else-if="
+              portfolioItem.fields['Year end'] !==
+              portfolioItem.fields['Year start']
+            "
+          >
+            - {{ portfolioItem.fields["Year end"] }}
+          </template>
+        </div>
+      </div>
       <!-- Render the markdown content as raw HTML -->
       <div class="content" v-html="markdownContent"></div>
     </div>
@@ -66,9 +82,6 @@ const markdownContent = md.render(
 <style lang="scss" scoped>
 .main-image {
   max-width: 100%;
-  // position: absolute;
-  // right: 0;
-  // top: 0;
 }
 
 .breadcrumbs {
