@@ -100,9 +100,9 @@ const markdownContent = md.render(
   );
   // border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.516);
 
   h3 {
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.516);
     font-size: 22px;
     line-height: 1.5;
     max-width: 500px;
