@@ -11,6 +11,8 @@ import cashflowDashboard from "../../data/cashflow-dashboard.json";
 import releaseManagement from "../../data/release-management.json";
 import herohero from "../../data/herohero.json";
 import powersave from "../../data/airtable-powersave.json";
+import goout from "../../data/goout.json";
+import leadfeeder from "../../data/leadfeeder.json";
 
 const Calendar = defineAsyncComponent(
   () => import("../../components/Calendar.vue")
@@ -45,7 +47,7 @@ const automationPortfolio = [
   releaseManagement,
 ];
 
-const webPortfolio = [powersave, herohero];
+const webPortfolio = [powersave, herohero, goout, leadfeeder];
 </script>
 
 <template>
@@ -96,11 +98,12 @@ const webPortfolio = [powersave, herohero];
       />
     </div>
     <p>
-      I am able to streamline and automate processes for your company to save
-      time, energy and to empower people with efficient dashboards and tools.
+      For me, automation is all about saving time, energy and empowering people
+      with efficient dashboards and tools. It's about coming up with completely
+      new approaches to well known problems.
     </p>
     <p>
-      I can integrate your existing tools together or I can come up with new
+      I can integrate existing tools together or I can come up with new
       solutions from the ground up. With the help of
       <a href="https://airtable.com/">Airtable</a>, I can design a tailored
       solution for project management, CRM, content management, feedback
