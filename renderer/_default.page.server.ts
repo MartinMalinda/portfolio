@@ -28,6 +28,7 @@ async function render(pageContext: PageContextServer) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <meta name="twitter:site" content="@martinmalindacz">
+        <meta name="view-transition" content="same-origin">
         <style>
     @font-face {
       font-family: 'Avenir';
@@ -87,7 +88,26 @@ async function render(pageContext: PageContextServer) {
         <title>${title}</title>
       </head>
       <body>
+       <script>
+        // No need to wait for DOMContentLoaded or load
+if (window.location.hash) {
+  const element = document.querySelector(window.location.hash);
+  if (element) {
+    element.scrollIntoView({ behavior: 'auto' });
+  }
+}
+  </script>
         <div id="app">${dangerouslySkipEscape(appHtml)}</div>
+        <script>
+        // No need to wait for DOMContentLoaded or load
+if (window.location.hash) {
+  const element = document.querySelector(window.location.hash);
+  debugger;
+  if (element) {
+    element.scrollIntoView({ behavior: 'instant' }); // Instant scroll to the element
+  }
+}
+  </script>
       </body>
     </html>`
 

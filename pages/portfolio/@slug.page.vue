@@ -53,7 +53,13 @@ const markdownContent = md.render(
     class="cta py-4 mt-2 px-4 flex fd-column ai-center jc-center text-center"
   >
     <h3>{{ portfolioItem.fields.CTA.value }}</h3>
-    <Button variant="primary" style="width: 200px">Let's talk</Button>
+    <Button
+      href="https://forms.fillout.com/t/q9mEPmvDvBus"
+      target="blank"
+      variant="primary"
+      style="width: 200px"
+      >Let's talk</Button
+    >
   </div>
 </template>
 

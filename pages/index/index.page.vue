@@ -57,7 +57,13 @@ const portfolioItems = [
       <b>I'm available for freelance:</b> workshops, consultations, building
       solutions for you.
     </h4>
-    <Button @click="email" :icon="Calendar" size="smaller">Let's talk</Button>
+    <Button
+      href="https://forms.fillout.com/t/q9mEPmvDvBus"
+      target="blank"
+      :icon="Calendar"
+      size="smaller"
+      >Let's talk</Button
+    >
     <h2 id="automation">Automation</h2>
     <div class="tools flex gap-xs">
       <Button
@@ -138,7 +144,8 @@ const portfolioItems = [
       </div>
     </div>
     <div class="portfolio">
-      <h3 class="mt-6" id="portfolio">Automation Portfolio</h3>
+      <div id="portfolio" class="pos-rel" style="top: -80px" />
+      <h3 class="mt-6">Automation Portfolio</h3>
       <div class="projects flex gap-1">
         <a
           v-for="portfolioItem in portfolioItems"
