@@ -29,34 +29,6 @@ async function render(pageContext: PageContextServer) {
         <meta name="description" content="${desc}" />
         <meta name="twitter:site" content="@martinmalindacz">
         <meta name="view-transition" content="same-origin">
-        <style>
-    @font-face {
-      font-family: 'Avenir';
-      src: url('/avenir/subset-AvenirLTStd-Black.woff2') format('woff2'),
-        url('/avenir/subset-AvenirLTStd-Black.woff') format('woff');
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    /* @font-face {
-      font-family: 'Avenir';
-      src: url('/avenir/subset-AvenirLTStd-Roman.woff2') format('woff2'),
-        url('/avenir/subset-AvenirLTStd-Roman.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    } */
-
-    @font-face {
-      font-family: 'Avenir';
-      src: url('/avenir/subset-AvenirLTStd-Book.woff2') format('woff2'),
-        url('/avenir/subset-AvenirLTStd-Book.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
         <meta property="og:type" content="profile">
         <script type="application/ld+json">{
   "@context": "http://schema.org",
@@ -85,6 +57,36 @@ async function render(pageContext: PageContextServer) {
     "https://github.com/martinmalinda"
   ]
 }</script>
+ <style>
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+</style>
         <title>${title}</title>
       </head>
       <body>

@@ -70,6 +70,9 @@ const email = () => {
     </main>
   </div>
 </template>
+<style lang="scss">
+@import "../style.scss";
+</style>
 <style lang="scss" scoped>
 $yellow: #f2eac1;
 

@@ -9,6 +9,8 @@ import studentDatabase from "../../data/student-database.json";
 import feedbackMachine from "../../data/feedback-machine.json";
 import cashflowDashboard from "../../data/cashflow-dashboard.json";
 import releaseManagement from "../../data/release-management.json";
+import herohero from "../../data/herohero.json";
+import powersave from "../../data/airtable-powersave.json";
 
 const Calendar = defineAsyncComponent(
   () => import("../../components/Calendar.vue")
@@ -35,17 +37,15 @@ const Dashboard = defineAsyncComponent(
   () => import("../../components/icons/Dashboard.vue")
 );
 
-const email = () => {
-  window.open("mailto:malindacz@gmail.com");
-};
-
 // Define a ref to hold the portfolio items
-const portfolioItems = [
+const automationPortfolio = [
   studentDatabase,
   feedbackMachine,
   cashflowDashboard,
   releaseManagement,
 ];
+
+const webPortfolio = [powersave, herohero];
 </script>
 
 <template>
@@ -144,11 +144,11 @@ const portfolioItems = [
       </div>
     </div>
     <div class="portfolio">
-      <div id="portfolio" class="pos-rel" style="top: -80px" />
-      <h3 class="mt-6">Automation Portfolio</h3>
+      <div id="Automation-portfolio" class="pos-rel" style="top: -80px" />
+      <h3 class="mt-6">Automation portfolio</h3>
       <div class="projects flex gap-1">
         <a
-          v-for="portfolioItem in portfolioItems"
+          v-for="portfolioItem in automationPortfolio"
           :href="`/portfolio/${portfolioItem.fields.Slug}`"
           class="project"
         >
@@ -202,6 +202,22 @@ const portfolioItems = [
         to make web apps load fast and stay fast.
       </li>
     </ul>
+    <div class="portfolio">
+      <div id="Web-portfolio" class="pos-rel" style="top: -80px" />
+      <h3 class="mt-6">Web development portfolio</h3>
+      <div class="projects flex gap-1">
+        <a
+          v-for="portfolioItem in webPortfolio"
+          :href="`/portfolio/${portfolioItem.fields.Slug}`"
+          class="project"
+        >
+          <img :src="`/images-portfolio/${portfolioItem.id}.png`" />
+          <div class="px-1 py-1">
+            <b>{{ portfolioItem.fields.Name }}</b>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>

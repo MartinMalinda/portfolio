@@ -109,7 +109,6 @@ const iconOnly = computed(() => {
 .button {
   text-align: center;
   transition: 0.2s background, 0.2s box-shadow;
-  // padding: $space * 2;
   padding: 0 !important;
   border: 0;
   font-weight: 500;

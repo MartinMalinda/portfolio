@@ -15,7 +15,7 @@ const streamPipeline = promisify(pipeline); // Promisify pipeline for async/awai
   const __dirname = path.dirname(__filename);
 
   const dataDirPath = path.join(__dirname, '../data');
-  const imagesDirPath = path.join(__dirname, '../public/images'); // Updated to ../public/images
+  const imagesDirPath = path.join(__dirname, '../public/images-portfolio'); // Updated to ../public/images
 
   // Check if the directories exist, if not, create them
   if (!fs.existsSync(dataDirPath)) {
