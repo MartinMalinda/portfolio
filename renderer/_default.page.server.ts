@@ -95,7 +95,7 @@ async function render(pageContext: PageContextServer) {
 if (window.location.hash) {
   const element = document.querySelector(window.location.hash);
   if (element) {
-    element.scrollIntoView({ behavior: 'auto' });
+    element.scrollIntoView({ behavior: 'instant' });
   }
 }
   </script>

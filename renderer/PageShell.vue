@@ -64,7 +64,7 @@ const email = () => {
       </div>
     </nav>
     <main>
-      <div class="page">
+      <div class="page w100p">
         <slot />
       </div>
     </main>
@@ -77,7 +77,7 @@ const email = () => {
 $yellow: #f2eac1;
 
 .app {
-  padding-top: 85px;
+  padding-top: 70px;
   // display: flex;
 }
 
@@ -110,24 +110,6 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-.page {
-  margin: $space * 2 0;
-  // padding: $space * 2;
-  // border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  width: 800px;
-
-  h1 {
-    margin: 0;
-  }
-
-  h4 {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
-  }
 }
 
 .portfolio-pages {
