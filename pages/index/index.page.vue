@@ -14,6 +14,7 @@ import powersave from "../../data/airtable-powersave.json";
 import goout from "../../data/goout.json";
 import leadfeeder from "../../data/leadfeeder.json";
 import Container from "../../components/Container.vue";
+import Envelope from "../../components/Envelope.vue";
 
 const Calendar = defineAsyncComponent(
   () => import("../../components/Calendar.vue")
@@ -236,16 +237,28 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
     </Container>
     <footer class="mt-10 py-5">
       <Container>
-        <div class="flex ai-center jc-center fd-column">
-          <h3>Let's automate, build, refactor, create:</h3>
-          <Button
-            href="https://forms.fillout.com/t/q9mEPmvDvBus"
-            target="blank"
-            variant="secondary"
-            :icon="Calendar"
-            size="smaller"
-            >Contact</Button
-          >
+        <div class="flex ai-center jc-space-between">
+          <div>
+            <h3>&copy; Martin Malinda</h3>
+          </div>
+          <div class="flex gap-1">
+            <Button
+              href="https://forms.fillout.com/t/q9mEPmvDvBus"
+              target="blank"
+              variant="primary"
+              :icon="Calendar"
+              size="smaller"
+              >Book a meeting</Button
+            >
+            <Button
+              href="https://forms.fillout.com/t/q9mEPmvDvBus"
+              target="blank"
+              variant="secondary"
+              :icon="Envelope"
+              size="smaller"
+              >Contact</Button
+            >
+          </div>
         </div>
       </Container>
     </footer>
@@ -340,8 +353,10 @@ a {
 }
 
 footer {
-  color: white;
-  background: lighten($almost-black, 5%);
+  color: $almost-black;
+  // background: lighten($almost-black, 5%);
+  background: lighten($yellow, 40%);
+  border-top: 3px solid black;
 
   h3 {
     font-size: 20px;

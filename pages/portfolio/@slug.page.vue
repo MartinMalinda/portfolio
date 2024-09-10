@@ -70,7 +70,7 @@ const markdownContent = md.render(
       </div>
     </div>
     <div
-      class="cta py-4 mt-2 px-4 flex fd-column ai-center jc-center text-center"
+      class="cta py-4 mt-2 mb-4 px-4 flex fd-column ai-center jc-center text-center"
     >
       <h3>{{ portfolioItem.fields.CTA.value }}</h3>
       <Button
