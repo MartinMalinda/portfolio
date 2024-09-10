@@ -18,7 +18,7 @@ const markdownContent = md.render(
 </script>
 
 <template>
-  <Container class="pt-5">
+  <Container class="pt-3">
     <div class="breadcrumbs">
       <a :href="`/#${portfolioItem.fields.Select}-portfolio`">
         {{ portfolioItem.fields.Select }}

@@ -73,7 +73,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         >
       </Container>
     </div>
-    <Container>
+    <Container class="pt-10">
       <h2 id="automation">Automation</h2>
       <div class="tools flex gap-xs">
         <Button
@@ -171,6 +171,9 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
           </a>
         </div>
       </div>
+    </Container>
+    <hr class="mt-10 mb-10" />
+    <Container>
       <h2 id="web-development">Web development</h2>
       <div class="tools flex gap-xs">
         <Button
@@ -231,12 +234,26 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         </div>
       </div>
     </Container>
+    <footer class="mt-10 py-5">
+      <Container>
+        <div class="flex ai-center jc-center fd-column">
+          <h3>Let's automate, build, refactor, create:</h3>
+          <Button
+            href="https://forms.fillout.com/t/q9mEPmvDvBus"
+            target="blank"
+            variant="secondary"
+            :icon="Calendar"
+            size="smaller"
+            >Contact</Button
+          >
+        </div>
+      </Container>
+    </footer>
   </div>
 </template>
 <style lang="scss" scoped>
 h2 {
   font-size: 35px;
-  margin-top: $space * 12;
 }
 
 li {
@@ -319,6 +336,15 @@ a {
     img {
       transform: rotate(-5deg);
     }
+  }
+}
+
+footer {
+  color: white;
+  background: lighten($almost-black, 5%);
+
+  h3 {
+    font-size: 20px;
   }
 }
 </style>
