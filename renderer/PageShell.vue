@@ -4,14 +4,10 @@ import MediumLogo from "../components/MediumLogo.vue";
 import GithubLogo from "../components/GithubLogo.vue";
 import Envelope from "../components/Envelope.vue";
 import Pin from "../components/Pin.vue";
-
-const email = () => {
-  window.open("mailto:malindacz@gmail.com");
-};
 </script>
 
 <template>
-  <div class="app">
+  <div class="page-shell">
     <nav class="intro">
       <div class="inner">
         <div class="left flex ai-center gap-2">
@@ -83,7 +79,7 @@ const email = () => {
 <style lang="scss" scoped>
 $yellow: #f2eac1;
 
-.app {
+.page-shell {
   padding-top: 71px;
   // display: flex;
 }
