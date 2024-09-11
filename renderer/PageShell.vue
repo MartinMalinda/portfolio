@@ -15,7 +15,7 @@ const email = () => {
     <nav class="intro">
       <div class="inner">
         <div class="left flex ai-center gap-2">
-          <div class="identity">
+          <div class="identity flex ai-center gap-2">
             <div class="cover">
               <img
                 src="https://res.cloudinary.com/serenity-themes/image/upload/w_350,f_webp/v1716215445/portfolio-2/pic.png"
@@ -112,20 +112,32 @@ nav.intro {
     .inner {
       width: 100%;
       padding: 0 $space * 2;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .services {
+      flex-direction: column;
+      align-items: start !important;
+    }
+
+    .right {
+      margin-top: $space * 2;
+
+      & > * {
+        align-items: start !important;
+        flex-direction: column;
+      }
     }
 
     .identity {
       width: 100%;
       flex-shrink: 0;
     }
-
-    // .services {
-    //   display: none;
-    // }
-
-    // .right {
-    //   display: none;
-    // }
   }
 }
 
