@@ -252,7 +252,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
               >Book a meeting</Button
             >
             <Button
-              href="https://forms.fillout.com/t/q9mEPmvDvBus"
+              href="mailto:martin@otimo.us"
               target="blank"
               variant="secondary"
               :icon="Envelope"

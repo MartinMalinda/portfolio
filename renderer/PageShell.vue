@@ -57,7 +57,11 @@ const email = () => {
               >
                 <GithubLogo class="link-logo" />
               </a>
-              <a target="_blank" class="medium-link" @click="email">
+              <a
+                target="_blank"
+                href="mailto:martin@otimo.us"
+                class="medium-link"
+              >
                 <Envelope class="link-logo" />
               </a>
             </div>
