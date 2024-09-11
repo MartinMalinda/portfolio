@@ -63,7 +63,7 @@ const email = () => {
             </div>
           </section>
         </div>
-        <div class="mobile-menu">Menu</div>
+        <!-- <div class="mobile-menu">Menu</div> -->
       </div>
     </nav>
     <main>
@@ -121,17 +121,15 @@ nav.intro {
     }
 
     .services {
-      flex-direction: column;
-      align-items: start !important;
+      display: none;
+    }
+
+    .location {
+      display: none;
     }
 
     .right {
-      margin-top: $space * 2;
-
-      & > * {
-        align-items: start !important;
-        flex-direction: column;
-      }
+      // display: none;
     }
 
     .identity {
@@ -177,21 +175,19 @@ img {
     position: relative;
     width: 1.5em;
     height: 1.5em;
-    top: -2px;
+    top: 1px;
   }
 }
 
 .socials {
   display: flex;
   gap: $space;
+  height: 1.5em;
 
   a {
     padding: $space / 3;
     font-size: 15px;
     padding-left: 0;
-    display: flex;
-    align-items: center;
-    gap: $space;
     color: black;
     cursor: pointer;
   }
