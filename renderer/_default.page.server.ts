@@ -104,7 +104,6 @@ if (window.location.hash) {
         // No need to wait for DOMContentLoaded or load
 if (window.location.hash) {
   const element = document.querySelector(window.location.hash);
-  debugger;
   if (element) {
     element.scrollIntoView({ behavior: 'instant' }); // Instant scroll to the element
   }

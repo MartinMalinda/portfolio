@@ -38,10 +38,12 @@ const streamPipeline = promisify(pipeline); // Promisify pipeline for async/awai
   }
 
   // Function to check if the image needs to be downloaded
-  function shouldDownloadImage(item, existingItem) {
+  function shouldDownloadImage(item, existingItem, imageField, imageIndex = 0) {
+    return true;
+
     if (!existingItem) return true; // No existing data, so download the image
-    const existingImageId = existingItem.fields.Image?.[0]?.id;
-    const newImageId = item.fields.Image?.[0]?.id;
+    const existingImageId = existingItem.fields[imageField]?.[imageIndex]?.id;
+    const newImageId = item.fields[imageField]?.[imageIndex]?.id;
     return newImageId !== existingImageId; // Return true if IDs are different
   }
 
@@ -68,20 +70,41 @@ const streamPipeline = promisify(pipeline); // Promisify pipeline for async/awai
     fs.writeFileSync(slugFilePath, JSON.stringify(item), 'utf-8');
     console.log(`Saved item data to ${slugFilePath}`);
 
-    // Download the image if exists
-    if (imageUrl && shouldDownloadImage(item, existingItem)) {
+    // Download the main image if it exists
+    if (imageUrl && shouldDownloadImage(item, existingItem, 'Image')) {
       const imageFilePath = path.join(imagesDirPath, `${id}.png`); // Saving to ../public/images
-      console.log(`Downloading image for item ${id}...`);
+      console.log(`Downloading main image for item ${id}...`);
       try {
         await downloadImage(imageUrl, imageFilePath);
-        console.log(`Image saved as ${imageFilePath}`);
+        console.log(`Main image saved as ${imageFilePath}`);
       } catch (err) {
-        console.error(`Failed to download image for item ${id}: ${err.message}`);
+        console.error(`Failed to download main image for item ${id}: ${err.message}`);
       }
     } else if (existingItem && imageUrl) {
-      console.log(`Image for item ${id} is up-to-date, skipping download.`);
+      console.log(`Main image for item ${id} is up-to-date, skipping download.`);
     } else {
-      console.log(`No image found for item ${id}`);
+      console.log(`No main image found for item ${id}`);
+    }
+
+    // Download the secondary images from the Images field if they exist
+    const secondaryImages = item.fields.Images || [];
+    for (let i = 0; i < secondaryImages.length; i++) {
+      const secondaryImageUrl = secondaryImages[i].url;
+      const secondaryImageId = secondaryImages[i].id;
+      if (secondaryImageUrl && shouldDownloadImage(item, existingItem, 'Images', i)) {
+        const secondaryImageFilePath = path.join(imagesDirPath, `${secondaryImageId}.png`); // Save each secondary image
+        console.log(`Downloading secondary image ${i} for item ${id}...`);
+        try {
+          await downloadImage(secondaryImageUrl, secondaryImageFilePath);
+          console.log(`Secondary image ${i} saved as ${secondaryImageFilePath}`);
+        } catch (err) {
+          console.error(`Failed to download secondary image ${i} for item ${id}: ${err.message}`);
+        }
+      } else if (existingItem && secondaryImageUrl) {
+        console.log(`Secondary image ${i} for item ${id} is up-to-date, skipping download.`);
+      } else {
+        console.log(`No secondary image ${i} found for item ${id}`);
+      }
     }
   }
 

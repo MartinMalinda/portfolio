@@ -46,6 +46,14 @@ const markdownContent = md.render(
         </div>
         <!-- Render the markdown content as raw HTML -->
         <div class="content" v-html="markdownContent"></div>
+        <div class="gallery">
+          <div
+            class="gallery-image"
+            v-for="image in portfolioItem.fields.Images"
+          >
+            <img :src="`/images-portfolio/${image.id}.png`" />
+          </div>
+        </div>
       </div>
       <div class="side-panel">
         <img
@@ -108,6 +116,10 @@ const markdownContent = md.render(
   strong {
     font-size: 14px;
   }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .cta {
@@ -130,6 +142,7 @@ const markdownContent = md.render(
 }
 
 h1 {
+  line-height: 1.25;
   margin: 0;
 }
 
@@ -150,6 +163,12 @@ h1 {
     font-weight: 600;
     letter-spacing: 0.2px;
   }
+
+  @media (max-width: 900px) {
+    ::v-deep(ul) {
+      padding-left: $space * 2;
+    }
+  }
 }
 
 .tag {
@@ -159,5 +178,13 @@ h1 {
   // color: white;
   padding: $space / 4 $space / 2;
   font-size: 14px;
+}
+
+.gallery {
+  img {
+    max-width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
 }
 </style>
