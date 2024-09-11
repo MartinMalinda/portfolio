@@ -54,7 +54,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
 
 <template>
   <div class="index">
-    <div class="intro py-10">
+    <div class="intro py-10 py-sm-5">
       <Container>
         <h1>Crafting Fast UIs & Efficient Automations</h1>
         <h4>
@@ -74,7 +74,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         >
       </Container>
     </div>
-    <Container class="pt-10">
+    <Container class="pt-10 pt-sm-2">
       <h2 id="automation">Automation</h2>
       <div class="tools flex gap-xs">
         <Button
@@ -173,7 +173,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         </div>
       </div>
     </Container>
-    <hr class="mt-10 mb-10" />
+    <hr class="my-10 my-sm-5" />
     <Container>
       <h2 id="web-development">Web development</h2>
       <div class="tools flex gap-xs">
@@ -237,12 +237,12 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
     </Container>
     <footer class="mt-10 py-5">
       <Container>
-        <div class="flex ai-center jc-space-between">
+        <div class="flex ai-center jc-space-between footer-row">
           <div>
             <h3>&copy; Martin Malinda</h3>
             Business ID: 05668115
           </div>
-          <div class="flex gap-1">
+          <div class="contact-row flex gap-1">
             <Button
               href="https://forms.fillout.com/t/q9mEPmvDvBus"
               target="blank"
@@ -268,6 +268,10 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
 <style lang="scss" scoped>
 h2 {
   font-size: 35px;
+
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
 }
 
 li {
@@ -299,14 +303,23 @@ a {
   // color: white;
 
   h1 {
+    margin-top: -$space * 1.5;
     font-size: 40px;
     line-height: 1.5;
+
+    @media (max-width: 800px) {
+      font-size: 30px;
+    }
   }
 
   h4 {
     line-height: 1.5;
     font-weight: 500;
     font-size: 20px;
+
+    @media (max-width: 800px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -327,6 +340,12 @@ a {
     flex-shrink: 0;
     width: 60px;
     height: 60px;
+  }
+}
+
+.projects {
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
   }
 }
 
@@ -351,6 +370,11 @@ a {
       transform: rotate(-5deg);
     }
   }
+
+  @media (max-width: 900px) {
+    width: calc(50% - 4px);
+    flex-shrink: 0;
+  }
 }
 
 footer {
@@ -362,6 +386,18 @@ footer {
   h3 {
     font-size: 20px;
     margin-bottom: $space;
+  }
+
+  @media (max-width: 900px) {
+    .footer-row {
+      align-items: flex-start !important;
+      gap: $space * 2;
+      flex-direction: column;
+    }
+
+    .contact-row {
+      flex-direction: column;
+    }
   }
 }
 </style>

@@ -270,6 +270,28 @@ a {
   }
 }
 
+@for $i from 1 through 10 {
+  @media (max-width: 900px) {
+    .py-sm-#{$i} {
+      padding-top: $space * $i;
+      padding-bottom: $space * $i;
+    }
+
+    .pt-sm-#{$i} {
+      padding-top: $space * $i;
+    }
+
+    .pt-mb-#{$i} {
+      padding-bottom: $space * $i;
+    }
+
+    .my-sm-#{$i} {
+      margin-top: $space * $i;
+      margin-bottom: $space * $i;
+    }
+  }
+}
+
 .block {
   display: block;
 }
