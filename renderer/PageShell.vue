@@ -15,16 +15,18 @@ const email = () => {
     <nav class="intro">
       <div class="inner">
         <div class="left flex ai-center gap-2">
-          <div class="cover">
-            <img
-              src="https://res.cloudinary.com/serenity-themes/image/upload/w_350,f_webp/v1716215445/portfolio-2/pic.png"
-              class="profile-pic"
-              alt="Profile picture of Martin Malinda"
-            />
+          <div class="identity">
+            <div class="cover">
+              <img
+                src="https://res.cloudinary.com/serenity-themes/image/upload/w_350,f_webp/v1716215445/portfolio-2/pic.png"
+                class="profile-pic"
+                alt="Profile picture of Martin Malinda"
+              />
+            </div>
+            <h2>
+              <span>Martin Malinda</span>
+            </h2>
           </div>
-          <h2>
-            <span>Martin Malinda</span>
-          </h2>
           <section class="services flex ai-center gap-1">
             <a href="/#automation">Automation</a>
             <a href="/#web-development">Web development</a>
@@ -61,6 +63,7 @@ const email = () => {
             </div>
           </section>
         </div>
+        <div class="mobile-menu">Menu</div>
       </div>
     </nav>
     <main>
@@ -77,7 +80,7 @@ const email = () => {
 $yellow: #f2eac1;
 
 .app {
-  padding-top: 70px;
+  padding-top: 71px;
   // display: flex;
 }
 
@@ -85,7 +88,7 @@ a {
   text-decoration: none;
 }
 
-nav {
+nav.intro {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -103,6 +106,26 @@ nav {
     justify-content: space-between;
     width: calc(800px + 16px);
     max-width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .inner {
+      width: 100%;
+      padding: 0 $space * 2;
+    }
+
+    .identity {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    // .services {
+    //   display: none;
+    // }
+
+    // .right {
+    //   display: none;
+    // }
   }
 }
 

@@ -94,6 +94,7 @@ const markdownContent = md.render(
   background: rgba(0, 0, 0, 0.01);
   padding: $space * 2;
   border-radius: 5px;
+  font-weight: 500;
 }
 
 .side-panel {

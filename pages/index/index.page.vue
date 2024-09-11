@@ -240,6 +240,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         <div class="flex ai-center jc-space-between">
           <div>
             <h3>&copy; Martin Malinda</h3>
+            Business ID: 05668115
           </div>
           <div class="flex gap-1">
             <Button
@@ -356,10 +357,11 @@ footer {
   color: $almost-black;
   // background: lighten($almost-black, 5%);
   background: lighten($yellow, 40%);
-  border-top: 3px solid black;
+  // border-top: 3px solid black;
 
   h3 {
     font-size: 20px;
+    margin-bottom: $space;
   }
 }
 </style>

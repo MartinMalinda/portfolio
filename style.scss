@@ -1,6 +1,7 @@
 
 * {
   touch-action: manipulation;
+  box-sizing: border-box;
 }
 
 * {
@@ -27,6 +28,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
   
   --vh: 1vh; // this is dynamically updated with JS
   --green: #173217;
