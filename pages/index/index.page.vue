@@ -75,7 +75,8 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       </Container>
     </div>
     <Container class="pt-10 pt-sm-2">
-      <h2 id="automation">Automation</h2>
+      <div class="pos-rel" style="top: -100px" id="automation"></div>
+      <h2>Automation</h2>
       <div class="tools flex gap-xs">
         <Button
           href="https://airtable.com/"
@@ -157,7 +158,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         </div>
       </div>
       <div class="portfolio">
-        <div id="Automation-portfolio" class="pos-rel" style="top: -80px" />
+        <div id="Automation-portfolio" class="pos-rel" style="top: -100px" />
         <h3 class="mt-6">Selected automations</h3>
         <div class="projects flex gap-1">
           <a
@@ -175,7 +176,8 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
     </Container>
     <hr class="my-10 my-sm-5" />
     <Container>
-      <h2 id="web-development">Web development</h2>
+      <div class="pos-rel" style="top: -100px" id="web-development"></div>
+      <h2>Web development</h2>
       <div class="tools flex gap-xs">
         <Button
           href="https://vuejs.org/"
