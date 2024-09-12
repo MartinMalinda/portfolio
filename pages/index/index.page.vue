@@ -167,6 +167,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
             class="project"
           >
             <img
+              :alt="portfolioItem.fields.Name"
               loading="lazy"
               :src="`/images-portfolio/${portfolioItem.id}.png`"
             />
@@ -233,6 +234,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
             class="project"
           >
             <img
+              :alt="portfolioItem.fields.Name"
               loading="lazy"
               :src="`/images-portfolio/${portfolioItem.id}.png`"
             />

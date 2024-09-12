@@ -35,6 +35,7 @@ import Pin from "../components/Pin.vue";
               <a
                 target="_blank"
                 class="linkedin-link"
+                title="LinkedIn"
                 href="https://www.linkedin.com/in/martin-malinda-58b03253/"
               >
                 <LinkedinLogo class="link-logo" />
@@ -42,6 +43,7 @@ import Pin from "../components/Pin.vue";
               <a
                 target="_blank"
                 class="medium-link"
+                title="Medium.com blog"
                 href="https://medium.com/@martinmalinda"
               >
                 <MediumLogo class="link-logo" />
@@ -50,11 +52,13 @@ import Pin from "../components/Pin.vue";
                 href="https://github.com/martinmalinda"
                 class="github-link"
                 target="_blank"
+                title="Github"
               >
                 <GithubLogo class="link-logo" />
               </a>
               <a
                 target="_blank"
+                title="Send an email"
                 href="mailto:martin@otimo.us"
                 class="medium-link"
               >

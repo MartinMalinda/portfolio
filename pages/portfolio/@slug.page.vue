@@ -51,12 +51,17 @@ const markdownContent = md.render(
             class="gallery-image"
             v-for="image in portfolioItem.fields.Images"
           >
-            <img loading="lazy" :src="`/images-portfolio/${image.id}.png`" />
+            <img
+              :alt="image.filename"
+              loading="lazy"
+              :src="`/images-portfolio/${image.id}.png`"
+            />
           </div>
         </div>
       </div>
       <div class="side-panel">
         <img
+          :alt="portfolioItem.fields.Name"
           class="main-image"
           :src="`/images-portfolio/${portfolioItem.id}.png`"
         />
