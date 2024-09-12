@@ -166,7 +166,10 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
             :href="`/portfolio/${portfolioItem.fields.Slug}`"
             class="project"
           >
-            <img :src="`/images-portfolio/${portfolioItem.id}.png`" />
+            <img
+              loading="lazy"
+              :src="`/images-portfolio/${portfolioItem.id}.png`"
+            />
             <div class="px-1 py-1">
               <b>{{ portfolioItem.fields.Name }}</b>
             </div>
@@ -229,7 +232,10 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
             :href="`/portfolio/${portfolioItem.fields.Slug}`"
             class="project"
           >
-            <img :src="`/images-portfolio/${portfolioItem.id}.png`" />
+            <img
+              loading="lazy"
+              :src="`/images-portfolio/${portfolioItem.id}.png`"
+            />
             <div class="px-1 py-1">
               <b>{{ portfolioItem.fields.Name }}</b>
             </div>
