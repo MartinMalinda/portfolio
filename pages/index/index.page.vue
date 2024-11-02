@@ -79,14 +79,14 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       <h2>Automation</h2>
       <div class="tools flex gap-xs">
         <Button
-          href="https://airtable.com/"
+          href="https://airtable.com/invite/r/swvrx671"
           target="_blank"
           :icon="Airtable"
           variant="secondary"
           size="small"
         />
         <Button
-          href="https://pipedream.com/"
+          href="http://pipedream.com/?via=martin"
           target="_blank"
           :icon="Pipedream"
           variant="secondary"
@@ -115,9 +115,10 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       <p>
         I can integrate existing tools together or I can come up with new
         solutions from the ground up. With the help of
-        <a href="https://airtable.com/">Airtable</a>, I can design a tailored
-        solution for project management, CRM, content management, feedback
-        collection, metrics collection or just about anything else.
+        <a href="https://airtable.com/invite/r/swvrx671">Airtable</a>, I can
+        design a tailored solution for project management, CRM, content
+        management, feedback collection, metrics collection or just about
+        anything else.
         <br />
       </p>
       <div class="flex fd-column gap-1">
