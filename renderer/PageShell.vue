@@ -108,7 +108,7 @@ nav.intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(800px + 16px);
+    width: calc(930px + 16px);
     max-width: 100%;
   }
 

@@ -54,27 +54,29 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
 
 <template>
   <div class="index">
-    <div class="intro py-10 py-sm-5">
-      <Container>
-        <h1>Crafting Fast UIs & Efficient Automations</h1>
-        <h4>
-          I specialize in building fast web UIs and automating business
-          processes.
-          <br />
-          <b>I'm available for freelance:</b> workshops, consultations, building
-          solutions for you.
-        </h4>
-        <Button
-          href="https://forms.fillout.com/t/q9mEPmvDvBus"
-          target="blank"
-          variant="primary"
-          :icon="Calendar"
-          size="smaller"
-          >Let's talk</Button
-        >
-      </Container>
+    <div class="pb-5 py-sm-5 flex jc-center">
+      <div class="intro">
+        <Container>
+          <h1>Crafting Fast UIs & Efficient Automations</h1>
+          <h4>
+            I specialize in building fast web UIs and automating business
+            processes.
+            <br />
+            <b>I'm available for freelance:</b> workshops, consultations,
+            building solutions for you.
+          </h4>
+          <Button
+            href="https://forms.fillout.com/t/q9mEPmvDvBus"
+            target="blank"
+            variant="primary"
+            :icon="Calendar"
+            size="smaller"
+            >Let's talk</Button
+          >
+        </Container>
+      </div>
     </div>
-    <Container class="pt-10 pt-sm-2">
+    <Container class="pt-sm-2 block">
       <div class="pos-rel" style="top: -100px" id="automation"></div>
       <h2>Automation</h2>
       <div class="tools flex gap-xs">
@@ -121,7 +123,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         anything else.
         <br />
       </p>
-      <div class="flex fd-column gap-1">
+      <div class="flex fd-column gap-1 mt-8 mb-8">
         <div class="service">
           <Dashboard class="icon" />
           <div class="texts">
@@ -178,9 +180,10 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
           </a>
         </div>
       </div>
+      <!-- <div class="pb-8"></div> -->
     </Container>
-    <hr class="my-10 my-sm-5" />
-    <Container>
+    <div class="mb-8 mt-8 my-sm-5" />
+    <Container class="block">
       <div class="pos-rel" style="top: -100px" id="web-development"></div>
       <h2>Web development</h2>
       <div class="tools flex gap-xs">
@@ -246,34 +249,36 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
         </div>
       </div>
     </Container>
-    <footer class="mt-10 py-5">
+    <div class="mt-10 py-5">
       <Container>
-        <div class="flex ai-center jc-space-between footer-row">
-          <div>
-            <h3>&copy; Martin Malinda</h3>
-            Business ID: 05668115
+        <footer>
+          <div class="flex ai-center jc-space-between footer-row">
+            <div>
+              <div>&copy; Martin Malinda</div>
+              Business ID: 05668115
+            </div>
+            <div class="contact-row flex gap-1">
+              <Button
+                href="https://forms.fillout.com/t/q9mEPmvDvBus"
+                target="blank"
+                variant="primary"
+                :icon="Calendar"
+                size="smaller"
+                >Book a meeting</Button
+              >
+              <Button
+                href="mailto:martin@otimo.us"
+                target="blank"
+                variant="secondary"
+                :icon="Envelope"
+                size="smaller"
+                >Contact</Button
+              >
+            </div>
           </div>
-          <div class="contact-row flex gap-1">
-            <Button
-              href="https://forms.fillout.com/t/q9mEPmvDvBus"
-              target="blank"
-              variant="primary"
-              :icon="Calendar"
-              size="smaller"
-              >Book a meeting</Button
-            >
-            <Button
-              href="mailto:martin@otimo.us"
-              target="blank"
-              variant="secondary"
-              :icon="Envelope"
-              size="smaller"
-              >Contact</Button
-            >
-          </div>
-        </div>
+        </footer>
       </Container>
-    </footer>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -291,7 +296,7 @@ li {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 a {
@@ -301,16 +306,27 @@ a {
   line-height: 1.2;
 }
 
+.block {
+  // border: 1px solid rgba(0, 0, 0, 0.099);
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  padding: $space * 3;
+}
+
 .intro {
-  background: transparentize(rgb(166, 161, 1), 0.8);
+  width: 950px;
+  margin-top: $space * 4;
+  padding: $space * 4;
+  border-radius: 15px;
+  background: transparentize(rgb(166, 161, 1), 0.4);
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 0, 0.2),
-    rgba(255, 0, 0, 0.15),
-    /* Slight red in the middle */ rgba(0, 140, 255, 0.2)
+    rgba(255, 255, 0, 0.1),
+    rgba(255, 0, 0, 0.1)
   );
-  border-bottom: 3px solid $almost-black;
-  border-top: 3px solid $almost-black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  // border-bottom: 3px solid $almost-black;
+  // border-top: 3px solid $almost-black;
   // color: white;
 
   h1 {
@@ -365,6 +381,7 @@ a {
   max-width: 200px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: 0.2s transform;
 
   img {
     border-top-left-radius: 5px;
@@ -376,10 +393,6 @@ a {
 
   &:hover {
     transform: scale(1.05);
-
-    img {
-      transform: rotate(-5deg);
-    }
   }
 
   @media (max-width: 900px) {
@@ -390,13 +403,16 @@ a {
 
 footer {
   color: $almost-black;
+  // box-shadow: inset 0 20px 100px #00000005;
+  // border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  // padding: $space * 2;
   // background: lighten($almost-black, 5%);
-  background: lighten($yellow, 40%);
   // border-top: 3px solid black;
 
   h3 {
-    font-size: 20px;
-    margin-bottom: $space;
+    font-size: 14px;
+    margin-bottom: -$space / 3;
   }
 
   @media (max-width: 900px) {
