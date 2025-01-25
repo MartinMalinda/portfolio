@@ -29,6 +29,7 @@ async function render(pageContext: PageContextServer) {
         <meta name="description" content="${desc}" />
         <meta name="twitter:site" content="@martinmalindacz">
         <meta name="view-transition" content="same-origin">
+        <link rel="icon" href="/rounded_corners.png" type="image/png" />
         <meta property="og:type" content="profile">
         <script type="application/ld+json">{
   "@context": "http://schema.org",
