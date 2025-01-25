@@ -54,7 +54,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
 
 <template>
   <div class="index">
-    <div class="pb-5 py-sm-5 flex jc-center">
+    <div class="pb-5 pb-sm-2 flex jc-center">
       <div class="intro">
         <Container>
           <h1>Crafting Fast UIs & Efficient Automations</h1>
@@ -182,7 +182,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       </div>
       <!-- <div class="pb-8"></div> -->
     </Container>
-    <div class="mb-8 mt-8 my-sm-5" />
+    <div class="mb-8 mt-8 my-sm-2" />
     <Container class="block">
       <div class="pos-rel" style="top: -100px" id="web-development"></div>
       <h2>Web development</h2>
@@ -266,14 +266,6 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
                 size="smaller"
                 >Book a meeting</Button
               >
-              <Button
-                href="mailto:martin@otimo.us"
-                target="blank"
-                variant="secondary"
-                :icon="Envelope"
-                size="smaller"
-                >Contact</Button
-              >
             </div>
           </div>
         </Container>
@@ -329,9 +321,14 @@ a {
     rgba(255, 0, 0, 0.1)
   );
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  // border-bottom: 3px solid $almost-black;
-  // border-top: 3px solid $almost-black;
-  // color: white;
+
+  @media (max-width: 900px) {
+    margin-top: 0;
+    padding-left: $space * 2;
+    padding-right: $space * 2;
+    padding-top: $space * 6;
+    border-radius: 0;
+  }
 
   h1 {
     margin-top: -$space * 1.5;

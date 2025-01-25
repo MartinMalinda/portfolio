@@ -282,6 +282,10 @@ a {
       padding-top: $space * $i;
     }
 
+    .pb-sm-#{$i} {
+      padding-bottom: $space * $i;
+    }
+
     .pt-mb-#{$i} {
       padding-bottom: $space * $i;
     }
