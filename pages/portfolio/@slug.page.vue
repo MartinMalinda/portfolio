@@ -157,7 +157,11 @@ h1 {
   }
 
   ::v-deep(a) {
-    color: darken(yellow, 20%);
+    background: rgb(255, 255, 215);
+    padding: 1px 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    // color: darken(yellow, 20%);
   }
 
   ::v-deep(li) {

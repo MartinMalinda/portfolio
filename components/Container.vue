@@ -7,6 +7,7 @@
 .container {
   margin: 0 auto;
   width: 950px;
+  max-width: 100%;
 
   @media (max-width: 820px) {
     width: 100%;

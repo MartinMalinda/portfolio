@@ -10,7 +10,7 @@ import feedbackMachine from "../../data/feedback-machine.json";
 import cashflowDashboard from "../../data/cashflow-dashboard.json";
 import releaseManagement from "../../data/release-management.json";
 import herohero from "../../data/herohero.json";
-import powersave from "../../data/airtable-powersave.json";
+import powersave from "../../data/powersave.json";
 import goout from "../../data/goout.json";
 import leadfeeder from "../../data/leadfeeder.json";
 import Container from "../../components/Container.vue";
@@ -250,8 +250,8 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       </div>
     </Container>
     <div class="mt-10 py-5">
-      <Container>
-        <footer>
+      <footer>
+        <Container>
           <div class="flex ai-center jc-space-between footer-row">
             <div>
               <div>&copy; Martin Malinda</div>
@@ -276,8 +276,8 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
               >
             </div>
           </div>
-        </footer>
-      </Container>
+        </Container>
+      </footer>
     </div>
   </div>
 </template>
@@ -301,8 +301,7 @@ p {
 
 a {
   color: $almost-black;
-  display: inline-block;
-  border-bottom: 1px solid black;
+
   line-height: 1.2;
 }
 
@@ -311,10 +310,15 @@ a {
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
   padding: $space * 3;
+
+  @media (max-width: 900px) {
+    box-shadow: none;
+  }
 }
 
 .intro {
   width: 950px;
+  max-width: 100%;
   margin-top: $space * 4;
   padding: $space * 4;
   border-radius: 15px;
@@ -402,6 +406,7 @@ a {
 }
 
 footer {
+  padding: $space * 2;
   color: $almost-black;
   // box-shadow: inset 0 20px 100px #00000005;
   // border-top: 1px solid rgba(0, 0, 0, 0.05);
