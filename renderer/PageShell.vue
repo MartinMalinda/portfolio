@@ -30,7 +30,7 @@ import Pin from "../components/Pin.vue";
         </div>
         <div class="right flex ai-enter gap-2">
           <section class="flex ai-center gap-2">
-            <div class="location"><Pin class="pin" />Prague / Portugal</div>
+            <div class="location"><Pin class="pin" />Prague / Lisbon</div>
             <div class="socials">
               <a
                 target="_blank"

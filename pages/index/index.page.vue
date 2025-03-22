@@ -4,7 +4,13 @@ import Button from "../../components/Button.vue";
 import Supabase from "../../components/icons/Supabase.vue";
 import Database from "../../components/icons/Database.vue";
 import Bolt from "../../components/icons/Bolt.vue";
+import Bulb from "../../components/icons/Bulb.vue";
+import Map from "../../components/icons/Map.vue";
+import Link from "../../components/icons/Link.vue";
+import Chart from "../../components/icons/Chart.vue";
+import Mag from "../../components/icons/Mag.vue";
 import Rocket from "../../components/icons/Rocket.vue";
+import Dollar from "../../components/icons/Dollar.vue";
 import studentDatabase from "../../data/student-database.json";
 import feedbackMachine from "../../data/feedback-machine.json";
 import cashflowDashboard from "../../data/cashflow-dashboard.json";
@@ -14,31 +20,30 @@ import powersave from "../../data/powersave.json";
 import goout from "../../data/goout.json";
 import leadfeeder from "../../data/leadfeeder.json";
 import Container from "../../components/Container.vue";
-import Envelope from "../../components/Envelope.vue";
 
 const Calendar = defineAsyncComponent(
-  () => import("../../components/Calendar.vue")
+  () => import("../../components/Calendar.vue"),
 );
 const Airtable = defineAsyncComponent(
-  () => import("../../components/icons/Airtable.vue")
+  () => import("../../components/icons/Airtable.vue"),
 );
 const Pipedream = defineAsyncComponent(
-  () => import("../../components/icons/Pipedream.vue")
+  () => import("../../components/icons/Pipedream.vue"),
 );
 const Vue = defineAsyncComponent(
-  () => import("../../components/icons/Vue.vue")
+  () => import("../../components/icons/Vue.vue"),
 );
 const Typescript = defineAsyncComponent(
-  () => import("../../components/icons/Typescript.vue")
+  () => import("../../components/icons/Typescript.vue"),
 );
 const Zapier = defineAsyncComponent(
-  () => import("../../components/icons/Zapier.vue")
+  () => import("../../components/icons/Zapier.vue"),
 );
 const Retool = defineAsyncComponent(
-  () => import("../../components/icons/Retool.vue")
+  () => import("../../components/icons/Retool.vue"),
 );
 const Dashboard = defineAsyncComponent(
-  () => import("../../components/icons/Dashboard.vue")
+  () => import("../../components/icons/Dashboard.vue"),
 );
 
 // Define a ref to hold the portfolio items
@@ -54,16 +59,15 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
 
 <template>
   <div class="index">
-    <div class="pb-5 pb-sm-2 flex jc-center">
+    <div class="pb-5 pb-sm-2 jc-center">
       <div class="intro">
         <Container>
           <h1>Crafting Fast UIs & Efficient Automations</h1>
           <h4>
-            I specialize in building fast web UIs and automating business
-            processes.
+            I build fast web interfaces and automate business processes.
             <br />
-            <b>I'm available for freelance:</b> workshops, consultations,
-            building solutions for you.
+            <b>I'm open for collaboration:</b> workshops, consulting, and
+            hands-on projects.
           </h4>
           <Button
             href="https://forms.fillout.com/t/q9mEPmvDvBus"
@@ -78,10 +82,10 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
     </div>
     <Container class="pt-sm-2 block">
       <div class="pos-rel" style="top: -100px" id="automation"></div>
-      <h2>Automation</h2>
+      <h2>Automation & Data management</h2>
       <div class="tools flex gap-xs">
         <Button
-          href="https://airtable.com/invite/r/swvrx671"
+          href="https://airtable.com"
           target="_blank"
           :icon="Airtable"
           variant="secondary"
@@ -109,60 +113,98 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
           size="small"
         />
       </div>
-      <p>
-        For me, automation is all about saving time, energy and empowering
-        people with efficient dashboards and tools. It's about coming up with
-        completely new approaches to well known problems.
-      </p>
-      <p>
-        I can integrate existing tools together or I can come up with new
-        solutions from the ground up. With the help of
-        <a href="https://airtable.com/invite/r/swvrx671">Airtable</a>, I can
-        design a tailored solution for project management, CRM, content
-        management, feedback collection, metrics collection or just about
-        anything else.
-        <br />
-      </p>
-      <div class="flex fd-column gap-1 mt-8 mb-8">
-        <div class="service">
-          <Dashboard class="icon" />
-          <div class="texts">
-            <b>Dashboards</b>
-            <div>Access relevant up to date data at the same place.</div>
-          </div>
+      <div class="flex gap-2 jc-space-between ai-center pt-4 two-columns">
+        <div class="content">
+          <ul style="list-style-type: none">
+            <li class="flex ai-center gap-1">
+              <Mag class="icon" /><span>
+                Let me review your <b>internal data</b></span
+              >
+            </li>
+            <li class="flex ai-center gap-1">
+              <Database class="icon" /><span>
+                Create and manage a <b>single source of truth</b></span
+              >
+            </li>
+            <li class="flex ai-center gap-1">
+              <Bolt class="icon" /><span>
+                Figure out how to <b>save energy & time</b></span
+              >
+            </li>
+            <li class="flex ai-center gap-1">
+              <Link class="icon" /><span>
+                Keep <b>data synced, up to date, interlinked</b></span
+              >
+            </li>
+            <li class="flex ai-center gap-1">
+              <Map class="icon" /><span>
+                Let's <b>map and review processes</b></span
+              >
+            </li>
+            <li class="flex ai-center gap-1">
+              <Bulb class="icon" /><span>
+                And come up with <b>new approaches & workflows</b></span
+              >
+            </li>
+          </ul>
         </div>
-        <div class="service">
-          <Database class="icon" />
-          <div class="texts">
-            <b>Single source of truth</b>
-            <div>Internal data always up to date, live, interlinked.</div>
-          </div>
-        </div>
-        <div class="service">
-          <Bolt class="icon" />
-          <div class="texts">
-            <b>Save time & energy</b>
-            <div>
-              Automate repetitive tasks and have more energy left for the
-              creative and human parts of work.
-            </div>
-          </div>
-        </div>
-        <div class="service">
-          <Rocket class="icon" />
-          <div class="texts">
-            <b>New approaches</b>
-            <div>
-              Every small automation or change can unlock new workflows, opening
-              up new automations, adding up to a transformative "snowball
-              effect".
-            </div>
-          </div>
+        <video
+          src="/videos/automation.mp4"
+          style="
+            width: 400px;
+            max-width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+          "
+          autoplay
+          loop
+          playsinline
+          muted
+        />
+      </div>
+      <div class="pt-7">
+        <h2>Dashboards</h2>
+        <div class="flex gap-2 jc-space-between ai-center pt-4 two-columns">
+          <video
+            src="/videos/interfaces.mp4"
+            style="
+              width: 400px;
+              max-width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            "
+            autoplay
+            loop
+            playsinline
+            muted
+          />
+          <ul style="list-style-type: none">
+            <li class="flex ai-center gap-1">
+              <Dashboard class="icon" />
+              <span>Data visualized, <b>always up to date</b></span>
+            </li>
+            <li class="flex ai-center gap-1">
+              <Dollar class="icon" />
+              <span>Financial overviews</span>
+            </li>
+            <li class="flex ai-center gap-1">
+              <Chart class="icon" />
+              <span>Analytics</span>
+            </li>
+            <li class="flex ai-center gap-1">
+              <Rocket class="icon" />
+              <span>Performance Metrics</span>
+            </li>
+            <li class="flex ai-center gap-1">
+              <Link class="icon" />
+              <span>Data aggregated, integrated</span>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="portfolio">
         <div id="Automation-portfolio" class="pos-rel" style="top: -100px" />
-        <h3 class="mt-6">Selected automations</h3>
+        <h3 class="mt-10">Selected automations</h3>
         <div class="projects flex gap-1">
           <a
             v-for="portfolioItem in automationPortfolio"
@@ -276,10 +318,15 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
 <style lang="scss" scoped>
 h2 {
   font-size: 35px;
+  line-height: 1.5;
 
   @media (max-width: 900px) {
     font-size: 25px;
   }
+}
+
+h3 {
+  font-size: 26px;
 }
 
 li {
@@ -288,7 +335,26 @@ li {
 }
 
 p {
-  line-height: 1.7;
+  line-height: 2;
+}
+
+ul {
+  padding: 0;
+  color: #444;
+  font-size: 20px;
+
+  @media (max-width: 950px) {
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  li {
+    margin-top: $space * 2;
+  }
 }
 
 a {
@@ -297,22 +363,16 @@ a {
   line-height: 1.2;
 }
 
-.block {
-  // border: 1px solid rgba(0, 0, 0, 0.099);
-  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 7px;
-  padding: $space * 3;
-
+.two-columns {
   @media (max-width: 900px) {
-    box-shadow: none;
+    display: block;
   }
 }
 
 .intro {
-  width: 950px;
+  /* width: 950px; */
   max-width: 100%;
-  margin-top: $space * 4;
-  padding: $space * 4;
+  padding: $space * 6 $space * 4;
   border-radius: 15px;
   background: transparentize(rgb(166, 161, 1), 0.4);
   background: linear-gradient(
@@ -331,9 +391,10 @@ a {
   }
 
   h1 {
-    margin-top: -$space * 1.5;
+    margin-top: 0;
     font-size: 40px;
     line-height: 1.5;
+    padding-top: 0;
 
     @media (max-width: 800px) {
       font-size: 30px;
