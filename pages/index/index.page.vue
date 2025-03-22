@@ -115,7 +115,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       </div>
       <div class="flex gap-2 jc-space-between ai-center pt-4 two-columns">
         <div class="content">
-          <ul style="list-style-type: none">
+          <ul class="details" style="list-style-type: none">
             <li class="flex ai-center gap-1">
               <Mag class="icon" /><span>
                 Let me review your <b>internal data</b></span
@@ -178,7 +178,7 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
             playsinline
             muted
           />
-          <ul style="list-style-type: none">
+          <ul class="details" style="list-style-type: none">
             <li class="flex ai-center gap-1">
               <Dashboard class="icon" />
               <span>Data visualized, <b>always up to date</b></span>
@@ -253,21 +253,29 @@ const webPortfolio = [powersave, herohero, goout, leadfeeder];
       </div>
       <p>
         My expertise lies in building web user interfaces that load fast and
-        stay fast. I have a lot of experience with Vue.js, TypeScript and
-        building complex web applications.
+        stay fast. <br />
+        I have a lot of experience with Vue.js, TypeScript and building complex
+        web applications.
       </p>
-      <h3>Services</h3>
-      <ul>
-        <li>
-          <b>Building MVPs</b>
+      <ul class="details" style="list-style-type: none">
+        <li class="flex ai-center gap-1">
+          <Rocket class="icon" />
+          <span><b>Building MVPs</b></span>
         </li>
-        <li>
-          <b>Code review & consulting:</b> Help pick the right libraries, set up
-          architecture, build tooling and design quality reusable components.
+        <li class="flex ai-center gap-1">
+          <Mag class="icon" />
+          <span
+            ><b>Code review & consulting:</b> <br />
+            Libraries, patterns, architecture, build tooling and component
+            design.
+          </span>
         </li>
-        <li>
-          <b>Performance:</b> Identify performance bottlenecks and implement
-          fixes to make web apps load fast and stay fast.
+        <li class="flex ai-center gap-1">
+          <Bolt class="icon" />
+          <span
+            ><b>Performance:</b> Identify performance bottlenecks and implement
+            fixes.</span
+          >
         </li>
       </ul>
       <div class="portfolio">
@@ -338,7 +346,7 @@ p {
   line-height: 2;
 }
 
-ul {
+ul.details {
   padding: 0;
   color: #444;
   font-size: 20px;
