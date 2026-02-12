@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-import Button from "../../components/Button.vue";
+import CardLink from "../../components/CardLink.vue";
 import Container from "../../components/Container.vue";
 import SiteFooter from "../../components/SiteFooter.vue";
+import PowersaveLogo from "../../components/icons/PowersaveLogo.vue";
+import PowersyncLogo from "../../components/icons/PowersyncLogo.vue";
 </script>
 
 <template>
@@ -16,41 +18,21 @@ import SiteFooter from "../../components/SiteFooter.vue";
       </Container>
     </div>
     <Container class="block">
-      <div class="product-card">
-        <div>
-          <h2>Powersave</h2>
-          <p>
-            Save ASAP with AI. Save more, categorize & analyze as you browse to
-            Airtable, Coda, Notion and elsewhere.
-          </p>
-        </div>
-        <div class="actions">
-          <Button
-            href="https://powersave.pro"
-            target="_blank"
-            variant="secondary"
-            size="small"
-            >Visit site</Button
-          >
-        </div>
-      </div>
-      <div class="product-card">
-        <div>
-          <h2>Powersync</h2>
-          <p>
-            Supercharge your Airtable and unlock new flows Track base history,
-            connect Slack and Stripe and more.
-          </p>
-        </div>
-        <div class="actions">
-          <Button
-            href="https://sync.powersave.pro"
-            target="_blank"
-            variant="secondary"
-            size="small"
-            >Visit site</Button
-          >
-        </div>
+      <div class="cards">
+        <CardLink
+          href="https://powersave.pro"
+          title="Powersave"
+          description="Save ASAP with AI. Save more, categorize & analyze as you browse to Airtable, Coda, Notion and elsewhere."
+          cta="Visit site"
+          :icon="PowersaveLogo"
+        />
+        <CardLink
+          href="https://sync.powersave.pro"
+          title="Powersync"
+          description="Supercharge your Airtable and unlock new flows Track base history, connect Slack and Stripe and more."
+          cta="Visit site"
+          :icon="PowersyncLogo"
+        />
       </div>
     </Container>
     <div class="mt-10 py-5">
@@ -88,37 +70,10 @@ import SiteFooter from "../../components/SiteFooter.vue";
   }
 }
 
-.product-card {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  padding: $space * 2.5;
-  background: white;
+.cards {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: $space * 2;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-  margin-bottom: $space * 2.5;
-
-  h2 {
-    margin: 0 0 $space 0;
-    font-size: 28px;
-  }
-
-  p {
-    margin: 0;
-    line-height: 1.6;
-    color: $dark-grey;
-    max-width: 520px;
-  }
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.product-card:first-of-type {
+  flex-direction: column;
+  gap: $space * 2.5;
   margin-top: $space * 3;
 }
 </style>

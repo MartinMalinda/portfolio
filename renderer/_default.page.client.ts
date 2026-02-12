@@ -1,27 +1,28 @@
-export { render }
+export { render };
+export const clientRouting = true;
 
-import { createApp } from './app'
-import type { PageContextClient } from './types'
+import { createApp } from "./app";
+import type { PageContextClient } from "./types";
 
-// This render() hook only supports SSR, see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
 async function render(pageContext: PageContextClient) {
-  const { Page, pageProps } = pageContext
-  if (!Page) throw new Error('Client-side render() hook expects pageContext.Page to be defined')
+  const { Page, pageProps } = pageContext;
+  if (!Page)
+    throw new Error(
+      "Client-side render() hook expects pageContext.Page to be defined",
+    );
 
+  const container = document.querySelector("#app")!;
   if (!pageContext.isHydration) {
-    document.querySelector('#app')!.innerHTML = '';
-    const app = createApp(Page, pageProps, pageContext);
-    app.mount('#app');
+    container.innerHTML = "";
+  }
 
-    if (window.location.hash) {
-      const element = document.querySelector(window.location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'instant' }); // Instant scroll to the element
-      }
-    }
+  const app = createApp(Page, pageProps, pageContext);
+  app.mount("#app", pageContext.isHydration);
+
+  // optional: only after CSR nav; during initial load browser already handles #hash
+  if (!pageContext.isHydration && window.location.hash) {
+    document
+      .querySelector(window.location.hash)
+      ?.scrollIntoView({ behavior: "instant" as ScrollBehavior });
   }
 }
-
-export const clientRouting = true;
-/* To enable Client-side Routing:
-// !! WARNING !! Before doing so, read https://vite-plugin-ssr.com/clientRouting */

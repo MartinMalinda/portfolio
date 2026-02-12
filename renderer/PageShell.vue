@@ -111,7 +111,7 @@ onBeforeUnmount(() => {
             <span class="short">Prod</span>
           </Link>
           <Link href="/portfolio" class="nav-link theme-portfolio" @click="closeNav">
-            <span class="label">Portfolio</span>
+            <span class="label">Case Studies</span>
             <span class="short">Work</span>
           </Link>
           <Link href="/writing" class="nav-link theme-writing" @click="closeNav">
@@ -402,13 +402,13 @@ img {
 .location {
   display: flex;
   align-items: center;
-  font-size: 15px;
-  gap: $space;
+  font-size: 0.9rem;
+  gap: $space / 2;
 
   .pin {
     position: relative;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1em;
+    height: 1em;
     top: 1px;
   }
 }

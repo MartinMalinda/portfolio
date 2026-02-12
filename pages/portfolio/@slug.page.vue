@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MarkdownIt from "markdown-it";
 import releaseManagement from "../../data/release-management.json";
-import Button from "../../components/Button.vue";
+import BookingButton from "../../components/BookingButton.vue";
 import PortfolioShell from "../../components/PortfolioShell.vue";
 
 // Initialize markdown-it instance
@@ -84,13 +84,7 @@ const markdownContent = md.render(
         class="cta py-4 mt-2 mb-4 px-4 flex fd-column ai-center jc-center text-center"
       >
         <h3>{{ portfolioItem.fields.CTA.value }}</h3>
-        <Button
-          href="https://forms.fillout.com/t/q9mEPmvDvBus"
-          target="blank"
-          variant="primary"
-          style="width: 200px"
-          >Let's talk</Button
-        >
+        <BookingButton size="medium" style="width: 200px" />
       </div>
     </div>
   </PortfolioShell>
@@ -145,6 +139,7 @@ const markdownContent = md.render(
     margin-top: 0;
   }
 }
+
 
 h1 {
   line-height: 1.25;

@@ -1,16 +1,20 @@
 <script lang="ts" setup>
+import BookingButton from "./BookingButton.vue";
 import Container from "./Container.vue";
 </script>
 
 <template>
-  <div class="portfolio-shell">
+  <div class="services-shell">
     <div class="hero">
       <Container>
-        <h1>Case Studies</h1>
+        <h1>Services</h1>
         <p>
-          Selected automation systems, Airtable workflows, and internal tools
-          with real-world constraints and outcomes.
+          I build reliable automation systems, Airtable workflows, and fast
+          internal interfaces.
         </p>
+        <div class="hero-actions">
+          <BookingButton size="smaller" />
+        </div>
       </Container>
     </div>
     <Container class="block">
@@ -46,5 +50,23 @@ import Container from "./Container.vue";
     font-size: 19px;
     font-weight: 500;
   }
+}
+
+.hero-actions {
+  margin-top: $space * 2;
+}
+
+:deep(.breadcrumbs) {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.01);
+  padding: $space * 2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+:deep(.service-title) {
+  margin-top: $space * 2;
+  font-size: 32px;
+  line-height: 1.4;
 }
 </style>

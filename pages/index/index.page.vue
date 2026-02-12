@@ -1,105 +1,227 @@
 <script lang="ts" setup>
+import { onMounted, onUnmounted, ref } from "vue";
 import BookingButton from "../../components/BookingButton.vue";
+import CardLink from "../../components/CardLink.vue";
 import Container from "../../components/Container.vue";
 import SiteFooter from "../../components/SiteFooter.vue";
+import TypingHeadline from "../../components/TypingHeadline.vue";
 import Bolt from "../../components/icons/Bolt.vue";
 import Rocket from "../../components/icons/Rocket.vue";
 import Chart from "../../components/icons/Chart.vue";
 import PenTool from "../../components/icons/PenTool.vue";
-import Bulb from "../../components/icons/Bulb.vue";
+import User from "../../components/icons/User.vue";
+
+type Testimonial = {
+  id: string;
+  author: string;
+  role: string;
+  source: string;
+  date?: string;
+  text: string;
+  image: string;
+};
+
+const testimonialsList = ref<Testimonial[]>([
+  {
+    id: "kristof-bardos",
+    author: "Kristof Bardos",
+    role: "CEO of Green Fox Academy",
+    source: "LinkedIn",
+    date: "November 12, 2024",
+    image: "/kristof-bardos.jpeg",
+    text: "Martin is a go-to person if you need automation and lightweight ERP for your company. He is a senior dev, armed with deep tooling and business process knowledge combined with excellent communication and expectation management skills. And a fun guy!",
+  },
+  {
+    id: "yusef-smith",
+    author: "Dr Yusef Smith",
+    role: "@PropaneFitness",
+    source: "Twitter",
+    image: "/yusef-smith.png",
+    text: "If you need a developer and/or data guy - @martinmalindacz is easily the best we've ever worked with. He truly got on board with our vision rather than just the narrow scope of the code.",
+  },
+]);
+
+const heroHeadlines = [
+  "Systems that think like you do.",
+  "One system. No chaos.",
+  "Workflows you can actually trust.",
+  "The single source of truth, at last.",
+  "A company OS that makes you relax.",
+];
+
+const slider = ref<HTMLElement | null>(null);
+const currentIndex = ref(0);
+
+function goTo(index: number) {
+  if (!slider.value) return;
+  const slideElement = slider.value.querySelector(".slide") as HTMLElement;
+  if (!slideElement) return;
+  const slideWidth =
+    slideElement.offsetWidth +
+    parseInt(getComputedStyle(slideElement).marginRight);
+  slider.value.scrollTo({
+    left: index * slideWidth,
+    behavior: "smooth",
+  });
+  currentIndex.value = index;
+}
+
+function next() {
+  if (currentIndex.value < testimonialsList.value.length - 1) {
+    currentIndex.value++;
+    goTo(currentIndex.value);
+  }
+}
+
+function previous() {
+  if (currentIndex.value > 0) {
+    currentIndex.value--;
+    goTo(currentIndex.value);
+  }
+}
+
+function handleScroll() {
+  if (!slider.value) return;
+  const slideElement = slider.value.querySelector(".slide") as HTMLElement;
+  if (!slideElement) return;
+  const slideWidth =
+    slideElement.offsetWidth +
+    parseInt(getComputedStyle(slideElement).marginRight);
+  currentIndex.value = Math.round(slider.value.scrollLeft / slideWidth);
+}
+
+onMounted(() => {
+  slider.value?.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  slider.value?.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
   <div class="index">
     <div class="hero">
       <Container>
-        <h1>Crafting Fast UIs &amp; Efficient Automations</h1>
+        <TypingHeadline :phrases="heroHeadlines" />
         <p>
-          I build fast web interfaces and automate business processes.
+          I design reliable workflow architecture, Airtable bases, and fast
+          internal UIs.
           <br />
-          <b>I'm open for collaboration:</b> workshops, consulting, and
-          hands-on projects.
+          <b>I'm open for collaboration:</b> audits, consulting, and hands-on
+          builds.
         </p>
         <BookingButton />
       </Container>
     </div>
     <Container class="block">
+      <a class="intro-block" href="/about">
+        <p class="intro-copy">
+          I bring 10 years of web development experience and 3 years focused on
+          business automation, with a strong emphasis on Airtable systems.
+          <br />
+          I’ve worked with startups, agencies, and growing companies to build
+          scalable internal tools and reliable workflows.
+        </p>
+        <span class="intro-link"> Read more <span class="arrow">→</span> </span>
+      </a>
       <div class="cards">
-        <a class="card" href="/services">
-          <div class="card-icon">
-            <Bolt />
-          </div>
-          <div class="card-copy">
-            <h2>Services</h2>
-            <p>
-              Automation, dashboards, and web development focused on outcomes
-              and clarity.
-            </p>
-          </div>
-          <div class="card-cta">
-            Explore services <span class="arrow">→</span>
-          </div>
-        </a>
-        <a class="card" href="/products">
-          <div class="card-icon">
-            <Rocket />
-          </div>
-          <div class="card-copy">
-            <h2>Products</h2>
-            <p>
-              Tools I build for real-world workflows, starting with Powersave.
-            </p>
-          </div>
-          <div class="card-cta">
-            View products <span class="arrow">→</span>
-          </div>
-        </a>
-        <a class="card" href="/portfolio">
-          <div class="card-icon">
-            <Chart />
-          </div>
-          <div class="card-copy">
-            <h2>Portfolio</h2>
-            <p>
-              Selected automation systems, dashboards, and web apps from recent
-              work.
-            </p>
-          </div>
-          <div class="card-cta">
-            See the work <span class="arrow">→</span>
-          </div>
-        </a>
-        <a class="card" href="/writing">
-          <div class="card-icon">
-            <PenTool />
-          </div>
-          <div class="card-copy">
-            <h2>Writing</h2>
-            <p>
-              Notes on automation, performance, and building reliable software.
-            </p>
-          </div>
-          <div class="card-cta">
-            Read writing <span class="arrow">→</span>
-          </div>
-        </a>
-        <a class="card" href="/about">
-          <div class="card-icon">
-            <Bulb />
-          </div>
-          <div class="card-copy">
-            <h2>About</h2>
-            <p>
-              Background, projects, and the path that led me to automation and
-              product work.
-            </p>
-          </div>
-          <div class="card-cta">
-            Learn about me <span class="arrow">→</span>
-          </div>
-        </a>
+        <CardLink
+          href="/services"
+          title="Services"
+          description="Automation systems, Airtable builds, and internal tools focused on clarity and outcomes."
+          cta="Explore services"
+          :icon="Bolt"
+        />
+        <CardLink
+          href="/products"
+          title="Products"
+          description="Tools I build for workflow speed and reliability."
+          cta="View products"
+          :icon="Rocket"
+        />
+        <CardLink
+          href="/portfolio"
+          title="Portfolio"
+          description="Automation systems, Airtable workflows, and internal apps from recent work."
+          cta="See the work"
+          :icon="Chart"
+        />
+        <CardLink
+          href="/writing"
+          title="Writing"
+          description="Notes on Airtable, workflow reliability, and performance engineering."
+          cta="Read writing"
+          :icon="PenTool"
+        />
+        <CardLink
+          href="/about"
+          title="About"
+          description="Background, systems work, and the path that led me to automation and product work."
+          cta="Learn about me"
+          :icon="User"
+        />
       </div>
     </Container>
+    <section class="testimonials">
+      <Container>
+        <div class="testimonials-header">
+          <h2>Testimonials</h2>
+          <p>Notes from founders, operators, and teams I have worked with.</p>
+        </div>
+        <div class="slider-container">
+          <div ref="slider" class="slider" aria-live="polite">
+            <article
+              v-for="testimonial in testimonialsList"
+              :key="testimonial.id"
+              class="slide"
+            >
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    class="avatar"
+                    :src="testimonial.image"
+                    :alt="testimonial.author"
+                    loading="lazy"
+                  />
+                  <div class="meta">
+                    <div class="author-row">
+                      <span class="author">{{ testimonial.author }}</span>
+                      <span class="source">{{ testimonial.source }}</span>
+                    </div>
+                    <div class="role">{{ testimonial.role }}</div>
+                    <div v-if="testimonial.date" class="date">
+                      {{ testimonial.date }}
+                    </div>
+                  </div>
+                </div>
+                <p class="testimonial-text">{{ testimonial.text }}</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="navigation">
+          <button
+            class="nav-arrow"
+            type="button"
+            aria-label="Previous testimonial"
+            @click="previous"
+            :disabled="currentIndex === 0"
+          >
+            ‹
+          </button>
+          <button
+            class="nav-arrow"
+            type="button"
+            aria-label="Next testimonial"
+            @click="next"
+            :disabled="currentIndex >= testimonialsList.length - 1"
+          >
+            ›
+          </button>
+        </div>
+      </Container>
+    </section>
     <div class="mt-10 py-5">
       <SiteFooter />
     </div>
@@ -124,16 +246,6 @@ import Bulb from "../../components/icons/Bulb.vue";
     padding-top: $space * 6;
   }
 
-  h1 {
-    margin-top: 0;
-    font-size: 40px;
-    line-height: 1.3;
-
-    @media (max-width: 800px) {
-      font-size: 30px;
-    }
-  }
-
   p {
     line-height: 1.6;
     font-size: 20px;
@@ -152,18 +264,29 @@ import Bulb from "../../components/icons/Bulb.vue";
   margin-top: $space * 3;
 }
 
-.card {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  padding: $space * 2.5;
+.intro-copy {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 720px;
+  color: rgba(0, 0, 0, 0.8);
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+.intro-block {
+  margin-top: $space * 3;
+  padding: $space * 2;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
   background: white;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) auto;
-  grid-template-areas: "icon copy cta";
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-items: start;
-  gap: $space * 2;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  column-gap: $space * 2;
   text-decoration: none;
   color: inherit;
   transition: 0.2s transform, 0.2s box-shadow, 0.2s border-color;
@@ -171,67 +294,29 @@ import Bulb from "../../components/icons/Bulb.vue";
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.2);
 
     .arrow {
       transform: translateX(4px);
     }
   }
 
-  h2 {
-    margin: 0 0 $space 0;
-    font-size: 28px;
-  }
-
-  p {
-    margin: 0;
-    line-height: 1.6;
-    color: $dark-grey;
-    max-width: 520px;
-  }
-
   @media (max-width: 800px) {
-    grid-template-columns: 54px 1fr;
-    grid-template-areas:
-      "icon copy"
-      "cta cta";
-    row-gap: $space * 1.5;
+    grid-template-columns: 1fr;
+    row-gap: $space;
     justify-items: start;
   }
 }
 
-.card-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background: rgba(0, 0, 0, 0.04);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  grid-area: icon;
-
-  :deep(svg) {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-.card-copy {
-  grid-area: copy;
-  min-width: 0;
-  text-align: left;
-  padding-right: $space * 2;
-}
-
-.card-cta {
-  color: $dark-grey;
-  font-weight: 600;
+.intro-link {
   display: inline-flex;
   align-items: center;
   gap: $space / 2;
-  white-space: nowrap;
+  font-weight: 600;
+  color: $dark-grey;
+  text-decoration: none;
+  width: fit-content;
   justify-self: end;
-  grid-area: cta;
 
   @media (max-width: 800px) {
     justify-self: start;
@@ -240,5 +325,137 @@ import Bulb from "../../components/icons/Bulb.vue";
 
 .arrow {
   transition: 0.2s transform;
+}
+
+.testimonials {
+  margin-top: $space * 6;
+  padding-bottom: $space * 3;
+}
+
+.testimonials-header {
+  display: flex;
+  flex-direction: column;
+  gap: $space / 2;
+  margin-bottom: $space * 2;
+
+  h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: $space * 2;
+  padding: $space 0 $space * 2;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 520px;
+  margin-right: $space * 2;
+
+  @media (max-width: 900px) {
+    width: 85vw;
+  }
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: $space * 1.5;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: $space * 2;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.testimonial-header {
+  display: flex;
+  gap: $space;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: $space / 3;
+}
+
+.author-row {
+  display: flex;
+  align-items: center;
+  gap: $space / 2;
+  font-weight: 600;
+}
+
+.source {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.role {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $space;
+}
+
+.nav-arrow {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 </style>

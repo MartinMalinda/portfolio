@@ -12,7 +12,7 @@ import Container from "./Container.vue";
           Business ID: 05668115
         </div>
         <div class="contact-row flex gap-1">
-          <BookingButton />
+          <BookingButton :show-subtext="false" />
         </div>
       </div>
     </Container>
