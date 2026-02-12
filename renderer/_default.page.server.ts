@@ -133,5 +133,12 @@ async function renderToString(app: App) {
 }
 
 export async function prerender() {
-  return ['/'];
+  return [
+    '/',
+    '/services',
+    '/products',
+    '/portfolio',
+    '/writing',
+    '/about',
+  ];
 }

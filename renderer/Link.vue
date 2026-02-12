@@ -1,5 +1,5 @@
 <template>
-  <a :class="{ active: pageContext.urlPathname === $attrs.href }">
+  <a v-bind="attrs" :class="[attrs.class, { active: isActive }]">
     <slot />
   </a>
 </template>
@@ -12,6 +12,17 @@ a.active {
 }
 </style>
 <script lang="ts" setup>
-import { usePageContext } from './usePageContext'
-const pageContext = usePageContext()
+import { computed, useAttrs } from "vue";
+import { usePageContext } from "./usePageContext";
+
+const attrs = useAttrs();
+const pageContext = usePageContext();
+
+const isActive = computed(() => {
+  const href = typeof attrs.href === "string" ? attrs.href : "";
+  const path = pageContext.urlPathname || "";
+  if (!href) return false;
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(`${href}/`);
+});
 </script>

@@ -2,7 +2,7 @@
 import MarkdownIt from "markdown-it";
 import releaseManagement from "../../data/release-management.json";
 import Button from "../../components/Button.vue";
-import Container from "../../components/Container.vue";
+import PortfolioShell from "../../components/PortfolioShell.vue";
 
 // Initialize markdown-it instance
 const md = new MarkdownIt();
@@ -18,89 +18,89 @@ const markdownContent = md.render(
 </script>
 
 <template>
-  <Container class="pt-3">
-    <div class="breadcrumbs">
-      <a :href="`/#${portfolioItem.fields.Select}-portfolio`">
-        {{ portfolioItem.fields.Select }}
-      </a>
-      \ {{ portfolioItem.fields.Name }}
-    </div>
-    <div class="flex mt-4 gap-4">
-      <div>
-        <h1>{{ portfolioItem.fields.Name }}</h1>
-        <div class="period mt-2 flex">
-          <div class="tag">
-            {{ portfolioItem.fields["Year start"] }}
-            <template v-if="!portfolioItem.fields['Year end']">
-              - Now
-            </template>
-            <template
-              v-else-if="
-                portfolioItem.fields['Year end'] !==
-                portfolioItem.fields['Year start']
-              "
-            >
-              - {{ portfolioItem.fields["Year end"] }}
-            </template>
-          </div>
-        </div>
-        <!-- Render the markdown content as raw HTML -->
-        <div class="content" v-html="markdownContent"></div>
-        <div class="gallery">
-          <div
-            class="gallery-image"
-            v-for="image in portfolioItem.fields.Images"
-          >
-            <img
-              :alt="image.filename"
-              loading="lazy"
-              :src="`/images-portfolio/${image.id}.png`"
-            />
-          </div>
-        </div>
+  <PortfolioShell>
+    <div class="pt-3">
+      <div class="breadcrumbs">
+        <a href="/portfolio">Portfolio</a>
+        \ {{ portfolioItem.fields.Name }}
       </div>
-      <div class="side-panel">
-        <img
-          :alt="portfolioItem.fields.Name"
-          class="main-image"
-          :src="`/images-portfolio/${portfolioItem.id}.png`"
-        />
-        <div class="px-1 py-1">
-          <strong>Project size</strong>
-          <div class="flex mt-1">
+      <div class="flex mt-4 gap-4">
+        <div>
+          <h1>{{ portfolioItem.fields.Name }}</h1>
+          <div class="period mt-2 flex">
             <div class="tag">
-              {{ portfolioItem.fields["Project size"] }}
+              {{ portfolioItem.fields["Year start"] }}
+              <template v-if="!portfolioItem.fields['Year end']">
+                - Now
+              </template>
+              <template
+                v-else-if="
+                  portfolioItem.fields['Year end'] !==
+                  portfolioItem.fields['Year start']
+                "
+              >
+                - {{ portfolioItem.fields["Year end"] }}
+              </template>
             </div>
           </div>
-          <div class="mt-2"></div>
-          <strong>Tags</strong>
-          <div class="flex mt-1 flex-wrap gap-xs">
-            <div class="tag" v-for="tag in portfolioItem.fields.Tags">
-              {{ tag }}
+          <div class="content" v-html="markdownContent"></div>
+          <div class="gallery">
+            <div
+              class="gallery-image"
+              v-for="image in portfolioItem.fields.Images"
+            >
+              <img
+                :alt="image.filename"
+                loading="lazy"
+                :src="`/images-portfolio/${image.id}.png`"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="side-panel">
+          <img
+            :alt="portfolioItem.fields.Name"
+            class="main-image"
+            :src="`/images-portfolio/${portfolioItem.id}.png`"
+          />
+          <div class="px-1 py-1">
+            <strong>Project size</strong>
+            <div class="flex mt-1">
+              <div class="tag">
+                {{ portfolioItem.fields["Project size"] }}
+              </div>
+            </div>
+            <div class="mt-2"></div>
+            <strong>Tags</strong>
+            <div class="flex mt-1 flex-wrap gap-xs">
+              <div class="tag" v-for="tag in portfolioItem.fields.Tags">
+                {{ tag }}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="cta py-4 mt-2 mb-4 px-4 flex fd-column ai-center jc-center text-center"
-    >
-      <h3>{{ portfolioItem.fields.CTA.value }}</h3>
-      <Button
-        href="https://forms.fillout.com/t/q9mEPmvDvBus"
-        target="blank"
-        variant="primary"
-        style="width: 200px"
-        >Let's talk</Button
+      <div
+        class="cta py-4 mt-2 mb-4 px-4 flex fd-column ai-center jc-center text-center"
       >
+        <h3>{{ portfolioItem.fields.CTA.value }}</h3>
+        <Button
+          href="https://forms.fillout.com/t/q9mEPmvDvBus"
+          target="blank"
+          variant="primary"
+          style="width: 200px"
+          >Let's talk</Button
+        >
+      </div>
     </div>
-  </Container>
+  </PortfolioShell>
 </template>
 
 <style lang="scss" scoped>
 .main-image {
   max-width: 100%;
 }
+
 
 .breadcrumbs {
   border: 1px solid rgba(0, 0, 0, 0.05);
