@@ -47,4 +47,5 @@ import Container from "./Container.vue";
     font-weight: 500;
   }
 }
+
 </style>

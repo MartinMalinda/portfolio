@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import BackButton from "../../../components/BackButton.vue";
 import Button from "../../../components/Button.vue";
 import ServicesShell from "../../../components/ServicesShell.vue";
 import SiteFooter from "../../../components/SiteFooter.vue";
@@ -11,10 +12,7 @@ import Rocket from "../../../components/icons/Rocket.vue";
   <div class="service-detail">
     <ServicesShell>
       <div class="pt-3">
-        <div class="breadcrumbs">
-          <a href="/services">Services</a>
-          \ Web development
-        </div>
+        <BackButton url="/services">Back to services</BackButton>
         <h2 class="service-title">Web development</h2>
         <p>Web interfaces and internal tools that stay fast under load.</p>
       </div>
@@ -62,7 +60,7 @@ import Rocket from "../../../components/icons/Rocket.vue";
 .details {
   padding: 0;
   color: #444;
-  font-size: 20px;
+  font-size: 16px;
 
   @media (max-width: 950px) {
     font-size: 16px;

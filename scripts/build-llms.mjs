@@ -9,7 +9,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
 const distDir = path.join(projectRoot, "dist");
 const outputRootPath = path.join(projectRoot, "llms-full.txt");
-const outputDistPath = path.join(distDir, "llms-full.txt");
+const distClientDir = path.join(distDir, "client");
+const outputDistPath = path.join(distClientDir, "llms-full.txt");
 const htmlExtensions = new Set([".html"]);
 const excludedBasenames = new Set([
   "404.html",
@@ -23,7 +24,9 @@ async function ensurePandoc() {
     await execFileAsync("pandoc", ["--version"]);
   } catch (error) {
     console.error("pandoc is required to build llms-full.txt.");
-    console.error("Install it from https://pandoc.org/installing.html and retry.");
+    console.error(
+      "Install it from https://pandoc.org/installing.html and retry.",
+    );
     process.exitCode = 1;
   }
 }
@@ -84,11 +87,23 @@ function toRoute(distFilePath) {
 async function convertHtmlToMarkdown(filePath) {
   const { stdout } = await execFileAsync("pandoc", [
     "--from=html",
-    "--to=gfm",
+    "--to=gfm-raw_html",
+    "--wrap=none",
     filePath,
   ]);
 
-  return stdout.trim();
+  let output = stdout.trim();
+  return postProcessLlms(output);
+}
+
+function postProcessLlms(markdown) {
+  // Replace: ![](data:image/svg+xml;base64,...)<label>
+  // With:   <label>
+  // Handles optional whitespace between ) and label.
+  return markdown.replace(
+    /!\[\]\(data:image\/svg\+xml(?:;base64)?,[^\)]*\)\s*/g,
+    "",
+  );
 }
 
 async function buildLlmsFile() {

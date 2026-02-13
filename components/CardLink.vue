@@ -6,7 +6,7 @@ const props = defineProps<{
   title: string;
   description: string;
   cta: string;
-  icon: DefineComponent;
+  icon?: DefineComponent;
 }>();
 
 const isExternal = computed(() => /^https?:\/\//.test(props.href));
@@ -20,39 +20,42 @@ const isExternal = computed(() => /^https?:\/\//.test(props.href));
     :rel="isExternal ? 'noopener noreferrer' : undefined"
   >
     <div class="card-icon">
-      <component :is="icon" />
+      <slot>
+        <component v-if="icon" :is="icon" />
+      </slot>
     </div>
     <div class="card-copy">
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
     </div>
-    <div class="card-cta">
-      {{ cta }} <span class="arrow">→</span>
-    </div>
+    <div class="card-cta">{{ cta }} <span class="arrow">→</span></div>
   </a>
 </template>
 
 <style lang="scss" scoped>
 .card {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  padding: $space * 2.5;
-  background: white;
+  border: 1px solid var(--card-border-color, rgba(0, 0, 0, 0.08));
+  border-radius: var(--card-radius, 14px);
+  padding: var(--card-padding, #{$space * 2.5});
+  background: var(--card-background, white);
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) auto;
-  grid-template-areas: "icon copy cta";
+  grid-template-columns: var(--card-columns, 64px minmax(0, 1fr) auto);
+  grid-template-areas: var(--card-areas, "icon copy cta");
   align-items: center;
   justify-items: start;
-  gap: $space * 2;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  gap: var(--card-gap, #{$space * 2});
+  box-shadow: var(--card-shadow, 0 10px 25px rgba(0, 0, 0, 0.06));
   text-decoration: none;
   color: inherit;
-  transition: 0.2s transform, 0.2s box-shadow, 0.2s border-color;
+  transition:
+    0.2s transform,
+    0.2s box-shadow,
+    0.2s border-color;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: var(--card-shadow-hover, 0 16px 30px rgba(0, 0, 0, 0.1));
+    border-color: var(--card-border-color-hover, rgba(0, 0, 0, 0.12));
 
     .arrow {
       transform: translateX(4px);
@@ -60,32 +63,33 @@ const isExternal = computed(() => /^https?:\/\//.test(props.href));
   }
 
   h2 {
-    margin: 0 0 $space 0;
-    font-size: 28px;
+    margin: 0;
+    font-size: var(--card-title-size, 20px);
   }
 
   p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.45;
     color: $dark-grey;
     max-width: 520px;
+    opacity: 0.8;
   }
 
   @media (max-width: 800px) {
-    grid-template-columns: 54px 1fr;
-    grid-template-areas:
-      "icon copy"
-      "cta cta";
-    row-gap: $space * 1.5;
+    grid-template-columns: var(--card-columns-mobile, 54px 1fr);
+    grid-template-areas: var(--card-areas-mobile, "icon copy" "cta cta");
+    row-gap: var(--card-row-gap-mobile, #{$space * 1.5});
     justify-items: start;
   }
 }
 
 .card-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background: rgba(0, 0, 0, 0.04);
+  width: var(--card-media-width, 54px);
+  height: var(--card-media-height, 54px);
+  border-radius: var(--card-media-radius, 16px);
+  background: var(--card-media-background, rgba(0, 0, 0, 0.04));
+  border: var(--card-media-border, none);
+  overflow: var(--card-media-overflow, visible);
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -94,6 +98,14 @@ const isExternal = computed(() => /^https?:\/\//.test(props.href));
   :deep(svg) {
     width: 28px;
     height: 28px;
+  }
+
+  :deep(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    display: block;
   }
 }
 

@@ -18,21 +18,21 @@ import VueLogo from "../../components/icons/Vue.vue";
         <CardLink
           href="/services/process-automation"
           title="Process automation"
-          description="Workflow mapping, automation strategy, and reliable execution across teams."
+          description="Hollistic workflow mapping, automation strategy."
           cta="View service"
           :icon="Bolt"
         />
         <CardLink
           href="/services/airtable-development"
           title="Airtable development"
-          description="Airtable bases, data models, and internal tools built for clarity and scale."
+          description="Airtable bases and internal tools built for clarity and scale."
           cta="View service"
           :icon="Airtable"
         />
         <CardLink
           href="/services/airtable-audit"
           title="Airtable audit"
-          description="Audit, cleanup, and performance review for existing Airtable systems."
+          description="Audit, and performance review for existing Airtable systems."
           cta="View service"
           :icon="Airtable"
         />

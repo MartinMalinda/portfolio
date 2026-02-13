@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import BackButton from "../../../components/BackButton.vue";
 import ServicesShell from "../../../components/ServicesShell.vue";
 import SiteFooter from "../../../components/SiteFooter.vue";
 </script>
@@ -7,10 +8,7 @@ import SiteFooter from "../../../components/SiteFooter.vue";
   <div class="service-detail">
     <ServicesShell>
       <div class="pt-3">
-        <div class="breadcrumbs">
-          <a href="/services">Services</a>
-          \ Airtable audit
-        </div>
+        <BackButton url="/services">Back to services</BackButton>
         <h2 class="service-title">Airtable audit</h2>
       </div>
       <p>TODO: add content.</p>
@@ -21,5 +19,4 @@ import SiteFooter from "../../../components/SiteFooter.vue";
   </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

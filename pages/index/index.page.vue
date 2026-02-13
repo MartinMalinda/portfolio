@@ -158,7 +158,7 @@ onUnmounted(() => {
           href="/about"
           title="About"
           description="Background, systems work, and the path that led me to automation and product work."
-          cta="Learn about me"
+          cta="Read more"
           :icon="User"
         />
       </div>
@@ -289,7 +289,10 @@ onUnmounted(() => {
   column-gap: $space * 2;
   text-decoration: none;
   color: inherit;
-  transition: 0.2s transform, 0.2s box-shadow, 0.2s border-color;
+  transition:
+    0.2s transform,
+    0.2s box-shadow,
+    0.2s border-color;
 
   &:hover {
     transform: translateY(-2px);

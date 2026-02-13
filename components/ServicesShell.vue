@@ -56,17 +56,10 @@ import Container from "./Container.vue";
   margin-top: $space * 2;
 }
 
-:deep(.breadcrumbs) {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: rgba(0, 0, 0, 0.01);
-  padding: $space * 2;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
 :deep(.service-title) {
-  margin-top: $space * 2;
-  font-size: 32px;
+  margin-top: 0;
+  font-size: 25px;
+  margin-bottom: 0;
   line-height: 1.4;
 }
 </style>

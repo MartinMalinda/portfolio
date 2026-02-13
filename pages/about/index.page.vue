@@ -55,8 +55,7 @@ import SiteFooter from "../../components/SiteFooter.vue";
           <br />
           <br />
           <strong
-            >Today, my focus is on automation, internal tooling, and AI-driven
-            workflows.</strong
+            >Today, my focus is on automation, internal tooling, and AI.</strong
           >
           <br />
           <br />

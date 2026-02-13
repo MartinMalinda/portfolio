@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MarkdownIt from "markdown-it";
 import releaseManagement from "../../data/release-management.json";
+import BackButton from "../../components/BackButton.vue";
 import BookingButton from "../../components/BookingButton.vue";
 import PortfolioShell from "../../components/PortfolioShell.vue";
 
@@ -13,17 +14,14 @@ const props = defineProps<{
 
 // Render markdown string to HTML
 const markdownContent = md.render(
-  props.portfolioItem.fields["Description (from Notion)"]
+  props.portfolioItem.fields["Description (from Notion)"],
 );
 </script>
 
 <template>
   <PortfolioShell>
     <div class="pt-3">
-      <div class="breadcrumbs">
-        <a href="/portfolio">Portfolio</a>
-        \ {{ portfolioItem.fields.Name }}
-      </div>
+      <BackButton url="/portfolio">Back to case studies</BackButton>
       <div class="flex mt-4 gap-4">
         <div>
           <h1>{{ portfolioItem.fields.Name }}</h1>
@@ -95,15 +93,6 @@ const markdownContent = md.render(
   max-width: 100%;
 }
 
-
-.breadcrumbs {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: rgba(0, 0, 0, 0.01);
-  padding: $space * 2;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
 .side-panel {
   background: rgba(0, 0, 0, 0.01);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -139,7 +128,6 @@ const markdownContent = md.render(
     margin-top: 0;
   }
 }
-
 
 h1 {
   line-height: 1.25;
