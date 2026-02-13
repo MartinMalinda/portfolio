@@ -66,7 +66,7 @@ import VueLogo from "../../components/icons/Vue.vue";
       <section class="ask-ai-block">
         <h2>Ask AI about my services</h2>
         <p>Build a focused prompt and open it in your AI chatbot of choice.</p>
-        <Button href="/chat" size="smaller">Open Ask AI</Button>
+        <Button href="/chat" size="smaller">Ask AI</Button>
       </section>
     </ServicesShell>
     <div class="mt-10 py-5">

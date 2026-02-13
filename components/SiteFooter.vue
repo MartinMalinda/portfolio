@@ -10,6 +10,9 @@ import Container from "./Container.vue";
         <div>
           <div>&copy; Martin Malinda</div>
           Business ID: 05668115
+          <div>
+            <a href="/llms-full.txt" target="_blank" rel="noreferrer">LLMs.txt</a>
+          </div>
         </div>
         <div class="contact-row flex gap-1">
           <BookingButton :show-subtext="false" />

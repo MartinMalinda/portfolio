@@ -44,11 +44,6 @@ import Rocket from "../../../components/icons/Rocket.vue";
             >
           </li>
           <li class="flex ai-center gap-1">
-            <Map class="icon" /><span>
-              Let's <b>map and review processes</b></span
-            >
-          </li>
-          <li class="flex ai-center gap-1">
             <Bulb class="icon" /><span>
               And come up with <b>new approaches & workflows</b></span
             >

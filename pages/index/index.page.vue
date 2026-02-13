@@ -25,6 +25,15 @@ type Testimonial = {
 
 const testimonialsList = ref<Testimonial[]>([
   {
+    id: "yusef-smith",
+    author: "Dr Yusef Smith",
+    role: "Co-Founder of PropaneFitness",
+    source: "Twitter",
+    date: "July 5, 2025",
+    image: "/yusef-smith.png",
+    text: "If you need a developer and/or data guy - @martinmalindacz is easily the best we've ever worked with. He truly got on board with our vision rather than just the narrow scope of the code.",
+  },
+  {
     id: "kristof-bardos",
     author: "Kristof Bardos",
     role: "CEO of Green Fox Academy",
@@ -32,14 +41,6 @@ const testimonialsList = ref<Testimonial[]>([
     date: "November 12, 2024",
     image: "/kristof-bardos.jpeg",
     text: "Martin is a go-to person if you need automation and lightweight ERP for your company. He is a senior dev, armed with deep tooling and business process knowledge combined with excellent communication and expectation management skills. And a fun guy!",
-  },
-  {
-    id: "yusef-smith",
-    author: "Dr Yusef Smith",
-    role: "@PropaneFitness",
-    source: "Twitter",
-    image: "/yusef-smith.png",
-    text: "If you need a developer and/or data guy - @martinmalindacz is easily the best we've ever worked with. He truly got on board with our vision rather than just the narrow scope of the code.",
   },
 ]);
 
@@ -150,8 +151,8 @@ onUnmounted(() => {
         />
         <CardLink
           href="/portfolio"
-          title="Portfolio"
-          description="Automation systems, Airtable workflows, and internal apps from recent work."
+          title="Case studies"
+          description="Automation systems, Airtable workflows, and web apps I've contributed to."
           cta="See the work"
           :icon="Chart"
         />

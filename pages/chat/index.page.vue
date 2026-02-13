@@ -3,7 +3,8 @@ import { computed, ref } from "vue";
 import Button from "../../components/Button.vue";
 import ChatGptLogo from "../../components/ChatGptLogo.vue";
 import ClaudeLogo from "../../components/ClaudeLogo.vue";
-import GeminiLogo from "../../components/GeminiLogo.vue";
+import CopyIcon from "../../components/CopyIcon.vue";
+import MistralLogo from "../../components/MistralLogo.vue";
 import Container from "../../components/Container.vue";
 import SiteFooter from "../../components/SiteFooter.vue";
 
@@ -206,8 +207,8 @@ const chatGptUrl = computed(
 const claudeUrl = computed(
   () => `https://claude.ai/new?q=${encodedPrompt.value}`,
 );
-const geminiUrl = computed(
-  () => `https://gemini.google.com/app?prompt=${encodedPrompt.value}`,
+const mistralUrl = computed(
+  () => `https://chat.mistral.ai/chat?q=${encodedPrompt.value}`,
 );
 
 function toggleOption(optionId: string) {
@@ -401,6 +402,7 @@ async function copyPrompt() {
               type="button"
               size="smaller"
               variant="primary"
+              :icon="CopyIcon"
               @click="copyPrompt"
             >
               {{ copyState }}
@@ -426,11 +428,11 @@ async function copyPrompt() {
             <Button
               variant="secondary"
               size="smaller"
-              :href="geminiUrl"
+              :href="mistralUrl"
               target="_blank"
-              :icon="GeminiLogo"
+              :icon="MistralLogo"
             >
-              Open in Gemini
+              Open in Mistral
             </Button>
           </div>
         </div>

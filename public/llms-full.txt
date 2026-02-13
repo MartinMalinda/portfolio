@@ -32,6 +32,8 @@ Outside of work, I recharge in nature and draw inspiration from history and art.
 
 Business ID: 05668115
 
+[LLMs.txt](/llms-full.txt)
+
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
 Book a meeting
@@ -100,13 +102,15 @@ Open in ChatGPT
 
 Open in Claude
 
-[](https://gemini.google.com/app?prompt=I%20am%20evaluating%20a%20potential%20collaboration%20with%20Martin%20Malinda%20-%20a%20process%20%26%20automation%20specialist%20%26%20a%20web%20developer.%0AReview%20his%20summarized%20website%20at%3A%20http%3A%2F%2Fmartinmalinda.cz%2Fllms-full.txt.%0A%0AFocus%20on%3A%20process%20audit%20and%20workflow%20mapping%2C%20Airtable%20development%20and%20base%20design.)
+[](https://chat.mistral.ai/chat?q=I%20am%20evaluating%20a%20potential%20collaboration%20with%20Martin%20Malinda%20-%20a%20process%20%26%20automation%20specialist%20%26%20a%20web%20developer.%0AReview%20his%20summarized%20website%20at%3A%20http%3A%2F%2Fmartinmalinda.cz%2Fllms-full.txt.%0A%0AFocus%20on%3A%20process%20audit%20and%20workflow%20mapping%2C%20Airtable%20development%20and%20base%20design.)
 
-Open in Gemini
+Open in Mistral
 
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
@@ -150,9 +154,9 @@ View products →
 
 [](/portfolio)
 
-## Portfolio
+## Case studies
 
-Automation systems, Airtable workflows, and internal apps from recent work.
+Automation systems, Airtable workflows, and web apps I've contributed to.
 
 See the work →
 
@@ -176,6 +180,14 @@ Read more →
 
 Notes from founders, operators, and teams I have worked with.
 
+![Dr Yusef Smith](/yusef-smith.png)
+
+Dr Yusef SmithCo-Founder of PropaneFitness
+
+July 5, 2025
+
+If you need a developer and/or data guy - @martinmalindacz is easily the best we've ever worked with. He truly got on board with our vision rather than just the narrow scope of the code.
+
 ![Kristof Bardos](/kristof-bardos.jpeg)
 
 Kristof BardosCEO of Green Fox Academy
@@ -184,12 +196,6 @@ November 12, 2024
 
 Martin is a go-to person if you need automation and lightweight ERP for your company. He is a senior dev, armed with deep tooling and business process knowledge combined with excellent communication and expectation management skills. And a fun guy!
 
-![Dr Yusef Smith](/yusef-smith.png)
-
-Dr Yusef Smith@PropaneFitness
-
-If you need a developer and/or data guy - @martinmalindacz is easily the best we've ever worked with. He truly got on board with our vision rather than just the narrow scope of the code.
-
 ‹
 
 ›
@@ -197,6 +203,8 @@ If you need a developer and/or data guy - @martinmalindacz is easily the best we
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
@@ -476,6 +484,8 @@ View case study →
 
 Business ID: 05668115
 
+[LLMs.txt](/llms-full.txt)
+
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
 Book a meeting
@@ -721,6 +731,8 @@ Visit site →
 
 Business ID: 05668115
 
+[LLMs.txt](/llms-full.txt)
+
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
 Book a meeting
@@ -762,6 +774,8 @@ Structured review of existing Airtable systems to improve clarity, performance, 
 
 Business ID: 05668115
 
+[LLMs.txt](/llms-full.txt)
+
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
 Book a meeting
@@ -791,7 +805,6 @@ Airtable systems, automation workflows, and internal interfaces built for reliab
 - Create and manage a **single source of truth**
 - Figure out how to **save energy & time**
 - Keep **data synced, up to date, interlinked**
-- Let's **map and review processes**
 - And come up with **new approaches & workflows**
 
 ### Automation
@@ -823,6 +836,8 @@ View template
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
@@ -864,6 +879,8 @@ Keep data synced, accurate, and traceable across tools with reliable pipelines.
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
@@ -919,11 +936,13 @@ Build a focused prompt and open it in your AI chatbot of choice.
 
 [](/chat)
 
-Open Ask AI
+Ask AI
 
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
@@ -965,6 +984,8 @@ Dashboards and admin tools that stay fast, clear, and reliable for day-to-day op
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
@@ -1034,6 +1055,8 @@ Structure first. Automation second. AI last.
 
 Business ID: 05668115
 
+[LLMs.txt](/llms-full.txt)
+
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
 Book a meeting
@@ -1078,6 +1101,8 @@ View selected work
 
 Business ID: 05668115
 
+[LLMs.txt](/llms-full.txt)
+
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
 Book a meeting
@@ -1107,6 +1132,8 @@ Thoughts on automation, performance, and shipping reliable systems.
 © Martin Malinda
 
 Business ID: 05668115
+
+[LLMs.txt](/llms-full.txt)
 
 [](https://forms.fillout.com/t/q9mEPmvDvBus)
 
