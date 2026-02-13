@@ -5,6 +5,8 @@ import CardLink from "../../components/CardLink.vue";
 import Container from "../../components/Container.vue";
 import SiteFooter from "../../components/SiteFooter.vue";
 import TypingHeadline from "../../components/TypingHeadline.vue";
+import LinkedinLogo from "../../components/LinkedinLogo.vue";
+import TwitterLogo from "../../components/TwitterLogo.vue";
 import Bolt from "../../components/icons/Bolt.vue";
 import Rocket from "../../components/icons/Rocket.vue";
 import Chart from "../../components/icons/Chart.vue";
@@ -51,6 +53,12 @@ const heroHeadlines = [
 
 const slider = ref<HTMLElement | null>(null);
 const currentIndex = ref(0);
+
+function getSourceIcon(source: string) {
+  if (source === "LinkedIn") return LinkedinLogo;
+  if (source === "Twitter") return TwitterLogo;
+  return null;
+}
 
 function goTo(index: number) {
   if (!slider.value) return;
@@ -187,7 +195,15 @@ onUnmounted(() => {
                   <div class="meta">
                     <div class="author-row">
                       <span class="author">{{ testimonial.author }}</span>
-                      <span class="source">{{ testimonial.source }}</span>
+                      <span class="source" :aria-label="testimonial.source">
+                        <component
+                          :is="getSourceIcon(testimonial.source)"
+                          v-if="getSourceIcon(testimonial.source)"
+                          class="source-icon"
+                          aria-hidden="true"
+                        />
+                        <span v-else>{{ testimonial.source }}</span>
+                      </span>
                     </div>
                     <div class="role">{{ testimonial.role }}</div>
                     <div v-if="testimonial.date" class="date">
@@ -417,11 +433,14 @@ onUnmounted(() => {
 }
 
 .source {
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
   color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 999px;
-  padding: 2px 8px;
+}
+
+.source :deep(svg) {
+  width: 14px;
+  height: 14px;
 }
 
 .role {

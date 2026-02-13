@@ -6,6 +6,7 @@ import MediumLogo from "../components/MediumLogo.vue";
 import GithubLogo from "../components/GithubLogo.vue";
 import Envelope from "../components/Envelope.vue";
 import Pin from "../components/Pin.vue";
+import AskAiIcon from "../components/AskAiIcon.vue";
 
 const isNavOpen = ref(false);
 const navRef = ref<HTMLElement | null>(null);
@@ -121,6 +122,13 @@ onBeforeUnmount(() => {
           <Link href="/about" class="nav-link theme-about" @click="closeNav">
             <span class="label">About</span>
             <span class="short">About</span>
+          </Link>
+          <Link href="/chat" class="nav-link theme-chat" @click="closeNav">
+            <span class="label">
+              Ask AI
+              <AskAiIcon class="ask-ai-icon" />
+            </span>
+            <span class="short">AI</span>
           </Link>
         </div>
         <div class="sidebar-footer">
@@ -296,20 +304,26 @@ a {
   margin-left: -$space * 2;
   margin-right: -$space * 2;
 
-  .nav-link {
-    padding: 12px $space * 2;
-    border-radius: 0;
-    color: $almost-black;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 0;
-    transition: 0.15s background, 0.15s border-color;
+    .nav-link {
+      padding: 12px $space * 2;
+      border-radius: 0;
+      color: $almost-black;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 0;
+      transition: 0.15s background, 0.15s border-color;
 
-    &.active {
-      background: var(--nav-bg);
-    }
+      .label {
+        display: flex;
+        align-items: center;
+        gap: $space / 2;
+      }
+    
+      &.active {
+        background: var(--nav-bg);
+      }
 
     &:hover {
       background: var(--nav-bg);
@@ -343,6 +357,14 @@ a {
   --nav-bg: linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.05),
+    rgba(255, 255, 255, 0.4)
+  );
+}
+
+.theme-chat {
+  --nav-bg: linear-gradient(
+    135deg,
+    rgba(189, 104, 255, 0.18),
     rgba(255, 255, 255, 0.4)
   );
 }

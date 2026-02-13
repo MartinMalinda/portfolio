@@ -7,6 +7,7 @@ const props = defineProps<{
   description: string;
   cta: string;
   icon?: DefineComponent;
+  disabled?: boolean;
 }>();
 
 const isExternal = computed(() => /^https?:\/\//.test(props.href));
@@ -15,9 +16,12 @@ const isExternal = computed(() => /^https?:\/\//.test(props.href));
 <template>
   <a
     class="card"
-    :href="href"
+    :class="{ 'card--disabled': disabled }"
+    :href="disabled ? undefined : href"
     :target="isExternal ? '_blank' : undefined"
     :rel="isExternal ? 'noopener noreferrer' : undefined"
+    :aria-disabled="disabled ? 'true' : undefined"
+    :tabindex="disabled ? -1 : undefined"
   >
     <div class="card-icon">
       <slot>
@@ -28,7 +32,9 @@ const isExternal = computed(() => /^https?:\/\//.test(props.href));
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
     </div>
-    <div class="card-cta">{{ cta }} <span class="arrow">→</span></div>
+    <div v-if="!disabled" class="card-cta">
+      {{ cta }} <span class="arrow">→</span>
+    </div>
   </a>
 </template>
 
@@ -80,6 +86,18 @@ const isExternal = computed(() => /^https?:\/\//.test(props.href));
     grid-template-areas: var(--card-areas-mobile, "icon copy" "cta cta");
     row-gap: var(--card-row-gap-mobile, #{$space * 1.5});
     justify-items: start;
+  }
+}
+
+.card--disabled {
+  border-color: var(--card-border-color-disabled, rgba(0, 0, 0, 0.05));
+  box-shadow: none;
+  cursor: default;
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--card-border-color-disabled, rgba(0, 0, 0, 0.05));
   }
 }
 

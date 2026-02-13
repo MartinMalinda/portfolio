@@ -132,6 +132,7 @@ import Rocket from "../../../components/icons/Rocket.vue";
             class="template-feature__button"
             href="https://airtable-invoicing-base.netlify.app/"
             target="_blank"
+            size="small"
           >
             View template
           </Button>
@@ -217,7 +218,7 @@ h2 {
   display: flex;
   gap: 12px;
   margin-top: auto;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 

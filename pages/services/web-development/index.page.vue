@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import BackButton from "../../../components/BackButton.vue";
 import Button from "../../../components/Button.vue";
+import ProgressBanner from "../../../components/ProgressBanner.vue";
+import ServiceBlock from "../../../components/ServiceBlock.vue";
 import ServicesShell from "../../../components/ServicesShell.vue";
 import SiteFooter from "../../../components/SiteFooter.vue";
 import Bolt from "../../../components/icons/Bolt.vue";
@@ -11,44 +13,41 @@ import Rocket from "../../../components/icons/Rocket.vue";
 <template>
   <div class="service-detail">
     <ServicesShell>
-      <div class="pt-3">
-        <BackButton url="/services">Back to services</BackButton>
+      <BackButton class="mt-2" url="/services">Back to services</BackButton>
+      <ProgressBanner />
+      <ServiceBlock class="pt-2">
         <h2 class="service-title">Web development</h2>
-        <p>Web interfaces and internal tools that stay fast under load.</p>
-      </div>
-      <div class="tools"></div>
-      <p>
-        My expertise lies in building web user interfaces that load fast and
-        stay fast. <br />
-        I have a lot of experience with Vue.js, TypeScript and building complex
-        web applications.
-      </p>
-      <ul class="details" style="list-style-type: none">
-        <li class="flex ai-center gap-1">
-          <Rocket class="icon" />
-          <span><b>Building MVPs</b></span>
-        </li>
-        <li class="flex ai-center gap-1">
-          <Mag class="icon" />
-          <span
-            ><b>Code review & consulting:</b> <br />
-            Libraries, patterns, architecture, build tooling and component
-            design.
-          </span>
-        </li>
-        <li class="flex ai-center gap-1">
-          <Bolt class="icon" />
-          <span
-            ><b>Performance:</b> Identify performance bottlenecks and implement
-            fixes.</span
-          >
-        </li>
-      </ul>
-      <div class="pt-5">
+        <div>Web interfaces and internal tools that stay fast under load.</div>
+      </ServiceBlock>
+      <ServiceBlock title="What I build">
+        <div>
+          Fast, dependable UIs in Vue + TypeScript with clean architecture and
+          maintainable components.
+        </div>
+        <ul class="details" style="list-style-type: none">
+          <li class="flex ai-center gap-1">
+            <Rocket class="icon" /><span><b>Building MVPs</b></span>
+          </li>
+          <li class="flex ai-center gap-1">
+            <Mag class="icon" />
+            <span
+              ><b>Code review & consulting:</b> Libraries, patterns, build
+              tooling, and component design.</span
+            >
+          </li>
+          <li class="flex ai-center gap-1">
+            <Bolt class="icon" />
+            <span
+              ><b>Performance:</b> Identify bottlenecks and implement fixes.</span
+            >
+          </li>
+        </ul>
+      </ServiceBlock>
+      <ServiceBlock title="Selected work">
         <Button href="/portfolio" variant="secondary" size="small">
           View selected work
         </Button>
-      </div>
+      </ServiceBlock>
     </ServicesShell>
     <div class="mt-10 py-5">
       <SiteFooter />
@@ -57,10 +56,19 @@ import Rocket from "../../../components/icons/Rocket.vue";
 </template>
 
 <style lang="scss" scoped>
+h2 {
+  font-size: 35px;
+  line-height: 1.5;
+
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
+}
+
 .details {
   padding: 0;
   color: #444;
-  font-size: 16px;
+  font-size: 18px;
 
   @media (max-width: 950px) {
     font-size: 16px;
@@ -75,4 +83,5 @@ import Rocket from "../../../components/icons/Rocket.vue";
     margin-top: $space * 2;
   }
 }
+
 </style>
