@@ -9,7 +9,7 @@
   width: 950px;
   max-width: 100%;
 
-  @media (max-width: 950px) {
+  @media (max-width: 1220px) {
     width: 100%;
     padding-left: $space * 2;
     padding-right: $space * 2;

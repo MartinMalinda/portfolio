@@ -457,18 +457,24 @@ img {
 }
 
 @media (max-width: 900px) {
+  $mobile-topbar-height: 64px;
+
   .topbar {
     display: flex;
+    height: $mobile-topbar-height;
   }
 
   .sidebar {
     transform: translateX(-100%);
     width: 280px;
+    top: $mobile-topbar-height;
+    height: calc(100vh - #{$mobile-topbar-height});
   }
 
   .page-shell.nav-open {
     .sidebar {
       transform: translateX(0);
+      z-index: 250;
     }
 
     .overlay {
