@@ -1,4 +1,4 @@
-import { readdir, stat, writeFile } from "node:fs/promises";
+import { readdir, stat, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
@@ -8,9 +8,8 @@ const execFileAsync = promisify(execFile);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
 const distDir = path.join(projectRoot, "dist");
-const outputRootPath = path.join(projectRoot, "llms-full.txt");
-const distClientDir = path.join(distDir, "client");
-const outputDistPath = path.join(distClientDir, "llms-full.txt");
+const publicDir = path.join(projectRoot, "public");
+const outputPublicPath = path.join(publicDir, "llms-full.txt");
 const htmlExtensions = new Set([".html"]);
 const excludedBasenames = new Set([
   "404.html",
@@ -129,8 +128,8 @@ async function buildLlmsFile() {
   }
 
   const output = `${sections.join("\n\n")}\n`;
-  await writeFile(outputRootPath, output, "utf8");
-  await writeFile(outputDistPath, output, "utf8");
+  await mkdir(publicDir, { recursive: true });
+  await writeFile(outputPublicPath, output, "utf8");
 }
 
 await ensurePandoc();

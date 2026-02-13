@@ -1,0 +1,1113 @@
+# /client/about
+
+# About
+
+![Teaching](/teaching.png) I build operational infrastructure for growing businesses.\
+\
+Over the past decade, I've worked on production systems used by real customers, handled monetization flows, modernized legacy applications, and helped teams scale their technical foundations without losing coherence.\
+\
+I've contributed to and led architecture work at companies such as [Leadfeeder](https://www.leadfeeder.com), [GoOut](https://goout.net/), and [TopMonks](https://www.topmonks.com/index.html), and later co-founded [Herohero](https://about.herohero.co/en/), where I was responsible for frontend architecture and core platform infrastructure. Along the way, I also taught programming and led technical teams at [Green Fox Academy](https://www.instagram.com/greenfox_official/), combining hands-on engineering with mentorship and delivery ownership.\
+\
+Across these roles, the common thread was complexity: scaling applications, improving performance, integrating payments, structuring data, and maintaining code quality as systems evolved.\
+\
+**Today, my focus is on automation, internal tooling, and AI.**\
+\
+I work with small and medium businesses to:
+
+- Structure data and processes so they remain manageable as the company grows
+- Connect tools into coherent systems instead of fragmented automations
+- Replace fragile manual work with reliable infrastructure
+- Introduce AI in pragmatic, business-aligned ways
+
+Alongside client work, I build products that embody the same philosophy:\
+\
+**Powersync** - infrastructure for reliable data synchronization and automation in Airtable-based systems.\
+**Powersave** - a browser extension that turns everyday web activity into structured, database-ready input.\
+\
+Whether working with SMBs or stepping into technical leadership roles, my goal is consistent: design systems that stay stable, observable, and adaptable as complexity increases.\
+\
+Outside of work, I recharge in nature and draw inspiration from history and art.
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/chat
+
+# Ask AI about my services
+
+Build a focused prompt by toggling the service and output details below.
+
+## Services
+
+Process audit
+
+Airtable development
+
+Internal tooling
+
+Data synchronization
+
+Web development
+
+## Goals
+
+Single source of truth
+
+Reduce manual work
+
+Connect tools
+
+AI augmentation
+
+## Pain points
+
+Workflow chaos
+
+Data inconsistency
+
+Slow internal ops
+
+Legacy systems
+
+## Constraints
+
+Timeline
+
+Budget
+
+Existing stack
+
+## Company context
+
+Company URL
+
+Company description
+
+## Prompt
+
+Copy prompt
+
+[](https://chatgpt.com/?q=I%20am%20evaluating%20a%20potential%20collaboration%20with%20Martin%20Malinda%20-%20a%20process%20%26%20automation%20specialist%20%26%20a%20web%20developer.%0AReview%20his%20summarized%20website%20at%3A%20http%3A%2F%2Fmartinmalinda.cz%2Fllms-full.txt.%0A%0AFocus%20on%3A%20process%20audit%20and%20workflow%20mapping%2C%20Airtable%20development%20and%20base%20design.)
+
+Open in ChatGPT
+
+[](https://claude.ai/new?q=I%20am%20evaluating%20a%20potential%20collaboration%20with%20Martin%20Malinda%20-%20a%20process%20%26%20automation%20specialist%20%26%20a%20web%20developer.%0AReview%20his%20summarized%20website%20at%3A%20http%3A%2F%2Fmartinmalinda.cz%2Fllms-full.txt.%0A%0AFocus%20on%3A%20process%20audit%20and%20workflow%20mapping%2C%20Airtable%20development%20and%20base%20design.)
+
+Open in Claude
+
+[](https://gemini.google.com/app?prompt=I%20am%20evaluating%20a%20potential%20collaboration%20with%20Martin%20Malinda%20-%20a%20process%20%26%20automation%20specialist%20%26%20a%20web%20developer.%0AReview%20his%20summarized%20website%20at%3A%20http%3A%2F%2Fmartinmalinda.cz%2Fllms-full.txt.%0A%0AFocus%20on%3A%20process%20audit%20and%20workflow%20mapping%2C%20Airtable%20development%20and%20base%20design.)
+
+Open in Gemini
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client
+
+# Systems that think like you do.
+
+I design reliable workflow architecture, Airtable bases, and fast internal UIs.\
+**I'm open for collaboration:** audits, consulting, and hands-on builds.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/about)
+
+I bring 10 years of web development experience and 3 years focused on business automation, with a strong emphasis on Airtable systems.\
+I’ve worked with startups, agencies, and growing companies to build scalable internal tools and reliable workflows.
+
+Read more →
+
+[](/services)
+
+## Services
+
+Automation systems, Airtable builds, and internal tools focused on clarity and outcomes.
+
+Explore services →
+
+[](/products)
+
+## Products
+
+Tools I build for workflow speed and reliability.
+
+View products →
+
+[](/portfolio)
+
+## Portfolio
+
+Automation systems, Airtable workflows, and internal apps from recent work.
+
+See the work →
+
+[](/writing)
+
+## Writing
+
+Notes on Airtable, workflow reliability, and performance engineering.
+
+Read writing →
+
+[](/about)
+
+## About
+
+Background, systems work, and the path that led me to automation and product work.
+
+Read more →
+
+## Testimonials
+
+Notes from founders, operators, and teams I have worked with.
+
+![Kristof Bardos](/kristof-bardos.jpeg)
+
+Kristof BardosCEO of Green Fox Academy
+
+November 12, 2024
+
+Martin is a go-to person if you need automation and lightweight ERP for your company. He is a senior dev, armed with deep tooling and business process knowledge combined with excellent communication and expectation management skills. And a fun guy!
+
+![Dr Yusef Smith](/yusef-smith.png)
+
+Dr Yusef Smith@PropaneFitness
+
+If you need a developer and/or data guy - @martinmalindacz is easily the best we've ever worked with. He truly got on board with our vision rather than just the narrow scope of the code.
+
+‹
+
+›
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/portfolio/cashflow-dashboard
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Cashflow dashboard
+
+2023
+
+To create a unified cashflow base I needed to integrate several systems: two invoicing SaaS and parsing of specific XML bank exports.
+
+- **Invoices table** unified data from mulitiple different invoicing services
+- **Transactions table** had unified data from multiple different banks in different currencies
+
+Transactions were matched to invoices, tracking payment status and information from all invoices were summarized in Airtable interfaces. This allowed custom automations based on invoice payment status as well as building custom dashboards via Airtable interfaces which showed up to date status of cashflow from multiple bank accounts at the same place.
+
+Airtable formula was able to convert all values to EUR and so revenue was easy to track month to month.
+
+Having financial data in Airtable might be useful if you need to set up automations on top of your financial data:
+
+- **Custom invoice workflows**: payment reminders, notifications, issuing new invoices
+- **Connecting revenue to your existing data:** see revenue of each product, company or user right in the Airtable base
+- **Custom alerts:** identify drops or increases in revenue in specific areas
+
+![Cashflow dashboard](/images-portfolio/reccVt9WzPEhZ3OzX.png)
+
+**Project size**
+
+Large
+
+**Tags**
+
+Airtable
+
+Invoicing
+
+### Would you like to streamline your cashflow management with custom automations, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio/feedback-machine
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Feedback machine
+
+2022
+
+Based on existing [Airtable](https://airtable.com/) data structure I used [TypeForm](https://www.typeform.com/) API to dynamically create new forms at the end of each week. This meant that the forms were highly specific and it made it easier for customers to pass feedback about recent changes. Along with these forms a webhook was dynamically created as well, which allowed to correctly capture responses for each of these newly created forms.
+
+- **Forms table** gathered information about each new dynamically created form
+- **Responses table** gathered all form submissions
+- **Formulas & rollups** summarized certain metrics from the form per each form (week)
+- **Airtable interfaces** allowed browsing all of the collected feedback and displayed charts for the numeric metrics
+
+In certain cases feedback form may be the same all the time. But in other situations it’s much better to create forms dynamically - for organized events, courses, workshops it might be useful to generate specific questions based on people involved, topics and other criteria.
+
+This likely leads to higher submissions too as the survey seems more personal and of higher quality.
+
+![Feedback machine](/images-portfolio/rec1RIDhb7nEagaBJ.png)
+
+**Project size**
+
+Medium
+
+**Tags**
+
+Airtable
+
+Typeform
+
+### Want to create dynamic, personalized feedback forms for your events, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio/goout
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# GoOut
+
+2020 - 2022
+
+I was working on a [new edition of UI](https://goout.net/en/prague/events/leznyvlkk/) built with Vue and [Nuxt](https://nuxt.com/). Combining internationalization, SSR with specific SEO needs, effective caching both on the server and client, and optimizing the performance of various infinite scrolling content provided a lot of challenges. We aimed to make the new website fast, SEO friendly but also able to withstand massive hits of traffic.
+
+![Screenshot 2024-09-10 at 16.54.55.png](/images-portfolio/attYhWp9c1Jjj3Og2.png)
+
+![Screenshot 2024-09-10 at 16.54.37.png](/images-portfolio/attWhB9OgFktWfypM.png)
+
+![Screenshot 2024-09-10 at 16.53.43.png](/images-portfolio/att84cjowu7v43gqZ.png)
+
+![GoOut](/images-portfolio/recyC37Ve1DoQD7Z4.png)
+
+**Project size**
+
+Large
+
+**Tags**
+
+Vue.js
+
+Nuxt
+
+### Ready to create a fast, SEO-friendly website that can handle massive traffic, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio/herohero
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Herohero
+
+2021 - 2023
+
+I was the main frontend developer creating the user interface for the [Herohero](https://about.herohero.co/en/) platform. In this project, I had the privilege of using the latest technology of Vue 3 and Vite. I optimized for fast boot, snappy page and non-page transitions, and good scroll restoration in this modern web single page app. I created a custom media player with timestamp support, advanced upload manager and integrated the [Stripe](https://stripe.com/en-cz) payment gateway.
+
+Herohero had a rapid growth in Czech Republic and Slovakia and eventually became the [dominant platform](https://www.focus-age.cz/m-journal/aktuality/mikyr-a-ti-dalsi--poznejte-nejlepe-vydelavajici-tvurce-na-herohero__s288x17493.html) for content monetisation.
+
+![Screenshot 2024-09-10 at 16.42.05.png](/images-portfolio/att5ROOFpSmnY39xb.png)
+
+![Screenshot 2024-09-10 at 16.51.20.png](/images-portfolio/attqk5eTus86uIj7K.png)
+
+![Screenshot 2024-09-10 at 16.42.32.png](/images-portfolio/attjEFpsROc3NVRyw.png)
+
+![Herohero](/images-portfolio/rectfYptNZQJ0Iiko.png)
+
+**Project size**
+
+Large
+
+**Tags**
+
+Vue.js
+
+Stripe
+
+### Want to create a cutting-edge platform like Herohero, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+## Automation & Data
+
+[](/portfolio/student-database)
+
+![Student database](/images-portfolio/recBAZwAj9NKCMbZF.png)
+
+## Student database
+
+I have managed a large database of students, classes and mentors. This included processes like application handling, contract signature, cl…
+
+View case study →
+
+[](/portfolio/feedback-machine)
+
+![Feedback machine](/images-portfolio/rec1RIDhb7nEagaBJ.png)
+
+## Feedback machine
+
+Based on existing Airtable data structure I used TypeForm API to dynamically create new forms at the end of each week. This meant that the…
+
+View case study →
+
+[](/portfolio/cashflow-dashboard)
+
+![Cashflow dashboard](/images-portfolio/reccVt9WzPEhZ3OzX.png)
+
+## Cashflow dashboard
+
+To create a unified cashflow base I needed to integrate several systems: two invoicing SaaS and parsing of specific XML bank exports.
+
+View case study →
+
+[](/portfolio/release-management)
+
+![Release management](/images-portfolio/recGSyZQiSPDAANie.png)
+
+## Release management
+
+For my browser extension Powersave I built a base to track bugs, features and releases. Chrome extensions have to be explicitly versioned t…
+
+View case study →
+
+## Web development
+
+[](/portfolio/powersave)
+
+![Powersave](/images-portfolio/recIr4cdiRMGC7pkE.png)
+
+## Powersave
+
+I created this browser extension to be able to save to Airtable quickly right from the browser. Powersave is an advanced web clipper with A…
+
+View case study →
+
+[](/portfolio/herohero)
+
+![Herohero](/images-portfolio/rectfYptNZQJ0Iiko.png)
+
+## Herohero
+
+I was the main frontend developer creating the user interface for the Herohero platform. In this project, I had the privilege of using the…
+
+View case study →
+
+[](/portfolio/goout)
+
+![GoOut](/images-portfolio/recyC37Ve1DoQD7Z4.png)
+
+## GoOut
+
+I was working on a new edition of UI built with Vue and Nuxt. Combining internationalization, SSR with specific SEO needs, effective cachin…
+
+View case study →
+
+[](/portfolio/leadfeeder)
+
+![Leadfeeder](/images-portfolio/rec4V0PHfqFowYr7M.png)
+
+## Leadfeeder
+
+After I onboarded in Leadfeeder, I got a lot of freeway to improve the main UI built with Ember. During my time in Leadfeeder, we have move…
+
+View case study →
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/portfolio/leadfeeder
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Leadfeeder
+
+2017 - 2018
+
+After I onboarded in [Leadfeeder](https://www.leadfeeder.com/), I got a lot of freeway to improve the main UI built with Ember. During my time in Leadfeeder, we have moved a lot of functionality from the previous Rails solution under the [Ember](https://emberjs.com/) SPA solution and we scaled the Ember SPA up. This required some new refactoring, overall overhauls in frontend architecture. I implemented [Ember Engines](https://ember-engines.com/) - a frontend code-splitting solution.
+
+![microsoft-dynamics-app-screenshot.png-c56ba652.webp](/images-portfolio/atty7q9jtkV1yd8CS.png)
+
+![qualify-main-image.png-02660926.webp](/images-portfolio/attAht9vmAsNu6aAT.png)
+
+![Leadfeeder](/images-portfolio/rec4V0PHfqFowYr7M.png)
+
+**Project size**
+
+Large
+
+**Tags**
+
+Ember.js
+
+### Do you need to create a modern web app or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio/powersave
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Powersave
+
+2024 - Now
+
+I created this [browser extension](https://chromewebstore.google.com/detail/airtable-powersave/haenikbhamhcofblbialbabhlimabade) to be able to save to [Airtable](https://airtable.com/) quickly right from the browser. [Powersave](http://powersave.pro/) is an advanced web clipper with AI capabilities that allows you to quickly save to the any base and table in Airtable.
+
+**Features**
+
+- Save data to any base and table
+- Use AI to extract and categorize information for you, no matter what your table structure is like
+- Create new Airtable tables in seconds with AI assistance
+- Quickly narrow down a portion of the screen for more precise extraction
+- Unlimited saved websites
+- Autofill URLs, images, headers, descriptions, and more
+- Take screenshots
+
+**Usecases**
+
+- ⚡ Save websites - portfolios, competitors, any other websites
+- ⚡ Content management - quickly add new content and update existing content. Quickly manage Airtable content for Softr, Glide and other websites using Airtable as backend
+- ⚡ Content auditing - review content under different URLs and quickly save notes
+- ⚡ Social media - save information about followers, posts
+- ⚡ Products - save products of any kind and categorize it to Airtable
+- ⚡ Migrations - transfer content from legacy websites to migrate to new structures
+- ⚡ Quickly add any Airtable record right from the browser
+
+![unnamed.png](/images-portfolio/attxqyKiZLPKqLxqE.png)
+
+![unnamed (1).png](/images-portfolio/attjPMep2YPoNNDym.png)
+
+![unnamed (2).png](/images-portfolio/attvDQ8fVd0Rfy2bj.png)
+
+![unnamed (3).png](/images-portfolio/atta6zMyDKNGyBUK1.png)
+
+![unnamed (4).png](/images-portfolio/attQKYbCsFN5RY7l7.png)
+
+![Powersave](/images-portfolio/recIr4cdiRMGC7pkE.png)
+
+**Project size**
+
+Large
+
+**Tags**
+
+Airtable
+
+Vue.js
+
+Supabase
+
+### Want to save and categorize web content effortlessly with AI, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio/release-management
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Release management
+
+2024
+
+For my browser extension [Powersave](https://powersave.pro/) I built a base to track bugs, features and releases. Chrome extensions have to be explicitly versioned to be scheduled for release in the Chrome Web Store. Therefore features but also bug fixes are tied to specific releases.
+
+I decided to build this chrome extension in public. This means that the interfaces are available publicly:
+
+- [Bugs interface](https://airtable.com/apphqr05AVNkiqHIq/shrRrZlGJPV2OFcy3) to view and report bugs
+- [Features interface](https://airtable.com/apphqr05AVNkiqHIq/shrKPaOGtiHfmxpRi) to see the status of new features and to allow anyone to submit feedback
+- [Releases interface](https://airtable.com/apphqr05AVNkiqHIq/shr5fk1lpnNIRmbE7) to see the status of upcoming releases (roadmap)
+
+Each feature has a dynamic link to an Airtable form, which allows anyone to click “Submit feedback” and share their thoughts. The form has pre-populated data from URL so it’s easy to quickly add feedback to any feature. An entire solution is built in Airtable.
+
+An extra automation here periodically checks the latest version published in the Chrome Web Store and compares it to status in Airtable. If the status is not published, it sets it to published and then it also changes the status of all related features and bugs.
+
+People who subscribed to certain features get notified the feature was released and there’s also an automated release summary posted to X.
+
+![Screenshot 2024-09-10 at 17.05.48.png](/images-portfolio/atts1Xf1N8HL11P5T.png)
+
+![Screenshot 2024-09-10 at 17.06.12.png](/images-portfolio/attnOoDzKgEKVic8P.png)
+
+![Screenshot 2024-09-10 at 17.06.49.png](/images-portfolio/attPIZVJsnTIUdN6a.png)
+
+![Screenshot 2024-09-10 at 17.07.10.png](/images-portfolio/attNqmVcP62wCIjHr.png)
+
+![Release management](/images-portfolio/recGSyZQiSPDAANie.png)
+
+**Project size**
+
+Medium
+
+**Tags**
+
+Airtable
+
+Pipedream
+
+### Ready to track your releases with Airtable, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/portfolio/student-database
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Student database
+
+2022 - 2023
+
+I have managed a large database of students, classes and mentors. This included processes like application handling, contract signature, class assignment, exam evaluation, class payments, attendance tracking, lecture & workshop planning, pricing configurations, hiring & placement.
+
+Potential students fist arrived in [ActiveCampaign CRM](https://www.activecampaign.com) where their application status was tracked. If successful, they were sent to Airtable. In Airtable there was an automated process to assign them to the right class and once a contract was signed, they were moved to Students table.
+
+A lot of complexity followed:
+
+- Attendance
+- Exam evalutation & result tracking
+- Project assignment
+- Payment tracking
+- Graduation process
+- Placement process
+
+Besides that I handled integration with different Invoicing software and exports from banks to create cashflow dashboards.
+
+The Airtable workspace consisted of over 50 tables and many interfaces and automations. In the end it eliminated a ton of manual sync of data from different systems and manual repeated creation of many types of spreadsheets, all of which could potentially be fault to human error.
+
+Airtable provided structure for operations and project management and [Slack](https://slack.com/) messages informed key people when it was their turn to move the process forward.
+
+![Student database](/images-portfolio/recBAZwAj9NKCMbZF.png)
+
+**Project size**
+
+Large
+
+**Tags**
+
+Airtable
+
+### Ready to streamline your student management system with Airtable, or build something else?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+# /client/products
+
+# Products
+
+Practical tools built from real client workflows and everyday automation needs.
+
+[](https://powersave.pro)
+
+## Powersave
+
+Save ASAP with AI. Save more, categorize & analyze as you browse to Airtable, Coda, Notion and elsewhere.
+
+Visit site →
+
+[](https://sync.powersave.pro)
+
+![Powersync](https://sync.powersave.pro/logo-ps-6.png)
+
+## Powersync
+
+Supercharge your Airtable and unlock new flows Track base history, connect Slack and Stripe and more.
+
+Visit site →
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services/airtable-audit
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services)
+
+←Back to services
+
+This page is in progress.
+
+## Airtable audit
+
+Structured review of existing Airtable systems to improve clarity, performance, and reliability.
+
+### Audit & review
+
+- Schema review and base health check
+- Table structure, fields, and relationships
+- Automation and integration mapping
+
+### Recommendations
+
+- Performance improvements and quick wins
+- Roadmap with effort and impact estimates
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services/airtable-development
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services)
+
+←Back to services
+
+## Airtable development
+
+Airtable systems, automation workflows, and internal interfaces built for reliability.
+
+### Database design
+
+- Create and manage a **single source of truth**
+- Figure out how to **save energy & time**
+- Keep **data synced, up to date, interlinked**
+- Let's **map and review processes**
+- And come up with **new approaches & workflows**
+
+### Automation
+
+- Keep **data synced, up to date, interlinked**
+- Figure out how to **save energy & time**
+- Tailored integrations & streamlining
+
+### Dashboards
+
+- Data visualized, **always up to date**
+- Financial overviews
+- Analytics
+- Performance Metrics
+- Data aggregated, integrated
+
+Free template
+
+### Airtable Invoicing Base
+
+A lightweight invoicing system built on Airtable with dashboards, client tracking, and exports. Use it as a starting point or adapt it to your own workflow.
+
+[](https://airtable-invoicing-base.netlify.app/)
+
+View template
+
+[![Airtable invoicing base diagram](/invoicing-base.png)](https://airtable-invoicing-base.netlify.app/)
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services/data-synchronization
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services)
+
+←Back to services
+
+This page is in progress.
+
+## Data synchronization
+
+Keep data synced, accurate, and traceable across tools with reliable pipelines.
+
+### Data pipelines
+
+- Normalize sources into a single source of truth
+- Bi-directional syncs and mappings
+- Automated updates at the right cadence
+
+### Reliability
+
+- Monitoring, retries, and audit trails
+- Error handling and data validation
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services/process-automation)
+
+## Process audit
+
+Hollistic workflow mapping, automation strategy.
+
+View service →
+
+[](/services/airtable-development)
+
+## Airtable development
+
+Airtable bases and internal tools built for clarity and scale.
+
+View service →
+
+## Airtable audit
+
+Audit, and performance review for existing Airtable systems.
+
+## Web development
+
+Fast, dependable internal UIs and web apps with clean architecture.
+
+## Data synchronization
+
+Keep data synced, accurate, and traceable across tools and teams.
+
+## Internal tooling
+
+Dashboards, admin tools, and bespoke workflows for ops teams.
+
+## Ask AI about my services
+
+Build a focused prompt and open it in your AI chatbot of choice.
+
+[](/chat)
+
+Open Ask AI
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services/internal-tooling
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services)
+
+←Back to services
+
+This page is in progress.
+
+## Internal tooling
+
+Dashboards and admin tools that stay fast, clear, and reliable for day-to-day operations.
+
+### Tooling strategy
+
+- Audit workflows and pain points
+- Design dashboards with clear KPIs
+- Prioritize high-impact automations
+
+### Delivery & UX
+
+- Build fast, dependable UIs
+- Role-based access and audit trails
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services/process-automation
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services)
+
+←Back to services
+
+## Process audit
+
+Operational clarity before automation.
+
+### Process Management
+
+Most workflows inside companies don’t start as systems. They emerge. A tool is added. A workaround appears. Someone takes ownership informally. Over time, complexity accumulates.
+
+Process work starts by observing what already exists.
+
+The goal of process design is simple: remove friction and bring clarity.
+
+### Process Mapping
+
+Process mapping is about making implicit logic explicit.
+
+- What happens?
+- When does it happen?
+- Who is involved?
+- What are the prerequisites?
+- What are the possible outcomes?
+
+Most organizations already have patterns. They’re just undocumented, inconsistently executed, or dependent on specific individuals.
+
+Good process work identifies recurring structures, clarifies ownership, and solidifies what is already there. It should remain adaptable and evolve when reality changes.
+
+![Process flow diagram](/process-flow.png)
+
+### From Clarity to Automation
+
+Clear processes enable automation.
+
+Once the logic is explicit, we can distinguish between:
+
+- Deterministic actions that are rule based and repeatable
+- Contextual decisions that may be assisted by AI
+- True human judgment and accountability
+
+Deterministic work should not require human attention.
+
+Traditional automation handles defined inputs, predictable routes, and clear outputs. AI extends automation into contextual territory, but only when the underlying process is structured.
+
+Structure first. Automation second. AI last.
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/services/web-development
+
+# Services
+
+I build reliable automation systems, Airtable workflows, and fast internal interfaces.
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
+[](/services)
+
+←Back to services
+
+This page is in progress.
+
+## Web development
+
+Web interfaces and internal tools that stay fast under load.
+
+### What I build
+
+Fast, dependable UIs in Vue + TypeScript with clean architecture and maintainable components.
+
+- **Building MVPs**
+- **Code review & consulting:** Libraries, patterns, build tooling, and component design.
+- **Performance:** Identify bottlenecks and implement fixes.
+
+### Selected work
+
+[](/portfolio)
+
+View selected work
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+# /client/writing
+
+# Writing
+
+Thoughts on automation, performance, and shipping reliable systems.
+
+- [Imagining a universal workflow automation](https://martinmalinda.medium.com/imagining-a-universal-workflow-automation-2c17c6907377)
+- [Lazy rendering in Vue to improve performance](https://medium.com/js-dojo/lazy-rendering-in-vue-to-improve-performance-dcccd445d5f)
+- [Validation fields in Airtable](https://www.linkedin.com/feed/update/urn:li:activity:7310975020497829954/)
+- [My current productivity stack](https://www.linkedin.com/posts/martin-malinda-58b03253_heres-my-current-productivity-stack-todoist-activity-7295866065731907584-1tDc)
+- [Airtable automations reacting to bulk changes](https://www.linkedin.com/posts/martin-malinda-58b03253_heres-an-airtable-trick-how-you-can-significantly-activity-7290332082159939586-K0u1)
+- [Effective AI analysis in Airtable](https://www.linkedin.com/posts/martin-malinda-58b03253_heres-one-trick-how-to-use-airtable-ai-fields-activity-7281344724592975872-G-Of)
+- [API quality evaluation](https://www.linkedin.com/posts/martin-malinda-58b03253_things-to-check-about-a-public-api-before-activity-7275233377480253440-QiCL)
+- [How to add a contact from Airtable to your phone ASAP](https://www.linkedin.com/posts/martin-malinda-58b03253_vcard-activity-7269370769225175040-_iia)
+- [A formula to open email client with dynamic content from Airtable ASAP](https://www.linkedin.com/posts/martin-malinda-58b03253_airtable-email-clients-activity-7268736015073222656-_PK7)
+- [An alternative approach to checklists in Airtable](https://www.linkedin.com/posts/martin-malinda-58b03253_if-you-have-checklists-that-you-want-activity-7266910744263168000-rrZ7)
+- [Effective use of Chrome via custom search engines](https://www.linkedin.com/posts/martin-malinda-58b03253_when-if-and-how-to-use-custom-search-activity-7263553177101193216--8pf)
+- [A formula button in Airtable to add an event to google calendar](https://www.linkedin.com/posts/martin-malinda-58b03253_airtable-add-to-calendar-button-activity-7243952014890553344-k4pV)
+- [How I built this website](https://www.linkedin.com/posts/martin-malinda-58b03253_portfolio-website-activity-7242832515948810241-GOt8)
+- [How do well known workflow platforms compare when it comes to writing code](https://www.linkedin.com/posts/martin-malinda-58b03253_today-i-checked-how-major-workflow-automation-activity-7235602071930998784-xNt1)
+- [How I'm tracking billable hours in Airtable](https://www.linkedin.com/posts/martin-malinda-58b03253_ive-improved-my-flow-for-billable-hours-activity-7214913446994182148-g-wj)
+
+© Martin Malinda
+
+Business ID: 05668115
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
