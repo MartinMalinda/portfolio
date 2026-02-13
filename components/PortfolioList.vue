@@ -4,6 +4,7 @@ import studentDatabase from "../data/student-database.json";
 import feedbackMachine from "../data/feedback-machine.json";
 import cashflowDashboard from "../data/cashflow-dashboard.json";
 import releaseManagement from "../data/release-management.json";
+import circleAiChatbot from "../data/circle-ai-chatbot.json";
 import herohero from "../data/herohero.json";
 import powersave from "../data/powersave.json";
 import goout from "../data/goout.json";
@@ -18,6 +19,7 @@ const automationPortfolio = [
   feedbackMachine,
   cashflowDashboard,
   releaseManagement,
+  circleAiChatbot,
 ];
 
 const webPortfolio = [powersave, herohero, goout, leadfeeder];

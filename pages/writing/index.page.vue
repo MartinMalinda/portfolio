@@ -35,6 +35,51 @@ import MediumLogo from "../../components/MediumLogo.vue";
         </li>
         <li>
           <a
+            href="https://www.linkedin.com/posts/martin-malinda-58b03253_you-can-use-airtable-omni-to-validate-your-activity-7381696209515741185-VLWf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc"
+            target="_blank"
+          >
+            <LinkedinLogo class="writing-link__icon" />
+            Base check via Airtable Omni
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/posts/martin-malinda-58b03253_ive-created-a-documentation-site-for-an-activity-7377351989057363969-F6BJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc"
+            target="_blank"
+          >
+            <LinkedinLogo class="writing-link__icon" />
+            Creating a documentation site for Airtable
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/posts/martin-malinda-58b03253_now-with-custom-interface-extensions-you-activity-7376631005526278144-UGKz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc"
+            target="_blank"
+          >
+            <LinkedinLogo class="writing-link__icon" />
+            Building a pinterest-like layout in Airtable via Interface Extensions
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/posts/martin-malinda-58b03253_event-discovery-activity-7370823774608179202-RlUN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc"
+            target="_blank"
+          >
+            <LinkedinLogo class="writing-link__icon" />
+            Automated event discovery in Airtable
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/posts/martin-malinda-58b03253_ive-embedded-an-ai-chatbot-directly-into-activity-7363157893568704533-f1XX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc"
+            target="_blank"
+          >
+            <LinkedinLogo class="writing-link__icon" />
+            Embedding an AI chatbot in Circle community platform
+          </a>
+        </li>
+        <li>
+          <a
             href="https://www.linkedin.com/feed/update/urn:li:activity:7310975020497829954/"
             target="_blank"
           >
