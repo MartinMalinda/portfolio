@@ -45,8 +45,7 @@ import SiteFooter from "../../components/SiteFooter.vue";
           projects at
           <a href="https://www.instagram.com/greenfox_official/" target="_blank"
             >Green Fox Academy</a
-          >, combining hands-on engineering with mentorship and delivery
-          ownership.
+          >.
           <br />
           <br />
           Across these roles, the common thread was complexity: scaling
