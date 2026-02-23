@@ -42,7 +42,7 @@ import SiteFooter from "../../components/SiteFooter.vue";
           <a href="https://about.herohero.co/en/" target="_blank">Herohero</a>,
           where I was responsible for frontend architecture and core platform
           infrastructure. Along the way, I also taught programming and led
-          technical teams at
+          projects at
           <a href="https://www.instagram.com/greenfox_official/" target="_blank"
             >Green Fox Academy</a
           >, combining hands-on engineering with mentorship and delivery
