@@ -259,6 +259,52 @@ Book a meeting
 
 30 minutes free - operations, automations, single source of truth
 
+# /client/portfolio/circle-ai-chatbot
+
+# Case Studies
+
+Selected automation systems, Airtable workflows, and internal tools with real-world constraints and outcomes.
+
+[](/portfolio)
+
+←Back to case studies
+
+# Circle DM AI chatbot
+
+2025 - Now
+
+Embedded an AI chatbot directly into Circle community DMs so members can access an assistant without extra authentication. Since we know which Circle user is messaging the bot, we can retrieve billing details and context from other integrated platforms such as Airtable.
+
+The chatbot runs on a server connected to Circle in real time and uses the API to create and edit DMs. Circle is rolling out an enterprise plan with AI chatbots at \$400/mo, but this custom solution is more flexible because we control the prompting and tools.
+
+Overall trend:
+
+- Keep business data well structured and high quality
+- Turn it into a vector DB (for example via OpenAI APIs)
+- Point the chatbot to the vector DB and let it become your knowledge base
+
+Off-the-shelf knowledge base + AI chat works well for semi-public docs, but this case needed a custom solution because the bot knows who is speaking and access is gated by paid community membership.
+
+![Circle DM AI chatbot](/images-portfolio/recCircleAiChatbot.png)
+
+**Project size**
+
+Medium
+
+**Tags**
+
+Circle
+
+OpenAI
+
+### Want an AI assistant embedded into your community DMs or a custom AI workflow?
+
+[](https://forms.fillout.com/t/q9mEPmvDvBus)
+
+Book a meeting
+
+30 minutes free - operations, automations, single source of truth
+
 # /client/portfolio/feedback-machine
 
 # Case Studies
@@ -435,6 +481,16 @@ View case study →
 ## Release management
 
 For my browser extension Powersave I built a base to track bugs, features and releases. Chrome extensions have to be explicitly versioned t…
+
+View case study →
+
+[](/portfolio/circle-ai-chatbot)
+
+![Circle DM AI chatbot](/images-portfolio/recCircleAiChatbot.png)
+
+## Circle DM AI chatbot
+
+Embedded an AI chatbot directly into Circle community DMs so members can access an assistant without extra authentication. Since we know wh…
 
 View case study →
 
@@ -1115,6 +1171,11 @@ Thoughts on automation, performance, and shipping reliable systems.
 
 - [Imagining a universal workflow automation](https://martinmalinda.medium.com/imagining-a-universal-workflow-automation-2c17c6907377)
 - [Lazy rendering in Vue to improve performance](https://medium.com/js-dojo/lazy-rendering-in-vue-to-improve-performance-dcccd445d5f)
+- [Base check via Airtable Omni](https://www.linkedin.com/posts/martin-malinda-58b03253_you-can-use-airtable-omni-to-validate-your-activity-7381696209515741185-VLWf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc)
+- [Creating a documentation site for Airtable](https://www.linkedin.com/posts/martin-malinda-58b03253_ive-created-a-documentation-site-for-an-activity-7377351989057363969-F6BJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc)
+- [Building a pinterest-like layout in Airtable via Interface Extensions](https://www.linkedin.com/posts/martin-malinda-58b03253_now-with-custom-interface-extensions-you-activity-7376631005526278144-UGKz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc)
+- [Automated event discovery in Airtable](https://www.linkedin.com/posts/martin-malinda-58b03253_event-discovery-activity-7370823774608179202-RlUN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc)
+- [Embedding an AI chatbot in Circle community platform](https://www.linkedin.com/posts/martin-malinda-58b03253_ive-embedded-an-ai-chatbot-directly-into-activity-7363157893568704533-f1XX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAs3c7sBJrgInmDmKjzxAP-KMfiyJ9w5gQc)
 - [Validation fields in Airtable](https://www.linkedin.com/feed/update/urn:li:activity:7310975020497829954/)
 - [My current productivity stack](https://www.linkedin.com/posts/martin-malinda-58b03253_heres-my-current-productivity-stack-todoist-activity-7295866065731907584-1tDc)
 - [Airtable automations reacting to bulk changes](https://www.linkedin.com/posts/martin-malinda-58b03253_heres-an-airtable-trick-how-you-can-significantly-activity-7290332082159939586-K0u1)
