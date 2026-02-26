@@ -6,7 +6,7 @@
 \
 Over the past decade, I've worked on production systems used by real customers, handled monetization flows, modernized legacy applications, and helped teams scale their technical foundations without losing coherence.\
 \
-I've contributed to and led architecture work at companies such as [Leadfeeder](https://www.leadfeeder.com), [GoOut](https://goout.net/), and [TopMonks](https://www.topmonks.com/index.html), and later co-founded [Herohero](https://about.herohero.co/en/), where I was responsible for frontend architecture and core platform infrastructure. Along the way, I also taught programming and led technical teams at [Green Fox Academy](https://www.instagram.com/greenfox_official/), combining hands-on engineering with mentorship and delivery ownership.\
+I've contributed to and led architecture work at companies such as [Leadfeeder](https://www.leadfeeder.com), [GoOut](https://goout.net/), and [TopMonks](https://www.topmonks.com/index.html), and later co-founded [Herohero](https://about.herohero.co/en/), where I was responsible for frontend architecture and core platform infrastructure. Along the way, I also taught programming and led projects at [Green Fox Academy](https://www.instagram.com/greenfox_official/).\
 \
 Across these roles, the common thread was complexity: scaling applications, improving performance, integrating payments, structuring data, and maintaining code quality as systems evolved.\
 \
@@ -179,6 +179,16 @@ Read more →
 ## Testimonials
 
 Notes from founders, operators, and teams I have worked with.
+
+![Tobias Czudej](/tobias-czudej.jpeg)
+
+Tobias CzudejCzudej McDonough
+
+Partner at Czudej McDonough
+
+February 24, 2026
+
+Martin is that rare developer who combines strong technical ability with real understanding of how a business actually operates. He thinks carefully about what you need, asks the right questions, and delivers work that holds up to everyday use. In a landscape where AI tools can generate code quickly, what sets Martin apart is the depth of his thinking: architecture, security, reliability, and long-term maintainability. We trust him with critical systems and he consistently delivers.
 
 ![Dr Yusef Smith](/yusef-smith.png)
 
