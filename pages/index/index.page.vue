@@ -25,6 +25,15 @@ type Testimonial = {
 
 const testimonialsList = ref<Testimonial[]>([
   {
+    id: "tobias-czudej",
+    author: "Tobias Czudej",
+    role: "Partner at Czudej McDonough",
+    source: "Czudej McDonough",
+    date: "February 24, 2026",
+    image: "/tobias-czudej.jpeg",
+    text: "Martin is that rare developer who combines strong technical ability with real understanding of how a business actually operates. He thinks carefully about what you need, asks the right questions, and delivers work that holds up to everyday use. In a landscape where AI tools can generate code quickly, what sets Martin apart is the depth of his thinking: architecture, security, reliability, and long-term maintainability. We trust him with critical systems and he consistently delivers.",
+  },
+  {
     id: "yusef-smith",
     author: "Dr Yusef Smith",
     role: "Co-Founder of PropaneFitness",
