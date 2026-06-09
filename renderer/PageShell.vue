@@ -19,7 +19,6 @@ const toggleNav = () => {
   isNavOpen.value = !isNavOpen.value;
 };
 
-
 const getIsMobile = () =>
   typeof window !== "undefined" &&
   window.matchMedia("(max-width: 900px)").matches;
@@ -95,7 +94,7 @@ onBeforeUnmount(() => {
             <h2>
               <span>Martin Malinda</span>
             </h2>
-            <div class="location"><Pin class="pin" />Prague / Lisbon</div>
+            <!-- <div class="location"><Pin class="pin" />Prague / Lisbon</div> -->
           </div>
         </div>
         <div class="nav-links">
@@ -103,19 +102,35 @@ onBeforeUnmount(() => {
             <span class="label">Home</span>
             <span class="short">Home</span>
           </Link>
-          <Link href="/services" class="nav-link theme-services" @click="closeNav">
+          <Link
+            href="/services"
+            class="nav-link theme-services"
+            @click="closeNav"
+          >
             <span class="label">Services</span>
             <span class="short">Svc</span>
           </Link>
-          <Link href="/products" class="nav-link theme-products" @click="closeNav">
+          <Link
+            href="/products"
+            class="nav-link theme-products"
+            @click="closeNav"
+          >
             <span class="label">Products</span>
             <span class="short">Prod</span>
           </Link>
-          <Link href="/portfolio" class="nav-link theme-portfolio" @click="closeNav">
+          <Link
+            href="/portfolio"
+            class="nav-link theme-portfolio"
+            @click="closeNav"
+          >
             <span class="label">Case Studies</span>
             <span class="short">Work</span>
           </Link>
-          <Link href="/writing" class="nav-link theme-writing" @click="closeNav">
+          <Link
+            href="/writing"
+            class="nav-link theme-writing"
+            @click="closeNav"
+          >
             <span class="label">Writing</span>
             <span class="short">Wrt</span>
           </Link>
@@ -181,7 +196,6 @@ onBeforeUnmount(() => {
 </style>
 <style lang="scss" scoped>
 $yellow: #f2eac1;
-
 
 .page-shell {
   display: block;
@@ -271,7 +285,9 @@ a {
   z-index: 160;
   padding: $space * 2;
   box-sizing: border-box;
-  transition: 0.2s transform ease-in-out, 0.2s width ease-in-out;
+  transition:
+    0.2s transform ease-in-out,
+    0.2s width ease-in-out;
   overflow-y: auto;
 
   .sidebar-inner {
@@ -304,26 +320,28 @@ a {
   margin-left: -$space * 2;
   margin-right: -$space * 2;
 
-    .nav-link {
-      padding: 12px $space * 2;
-      border-radius: 0;
-      color: $almost-black;
-      font-weight: 500;
+  .nav-link {
+    padding: 12px $space * 2;
+    border-radius: 0;
+    color: $almost-black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    transition:
+      0.15s background,
+      0.15s border-color;
+
+    .label {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      border: 0;
-      transition: 0.15s background, 0.15s border-color;
+      gap: $space / 2;
+    }
 
-      .label {
-        display: flex;
-        align-items: center;
-        gap: $space / 2;
-      }
-    
-      &.active {
-        background: var(--nav-bg);
-      }
+    &.active {
+      background: var(--nav-bg);
+    }
 
     &:hover {
       background: var(--nav-bg);
@@ -386,11 +404,7 @@ a {
 }
 
 .theme-about {
-  --nav-bg: linear-gradient(
-    135deg,
-    rgba(255, 0, 0, 0.08),
-    rgba(0, 0, 0, 0.06)
-  );
+  --nav-bg: linear-gradient(135deg, rgba(255, 0, 0, 0.08), rgba(0, 0, 0, 0.06));
 }
 
 .sidebar-footer {

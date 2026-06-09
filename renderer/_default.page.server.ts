@@ -28,6 +28,8 @@ async function render(pageContext: PageContextServer) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <meta name="twitter:site" content="@martinmalindacz">
+        <meta property="og:image" content="/og.png">
+        <meta name="twitter:image" content="/og.png">
         <meta name="view-transition" content="same-origin">
         <link rel="icon" href="/rounded_corners.png" type="image/png" />
         <meta property="og:type" content="profile">
