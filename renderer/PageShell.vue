@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
             <h2>
               <span>Martin Malinda</span>
             </h2>
-            <!-- <div class="location"><Pin class="pin" />Prague / Lisbon</div> -->
+            <div class="location"><Pin class="pin" />Europe</div>
           </div>
         </div>
         <div class="nav-links">
