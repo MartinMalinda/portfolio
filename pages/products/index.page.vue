@@ -20,16 +20,24 @@ import PowersyncLogo from "../../components/icons/PowersyncLogo.vue";
     <Container class="block">
       <div class="cards">
         <CardLink
+          href="https://orloi.ai"
+          title="Orloi"
+          description="Orloi turns Airtable activity into a living record of metrics, reports, and trends your team and AI agents can act on."
+          cta="Visit site"
+        >
+          <img src="https://orloi.ai/favicon.svg" alt="Orloi logo" />
+        </CardLink>
+        <CardLink
           href="https://powersave.pro"
           title="Powersave"
-          description="Save ASAP with AI. Save more, categorize & analyze as you browse to Airtable, Coda, Notion and elsewhere."
+          description="Save, categorize and analyze as you browse."
           cta="Visit site"
           :icon="PowersaveLogo"
         />
         <CardLink
           href="https://sync.powersave.pro"
           title="Powersync"
-          description="Supercharge your Airtable and unlock new flows Track base history, connect Slack and Stripe and more."
+          description="Supercharge your Airtable and unlock new flows."
           cta="Visit site"
           :icon="PowersyncLogo"
         />
